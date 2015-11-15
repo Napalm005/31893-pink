@@ -1,7 +1,7 @@
 # Проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Napalm](https://htmlacademy.ru/profile/id31893).
-* Наставник: `Андрей Алексеев`.
+* Наставник: [Андрей Алексеев](https://htmlacademy.ru/profile/id4596).
 
 ### Немного о себе
 
