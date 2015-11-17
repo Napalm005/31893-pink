@@ -5,58 +5,66 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="">
-      <div>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>
-        <div class="menu">
+    <header class="page-header">
+      <div class="page-header__top">
+        <a class="page-header__logo" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+        <button class="page-header__hamburger">&#9776;</button>
+        <button class="page-header__cross">&#735;</button>
+        <nav class="page-header__nav">
           <ul>
             <a href="#"><li>Информация</li></a>
             <a href="#"><li>Блог</li></a>
             <a href="#"><li>Отзывы</li></a>
-            <a href="#"><li>КОнкурс</li></a>
+            <a href="#"><li>Конкурс</li></a>
           </ul>
-        </div>
+        </nav>
       </div>
-      <h1>Блог путешественников, пользователей Пинк</h1>
+      <h1 class="page-header__title">Блог путешественников, пользователей Пинк</h1>
     </header>
     <main>
-      <article>
-        <a href="/">Антон и Надя в Тайланде</a>
-        <div>Опубликовано: <time>6 месяцев назад</time></div>
-        <p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+      <article class="post">
+        <header class="post__header">
+          <a href="/" class="post__main-link"><h1 class="post__title">Антон и Надя в Тайланде</h1></a>
+          <div class="post__pablic">Опубликовано: <time class="post__date" datetime="2015-5-17">6 месяцев назад</time></div>
+        </header>
+        <p class="post__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
       </article>
-      <article>
-        <a href="/">Гастрольный тур «Кубанских борщеваров»</a>
-        <div>Опубликовано: <time>5 лет назад</time></div>
-        <p>Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
+      <article class="post">
+        <header class="post__header">
+          <a href="/" class="post__main-link"><h1 class="post__title">Гастрольный тур «Кубанских борщеваров»</h1></a>
+          <div class="post__pablic">Опубликовано: <time class="post__date" datetime="2010-5-17">5 лет назад</time></div>
+        </header>
+        <p class="post__text">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
       </article>
-      <article>
-        <a href="/">Чета Болонских в Париже</a>
-        <div>Опубликовано: <time>100 лет назад</time></div>
-        <p>Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
+      <article class="post">
+        <header class="post__header">
+          <a href="/" class="post__main-link"><h1 class="post__title">Чета Болонских в Париже</h1></a>
+          <div class="post__pablic">Опубликовано: <time class="post__date" datetime="1915-5-17">100 лет назад</time></div>
+        </header>
+        <p class="post__text">Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
       </article>
-      <article>
-        <a href="/">Путешествие на яхте сеньора Христофора</a>
-        <div>Опубликовано: <time>523 года назад</time></div>
-        <p>Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
+      <article class="post">
+        <header class="post__header">
+          <a href="/" class="post__main-link"><h1 class="post__title">Путешествие на яхте сеньора Христофора</h1></a>
+          <div class="post__pablic">Опубликовано: <time class="post__date" datetime="1492-5-17">523 года назад</time></div>
+        </header>
+        <p class="post__text">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
       </article>
       <ul class="pagination">
-        <li class="active"><a href="#">1</a></li>
+        <li class="active">1</li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
       </ul>
-      <footer>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <section class="footer-social gl2">
-          <a href="#" class="">Твиттер</a>
-          <a href="#" class="">Фейсбук</a>
-          <a href="#" class="">Ютуб</a>
+      <footer class="page-footer">
+        <a class="page-footer__logo" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+        <section class="page-footer__social">
+          <a href="#" class="page-footer__social--twitter">twitter</a>
+          <a href="#" class="page-footer__social--facebook">facebook</a>
+          <a href="#" class="page-footer__social--youtube">youtube</a>
         </section>
-        <section class="">
-          <a href="#" class="">Разработано</a>
+        <section class="page-footer__bottom">
+          <a href="#" class="page-footer__developer">Разработано<img width="27" height="34" src="" alt="HTML Academy"></a>
         </section>
       </footer>
     </main>
