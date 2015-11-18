@@ -5,32 +5,42 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="">
-      <div>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>
-        <div class="menu">
-          <ul>
-            <a href="#"><li>Информация</li></a>
-            <a href="#"><li>Блог</li></a>
-            <a href="#"><li>Отзывы</li></a>
-            <a href="#"><li>КОнкурс</li></a>
+    <header class="page-header">
+      <div class="page-header__top">
+        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#">Информация</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a href="#">Блог</a></li>
+            <li class="main-nav__item"><a href="#">Отзывы</a></li>
+            <li class="main-nav__item"><a href="#">Конкурс</a></li>
           </ul>
-        </div>
+          <a class="main-nav__toggle  main-nav__toggle--cross" href="#"></a>
+        </nav>
       </div>
-      <h1>Блог путешественников, пользователей Пинк</h1>
+      <h1 class="page-header__title">Блог путешественников, пользователей Пинк</h1>
     </header>
+
+
+
+
+
     <main>
-      <section>
-        <h1>Антон и Надя в Тайланде</h1>
-        <div>Опубликовано: <time>6 месяцев назад</time></div>
-        <p>Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
-        <article>
+      <article class="post  post--center">
+        <header class="post__header">
+          <h1 class="post__title  post__title--big">Антон и Надя в Тайланде</h1>
+          <div class="post__pablic">Опубликовано: <time class="post__date" datetime="2015-5-17">6 месяцев назад</time></div>
+        </header>
+        <p class="post__text  post__text--big">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+
+
+        <section class="text-content">
           <h2>Предистория</h2>
           <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a href="">skyscanner.ru</a> мы все-таки решились!</p>
-        </article>
-        <article>
+        </section>
+
+
+        <section class="text-content">
           <h2>Выбор отеля</h2>
           <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
           <ul>
@@ -50,28 +60,39 @@
               Потрясающие виды.</p>
             <cite>Олег, г. Москва</cite>
           </blockquote>
-        </article>
-        <article>
+        </section>
+
+
+        <section class="text-content">
           <h2>Местная еда</h2>
           <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
-        </article>
-        <a href="#" class="">Пред.</a>
-        <a href="#" class="">След.</a>
-        <a href="#" class="">Назад к списку</a>
-      </section>
-      <footer>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <section class="footer-social gl2">
-          <a href="#" class="">Твиттер</a>
-          <a href="#" class="">Фейсбук</a>
-          <a href="#" class="">Ютуб</a>
         </section>
-        <section class="">
-          <a href="#" class="">Разработано</a>
-        </section>
-      </footer>
+
+
+        <ul class="pagination">
+          <li><a class="pagination__prev" href="#">Пред.</a></li>
+          <li><a class="pagination__next" href="#">След.</a></li>
+          <li><a class="pagination__back" href="#">Назад к списку</a></li>
+        </ul>
+      </article>
     </main>
 
 
+
+
+
+    <footer class="page-footer">
+      <a class="logo--black" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+      <div class="page-footer__social">
+        <ul class="social-links">
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--twitter">twitter</a></li>
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--facebook">facebook</a></li>
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--youtube">youtube</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__bottom">
+        <a href="#" class="page-footer__developer">Разработано<img width="27" height="34" src="" alt="HTML Academy"></a>
+      </div>
+    </footer>
   </body>
 </html>

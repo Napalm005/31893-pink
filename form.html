@@ -5,21 +5,20 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-    <header class="">
-      <div>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <button class="hamburger">&#9776;</button>
-        <button class="cross">&#735;</button>
-        <div class="menu">
-          <ul>
-            <a href="#"><li>Информация</li></a>
-            <a href="#"><li>Блог</li></a>
-            <a href="#"><li>Отзывы</li></a>
-            <a href="#"><li>Конкурс</li></a>
+    <header class="page-header">
+      <div class="page-header__top">
+        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#">Информация</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a href="#">Блог</a></li>
+            <li class="main-nav__item"><a href="#">Отзывы</a></li>
+            <li class="main-nav__item"><a href="#">Конкурс</a></li>
           </ul>
-        </div>
+          <a class="main-nav__toggle  main-nav__toggle--cross" href="#"></a>
+        </nav>
       </div>
-      <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
+      <h1 class="page-header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
     </header>
 
 
@@ -28,92 +27,136 @@
 
     <main>
       <form action="" enctype="multipart/form-data" method="post">
-        <fieldset>
+        <section>
           <label>Имя: *</label>
           <input type="text" name="name" placeholder="Введите ваше имя" required>
           <label>Фамилия: *</label>
           <input type="text" name="second_name" placeholder="Укажите фамилию" required>
-          <label>Отчечтво:</label>
-          <input type="text" name="third name" placeholder="Ну и отчество тоже">
-        </fieldset>
+          <label>Отчество:</label>
+          <input type="text" name="third_name" placeholder="Ну и отчество тоже">
+        </section>
 
 
-        <fieldset>
-          <legend>С каким приложением путешествовали? *</legend>
-          <label>
-            <input type="radio" name="app" value="Pink для iOS">
+        <section class="app">
+          <h3 class="app__title">С каким приложением путешествовали? *</h3>
+          <label class="radio">
+            <input type="radio" name="app" id="radio1" checked>
+            <span class="radio__box"></span>
             Pink для iOS
           </label>
-          <label>
-            <input type="radio" name="app" value="Pink на Android">
+          <label class="radio">
+            <input type="radio" name="app" id="radio2">
+            <span class="radio__box"></span>
             Pink на Android
           </label>
-          <label>
-            <input type="radio" name="app" value="Windows Phone">
+          <label class="radio">
+            <input type="radio" name="app" id="radio3">
+            <span class="radio__box"></span>
             Windows Phone
           </label>
-        </fieldset>
+        </section>
 
 
-        <fieldset>
-          <legend>Когда вы путешествовали? *</legend>
-          <input type="date" name="date_out" value="1 апреля 2015">
+        <section class="date">
+          <h3 class="date__title">Когда вы путешествовали? *</h3>
+          <input type="date" name="date_out" value="2012-06-01">
           <label>Дата выезда</label>
           <input type="number" name="number" value="10 дней" step="1">
           <label>Продолжительность</label>
           <input type="date" name="date_back" value="1 апреля 2015">
           <label>Дата возвращения</label>
-        </fieldset>
+        </section>
 
 
-        <fieldset>
-          <legend>Количество попутчиков *</legend>
-          <input type="number" name="date_out" value="2 чел" step="1">
-          <div>№ 1</div>
-          <label>Имя</label>
-          <input type="text" name="name_1" placeholder="Введите ваше имя">
-          <label>Прозвище</label>
-          <input type="text" name="name_2" placeholder="Ну как же без этого!">
-          <div>№ 2</div>
-          <label>Имя</label>
-          <input type="text" name="name_1" placeholder="Введите ваше имя">
-          <label>Прозвище</label>
-          <input type="text" name="name_2" placeholder="Ну как же без этого!">
-        </fieldset>
+        <section class="quantities">
+          <h3 class="quantities__title">Количество попутчиков *</h3>
+
+          <div class="input-prepend input-append">
+            <span class="add-on">-</span><input class="span2" id="appendedPrependedInput" type="text"><span class="add-on">+</span>
+          </div>
+
+          <div class="quantities__item">
+            <div class="quantities__">
+              <span class="number">№</span> <span class="figure">Имя *</span>
+            </div>
+            <div class="input-prepend">
+              <span class="add-on">1</span><input class="span2" id="prependedInput" type="text" placeholder="Введите ваше имя">
+            </div>
+            <div class="quantities__">
+              <span class="number"></span> <span class="figure">Прозвище</span>
+            </div>
+            <div class="input-prepend">
+              <span class="add-on"></span><input class="span2" id="prependedInput" type="text" placeholder="Ну как же без этого!">
+            </div>
+          </div>
+
+          <div class="quantities__item">
+            <div class="quantities__">
+              <span class="number">№</span> <span class="figure">Имя *</span>
+            </div>
+            <div class="input-prepend">
+              <span class="add-on">1</span><input class="span2" id="prependedInput" type="text" placeholder="Введите ваше имя">
+            </div>
+            <div class="quantities__">
+              <span class="number"></span> <span class="figure">Прозвище</span>
+            </div>
+            <div class="input-prepend">
+              <span class="add-on"></span><input class="span2" id="prependedInput" type="text" placeholder="Ну как же без этого!">
+            </div>
+          </div>
+        </section>
 
 
-        <fieldset>
-          <legend>Ваши безбашенные достижения в путешествии</legend>
-          <input type="checkbox" name="selfy" id="selfy" checked>
-          <label for="selfy">Сделал селфи с акулой</label>
-          <input type="checkbox" name="burned" id="seburnedlfy" checked>
-          <label for="burned">Обгорел на пляже</label>
-          <input type="checkbox" name="Chak" id="Chak">
-          <label for="Chak">Видел Чака Норриса</label>
-          <input type="checkbox" name="bay" id="bay">
-          <label for="bay">Накупил сувениров</label>
-          <input type="checkbox" name="tower" id="tower" checked>
-          <label for="tower">Удержал башню</label>
-          <input type="checkbox" name="hotel" id="hotel">
-          <label for="hotel">Разгромил отель</label>
-        </fieldset>
+        <section class="achievement">
+          <h3 class="achievement__title">Ваши безбашенные достижения в путешествии</h3>
+          <label class="checkbox">
+            <input type="checkbox" name="selfy" id="selfy" checked>
+            <span class="checkbox__box"></span>
+            Сделал селфи с акулой
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="burned" id="seburnedlfy" checked>
+            <span class="checkbox__box"></span>
+            Обгорел на пляже
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="Chak" id="Chak">
+            <span class="checkbox__box"></span>
+            Видел Чака Норриса
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="bay" id="bay">
+            <span class="checkbox__box"></span>
+            Накупил сувениров
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="tower" id="tower" checked>
+            <span class="checkbox__box"></span>
+            Удержал башню
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="hotel" id="hotel">
+            <span class="checkbox__box"></span>
+            Разгромил отель
+          </label>
+        </section>
 
 
-        <fieldset>
-          <legend>Ваши фотографии из поездки *</legend>
+        <section>
+          <h3>Ваши фотографии из поездки *</h3>
           <input type="file" name="foto" value="Загрузить фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-          <img width="68" height="68" src="" alt="фото">
-        </fieldset>
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+          <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
+        </section>
 
         <input type="submit" value="Отправить форму">
-        <p><span>*</span> &mdash; обязательные поля</p>
+        <small class="form__text-muted"><span>*</span> &mdash; обязательные поля</p>
       </form>
 
 
@@ -121,17 +164,19 @@
 
 
 
-      <footer>
-        <a href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
-        <section class="footer-social gl2">
-          <a href="#" class="">Твиттер</a>
-          <a href="#" class="">Фейсбук</a>
-          <a href="#" class="">Ютуб</a>
-        </section>
-        <section class="">
-          <a href="#" class="">Разработано</a>
-        </section>
-      </footer>
+      <footer class="page-footer">
+      <a class="logo--black" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+      <div class="page-footer__social">
+        <ul class="social-links">
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--twitter">twitter</a></li>
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--facebook">facebook</a></li>
+          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--youtube">youtube</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__bottom">
+        <a href="#" class="page-footer__developer">Разработано<img width="27" height="34" src="" alt="HTML Academy"></a>
+      </div>
+    </footer>
     </main>
 
 
