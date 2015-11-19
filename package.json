@@ -2,8 +2,8 @@
   "name": "31893-pink",
   "version": "0.1.0",
   "private": true,
-  "description": "Обучающий проект «Пинк» от HTML Academy",
-  "author": "Napalm",
+  "description": "Обучающий проект «» от HTML Academy",
+  "author": "Александр Фролов",
   "repository": {
     "type": "git",
     "url": "git://github.com/up-htmlacademy/31893-pink.git"
@@ -13,16 +13,15 @@
   },
   "homepage": "https://github.com/up-htmlacademy/31893-pink",
   "dependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-clean": "0.6.x",
-    "grunt-contrib-copy": "0.8.x",
-    "grunt-lintspaces": "0.7.x",
-    "load-grunt-tasks": "3.3.x"
+    "eclint": "1.1.x",
+    "fs-extra": "0.26.x",
+    "gulp": "3.9.x",
+    "gulp-plumber": "1.0.x"
   },
   "scripts": {
     "pregosha": "npm install > /dev/null",
-    "gosha": "grunt gosha",
-    "test": "grunt lintspaces:codestyle"
+    "gosha": "gulp gosha",
+    "test": "gulp lint"
   },
   "engines": {
     "node": "^5.0.0"
