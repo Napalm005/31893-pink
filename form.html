@@ -7,69 +7,78 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
+
+        <!-- Как длать меню взял отсюда http://codepen.io/g13nn/pen/eHGEF -->
+        <button class="page-header__hamburger" title="toggle-menu">&#9776;</button>
+        <button class="page-header__cross" title="cross-menu">&#735;</button>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#">Информация</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a href="#">Блог</a></li>
-            <li class="main-nav__item"><a href="#">Отзывы</a></li>
-            <li class="main-nav__item"><a href="#">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="#">Блог</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
           </ul>
-          <a class="main-nav__toggle  main-nav__toggle--cross" href="#"></a>
         </nav>
       </div>
-      <h1 class="page-header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
     </header>
 
 
 
 
 
-    <main>
-      <form action="" enctype="multipart/form-data" method="post">
-        <section>
-          <label>Имя: *</label>
-          <input type="text" name="name" placeholder="Введите ваше имя" required>
-          <label>Фамилия: *</label>
-          <input type="text" name="second_name" placeholder="Укажите фамилию" required>
-          <label>Отчество:</label>
-          <input type="text" name="third_name" placeholder="Ну и отчество тоже">
-        </section>
+    <main class="page-content">
+      <div class="intro">
+        <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
+
+      <p class="promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
 
 
-        <section class="app">
-          <h3 class="app__title">С каким приложением путешествовали? *</h3>
-          <label class="radio">
+      <form class="form" action="" enctype="multipart/form-data" method="post">
+        <fieldset class="form__section">
+          <label class="form__text  required" for="name">Имя:</label>
+          <input id="name" type="text" name="name" placeholder="Введите ваше имя" required>
+          <label class="form__text  required" for="second_name">Фамилия:</label>
+          <input id="second_name" type="text" name="second_name" placeholder="Укажите фамилию" required>
+          <label class="form__text" for="third_name">Отчество:</label>
+          <input id="third_name" type="text" name="third_name" placeholder="Ну и отчество тоже">
+        </fieldset>
+
+
+        <fieldset class="form__section">
+          <h3 class="form__title  required">С каким приложением путешествовали?</h3>
+          <label class="radio" for="radio1">
             <input type="radio" name="app" id="radio1" checked>
-            <span class="radio__box"></span>
+            <span class="radio__indicator"></span>
             Pink для iOS
           </label>
-          <label class="radio">
+          <label class="radio" for="radio2">
             <input type="radio" name="app" id="radio2">
-            <span class="radio__box"></span>
+            <span class="radio__indicator"></span>
             Pink на Android
           </label>
-          <label class="radio">
+          <label class="radio" for="radio3">
             <input type="radio" name="app" id="radio3">
-            <span class="radio__box"></span>
+            <span class="radio__indicator"></span>
             Windows Phone
           </label>
-        </section>
+        </fieldset>
 
 
-        <section class="date">
-          <h3 class="date__title">Когда вы путешествовали? *</h3>
+        <fieldset class="form__section">
+          <h3 class="form__title  required">Когда вы путешествовали?</h3>
           <input type="date" name="date_out" value="2012-06-01">
-          <label>Дата выезда</label>
+          <label class="form__text">Дата выезда</label>
           <input type="number" name="number" value="10 дней" step="1">
-          <label>Продолжительность</label>
+          <label class="form__text">Продолжительность</label>
           <input type="date" name="date_back" value="1 апреля 2015">
-          <label>Дата возвращения</label>
-        </section>
+          <label class="form__text">Дата возвращения</label>
+        </fieldset>
 
 
-        <section class="quantities">
-          <h3 class="quantities__title">Количество попутчиков *</h3>
+        <fieldset class="form__section">
+          <h3 class="form__title  required">Количество попутчиков</h3>
 
           <div class="input-prepend input-append">
             <span class="add-on">-</span><input class="span2" id="appendedPrependedInput" type="text"><span class="add-on">+</span>
@@ -77,7 +86,7 @@
 
           <div class="quantities__item">
             <div class="quantities__">
-              <span class="number">№</span> <span class="figure">Имя *</span>
+              <span class="number">№</span> <span class="figure required">Имя</span>
             </div>
             <div class="input-prepend">
               <span class="add-on">1</span><input class="span2" id="prependedInput" type="text" placeholder="Введите ваше имя">
@@ -92,7 +101,7 @@
 
           <div class="quantities__item">
             <div class="quantities__">
-              <span class="number">№</span> <span class="figure">Имя *</span>
+              <span class="number">№</span> <span class="figure required">Имя</span>
             </div>
             <div class="input-prepend">
               <span class="add-on">1</span><input class="span2" id="prependedInput" type="text" placeholder="Введите ваше имя">
@@ -104,46 +113,46 @@
               <span class="add-on"></span><input class="span2" id="prependedInput" type="text" placeholder="Ну как же без этого!">
             </div>
           </div>
-        </section>
+        </fieldset>
 
 
-        <section class="achievement">
-          <h3 class="achievement__title">Ваши безбашенные достижения в путешествии</h3>
+        <fieldset class="form__section">
+          <h3 class="form__title">Ваши безбашенные достижения в путешествии</h3>
           <label class="checkbox">
             <input type="checkbox" name="selfy" id="selfy" checked>
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Сделал селфи с акулой
           </label>
           <label class="checkbox">
             <input type="checkbox" name="burned" id="seburnedlfy" checked>
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Обгорел на пляже
           </label>
           <label class="checkbox">
             <input type="checkbox" name="Chak" id="Chak">
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Видел Чака Норриса
           </label>
           <label class="checkbox">
             <input type="checkbox" name="bay" id="bay">
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Накупил сувениров
           </label>
           <label class="checkbox">
             <input type="checkbox" name="tower" id="tower" checked>
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Удержал башню
           </label>
           <label class="checkbox">
             <input type="checkbox" name="hotel" id="hotel">
-            <span class="checkbox__box"></span>
+            <span class="checkbox__indicator"></span>
             Разгромил отель
           </label>
-        </section>
+        </fieldset>
 
 
-        <section>
-          <h3>Ваши фотографии из поездки *</h3>
+        <fieldset class="form__section">
+          <h3 class="form__title  required">Ваши фотографии из поездки *</h3>
           <input type="file" name="foto" value="Загрузить фото">
           <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
           <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
@@ -153,7 +162,7 @@
           <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
           <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
           <img width="68" height="68" src="http://placebear.com/200/300" alt="фото">
-        </section>
+        </fieldset>
 
         <input type="submit" value="Отправить форму">
         <small class="form__text-muted"><span>*</span> &mdash; обязательные поля</p>
@@ -165,16 +174,16 @@
 
 
       <footer class="page-footer">
-      <a class="logo--black" href="#"><img width="74" height="23" src="" alt="PINK логотип"></a>
+      <a class="logo  logo--alt" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
       <div class="page-footer__social">
         <ul class="social-links">
-          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--twitter">twitter</a></li>
-          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--facebook">facebook</a></li>
-          <li class="social-links__item"><a href="" class="social-links__link  social-links__link--youtube">youtube</a></li>
+          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--twitter" title="twitter">twitter</a></li>
+          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--facebook" title="facebook">facebook</a></li>
+          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--youtube" title="youtube">youtube</a></li>
         </ul>
       </div>
-      <div class="page-footer__bottom">
-        <a href="#" class="page-footer__developer">Разработано<img width="27" height="34" src="" alt="HTML Academy"></a>
+      <div class="page-footer__developer">
+        Разработано<a href="#" class="page-footer__developer-link"><img width="27" height="34" src="" alt="HTML Academy" title="HTML Academy">HTML Academy</a>
       </div>
     </footer>
     </main>
