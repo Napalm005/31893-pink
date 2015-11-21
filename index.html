@@ -5,8 +5,181 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
+    <header class="page-header">
+      <div class="page-header__top">
+        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
+        <batton href="" class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></buttom>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="#">Блог</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
 
+
+
+    <main class="page-content">
+      <div class="intro--index">
+        <h1 class="intro__title">Взгляните на жизнь иначе</h1>
+      </div>
+
+
+      <section class="app">
+        <h1 class="app__title">Скачать приложение</h1>
+        <ul class="app__list">
+          <li class="app__item"><a href="#" class="app__link" title="Apple">Apple</a></li>
+          <li class="app__item"><a href="#" class="app__link" title="Android">Android</a></li>
+          <li class="app__item"><a href="#" class="app__link" title="Winows">Winows</a></li>
+        </ul>
+        <p class="app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </section>
+
+
+      <p class="promo-text">Устали от серости мегаполиса?</p>
+
+      <p class="promo-text">Нам есть, что вам предложить!</p>
+
+
+      <section class="feature">
+        <ul class="feature__list">
+          <li class="feature__item">
+            <h2 class="feature__title">Поднимает настроение</h2>
+            <p class="feature__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+          </li>
+          <li class="feature__item">
+            <h2 class="feature__title">Меняет мир вокруг</h2>
+            <p class="feature__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="feature__item">
+            <h2 class="feature__title">Заводит новых друзей</h2>
+            <p class="feature__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
+
+
+      <section class="reviews">
+        <div class="slider-reviews">
+          <article class="slider-reviews__item">
+            <h1 class="slider-reviews__title">Николай Петров</h1>
+            <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+          <article class="slider-reviews__item">
+            <h1 class="slider-reviews__title">Николай Петров</h1>
+            <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+          <article class="slider-reviews__item">
+            <h1 class="slider-reviews__title">Николай Петров</h1>
+            <p class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+
+          <div class="slider-reviews__pagination">
+            <span class="slider-reviews__pagination-item  slider-reviews__pagination-item--active"></span>
+            <span class="slider-reviews__pagination-item"></span>
+            <span class="slider-reviews__pagination-item"></span>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="tarifs">
+        <div class="slider-tarifs">
+          <section class="slider-tarifs__item">
+            <header class="slider-tarifs__header">
+              <h1 class="slider-tarifs__title">Стандарт</h1>
+              <p class="slider-reviews__text">3,99 USD</p>
+            </header>
+            <table class="slider-tarifs__table">
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Розовый фильтр</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Смайлики</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Комментарии</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10006;</td>
+              </tr>
+            </table>
+          </section>
+          <section class="slider-tarifs__item">
+            <header class="slider-tarifs__header">
+              <h1 class="slider-tarifs__title">Стандарт</h1>
+              <p class="slider-reviews__text">3,99 USD</p>
+            </header>
+            <table class="slider-tarifs__table">
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Розовый фильтр</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Смайлики</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Комментарии</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10006;</td>
+              </tr>
+            </table>
+          </section>
+          <section class="slider-tarifs__item">
+            <header class="slider-tarifs__header">
+              <h1 class="slider-tarifs__title">Стандарт</h1>
+              <p class="slider-reviews__text">3,99 USD</p>
+            </header>
+            <table class="slider-tarifs__table">
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Розовый фильтр</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Смайлики</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10004;</td>
+              </tr>
+              <tr class="slider-tarifs__tr">
+                <td class="slider-tarifs__td  slider-tarifs__td--left">Комментарии</td>
+                <td class="slider-tarifs__td  slider-tarifs__td--right">&#10006;</td>
+              </tr>
+            </table>
+          </section>
+
+          <div class="slider-tarifs__pagination">
+            <span class="slider-tarifs__pagination-item  slider-tarifs__pagination-item--active"></span>
+            <span class="slider-tarifs__pagination-item"></span>
+            <span class="slider-tarifs__pagination-item"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+
+    <footer class="page-footer">
+      <address class="contacts">
+        <h1 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h1>
+          <div class="phone">
+            <h2 class="phone__title">Звоните</h2>
+            <a class="phone__text" href="tel:+78125556666">+7(812)555-66-66</a>
+          </div>
+          <div class="mail">
+            <h2 class="mail__title">Пишите</h2>
+            <a class="mail__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="address">
+            <h2 class="address__title">Приезжайте в гости</h2>
+            <p class="address__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+          <div class="footer__map"></div>
+      </address>
+    </footer>
   </body>
 </html>
