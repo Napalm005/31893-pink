@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -10,17 +11,18 @@
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
+        <a class="logo" href="#"><img width="74" height="24" src="" alt="PINK логотип" title="PINK"></a>
         <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
+      </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
+            <li class="main-nav__item"></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
             <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="#">Блог</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
           </ul>
         </nav>
-      </div>
     </header>
 
 
@@ -32,14 +34,14 @@
         <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
 
-      <p class="promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+      <p class="promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
 
 
       <form class="form" action="" enctype="multipart/form-data" method="post">
-        <fieldset class="form__section">
-          <label class="form__text  form__text--required" for="name">Имя:</label>
+        <fieldset class="form__fieldset">
+          <label class="form__text  form__required" for="name">Имя:</label>
           <input id="name" type="text" name="name" placeholder="Введите ваше имя" required>
-          <label class="form__text  form__text--required" for="second_name">Фамилия:</label>
+          <label class="form__text  form__required" for="second_name">Фамилия:</label>
           <input id="second_name" type="text" name="second_name" placeholder="Укажите фамилию" required>
           <label class="form__text" for="third_name">Отчество:</label>
           <input id="third_name" type="text" name="third_name" placeholder="Ну и отчество тоже">
@@ -47,7 +49,7 @@
 
 
         <fieldset class="form__fieldset">
-          <h3 class="form__legend  form__legend--required">С каким приложением путешествовали?</h3>
+          <h3 class="form__legend  form__required">С каким приложением путешествовали?</h3>
           <label class="radio" for="radio1">
             <input type="radio" name="app" id="radio1" checked>
             <span class="radio__indicator"></span>
@@ -67,7 +69,7 @@
 
 
         <fieldset class="form__fieldset">
-          <h3 class="form__legend  form__legend--required">Когда вы путешествовали?</h3>
+          <h3 class="form__legend  form__required">Когда вы путешествовали?</h3>
           <input class="form__input-text" type="text" name="date_out" id="date_out" value="1 апреля 2015" required>
           <label class="form__text" for="date_out">Дата выезда</label>
           <div class="number">
@@ -90,7 +92,7 @@
             <div class="companion__left">
               <span class="companion__number">№</span> <span class="companion__figure">1</span>
             </div>
-            <label class="companion__text  required" for="companion-name-1">Имя:</label>
+            <label class="companion__text  form__required" for="companion-name-1">Имя:</label>
             <input id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
             <label class="companion__text  required" for="companion-name-2">Прозвище:</label>
             <input id="companion-name-2" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
@@ -100,7 +102,7 @@
             <div class="companion__left">
               <span class="companion__number">№</span> <span class="companion__figure">2</span>
             </div>
-            <label class="companion__text  required" for="companion-name-3">Имя:</label>
+            <label class="companion__text  form__required" for="companion-name-3">Имя:</label>
             <input id="companion-name-3" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
             <label class="companion__text  required" for="companion-name-4">Прозвище:</label>
             <input id="companion-name-4" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
@@ -144,7 +146,7 @@
 
 
         <fieldset class="form__fieldset">
-          <h3 class="form__legend  form__legend--required">Ваши фотографии из поездки</h3>
+          <h3 class="form__legend  form__required">Ваши фотографии из поездки</h3>
           <label class="file" for="file">
             <input class="file__input" type="file" id="file">
             <span class="file__custom"></span>

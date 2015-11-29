@@ -1,0 +1,71 @@
+.app {
+  background-color: #1d2631;
+  color: @c_white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__title-link {
+    font-size: @fz_big;
+    line-height: 1;
+    padding: 20px 0;
+    border: 3px solid @c_white;
+    border-radius: 50px;
+    margin: 0;
+    text-align: center;
+    .link_style_kill;
+    color: @c_white;
+  }
+
+  &__list {
+    text-align: center;
+    .list_style_kill;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-left: 35px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:nth-child(3n-2) {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    .link_style_kill;
+    .text_hider;
+
+
+    &--apple {
+      width: 46px;
+      height: 57px;
+      background: url("../img/icon-apple.png") no-repeat center;
+    }
+
+    &--android {
+      width: 42px;
+      height: 47px;
+      background: url("../img/icon-android.png") no-repeat center;
+    }
+
+    &--windows {
+      width: 44px;
+      height: 42px;
+      background: url("../img/icon-windows.png") no-repeat center;
+    }
+  }
+
+  &__text {
+    .padding_margin_kill;
+    line-height: @lh_24;
+    font-weight: @fw_light;
+    text-align: center;
+  }
+}
