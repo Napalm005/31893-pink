@@ -1,0 +1,42 @@
+.radio {
+  font-size: @fz_big;
+  margin-bottom: 40px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  input {
+   .input_header;
+
+    &:checked ~ .radio__indicator:after {
+      content: '';
+      display: block;
+      background: @c_red;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  &__indicator {
+    position: relative;
+    top: 14px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: 2px solid @c_border;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+

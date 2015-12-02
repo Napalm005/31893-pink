@@ -5,24 +5,19 @@
     width: 100%;
     text-transform: uppercase;
     border-collapse: collapse;
-
-
-    & tr {
-    }
   }
 
   &__table-header {
+    .padding_margin_kill;
     background: @c_dark;
     color: @c_white;
-    .padding_margin_kill;
 
     &--new {
-
       &:before {
         .after_before;
+        position: absolute;
         width: 74px;
         height: 73px;
-        position: absolute;
         background: url('../img/hit.png') no-repeat left top;
         margin-left: -2px;
       }
@@ -34,17 +29,18 @@
   }
 
   &__title {
-    font-size: @fz_big;
-    line-height: @lh_big;
-    font-weight: @fw_bold;
     .padding_margin_kill;
+    font-size: @fz_big;
+    line-height: @lh_big-fussed;
+    font-weight: @fw_bold;
 
   }
 
   &__text {
+    .padding_margin_kill;
     font-size: @fz_title;
     font-weight: @fw_light;
-    .padding_margin_kill;
+    color: @c_white;
   }
 
   &__table-body {
@@ -55,9 +51,9 @@
     }
 
     & td {
-      line-height: @lh_30;
+      line-height: @lh_fussed;
       padding: 14px 25px;
-      border-bottom: 2px solid #f2f2f2;
+      border-bottom: 2px solid @c_background;
     }
   }
 

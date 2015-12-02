@@ -8,9 +8,13 @@
   &__title {
     margin: 0;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   &__title-link {
+    .link_style_kill;
+    display: inline-block;
+    width: 280px;
     font-size: @fz_big;
     line-height: 1;
     padding: 20px 0;
@@ -18,13 +22,12 @@
     border-radius: 50px;
     margin: 0;
     text-align: center;
-    .link_style_kill;
     color: @c_white;
   }
 
   &__list {
-    text-align: center;
     .list_style_kill;
+    text-align: center;
     margin-bottom: 30px;
   }
 
@@ -45,8 +48,8 @@
 
     &--apple {
       width: 46px;
-      height: 57px;
-      background: url("../img/icon-apple.png") no-repeat center;
+      height: 69px;
+      background: url("../img/icon-apple.png") no-repeat center top;
     }
 
     &--android {
@@ -64,8 +67,9 @@
 
   &__text {
     .padding_margin_kill;
-    line-height: @lh_24;
+    line-height: @lh_text;
     font-weight: @fw_light;
     text-align: center;
+    color: @c_white;
   }
 }

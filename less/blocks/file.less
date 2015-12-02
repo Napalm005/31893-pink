@@ -1,0 +1,31 @@
+.file {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+
+  &__input {
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+
+  &__custom {
+    .form_fild;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 280px;
+    background: #fff;
+    font-weight: bold;
+    text-align: center;
+
+    &:after {
+      content: "Загрузить фото";
+      text-transform: uppercase;
+    }
+  }
+}

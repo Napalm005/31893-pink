@@ -1,0 +1,64 @@
+.number {
+
+  &--bordered {
+    border-bottom: 2px solid @c_border;
+  }
+
+  &__minus {
+    .padding_margin_kill;
+    .text_hide;
+    .form_fild;
+    border-right: none;
+    background: #fff;
+    position: relative;
+
+    &:after {
+      .after_before;
+      height: 3px;
+      width: 27px;
+      background: #000;
+      position: absolute;
+      top: 30px;
+      left: 30%;
+    }
+  }
+
+  &__input {
+    width: 54%;
+
+    &--dark {
+      background: @c_background;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__plus {
+    .padding_margin_kill;
+    .text_hide;
+    .form_fild;
+    position: relative;
+    border-left: none;
+    background: #fff;
+
+    &:before {
+      .after_before;
+      height: 3px;
+      width: 27px;
+      background: #000;
+      position: absolute;
+      top: 30px;
+      left: 30%;
+    }
+
+    &:after {
+      .after_before;
+      height: 27px;
+      width: 3px;
+      background: #000;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+    }
+  }
+}
+

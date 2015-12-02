@@ -1,8 +1,11 @@
 .main-nav {
+  .gorizontal_centered;
   display: none;
   position: fixed;
   z-index: @z_over_plus;
   width: 100%;
+  min-width: 320px;
+  max-width: 830px;
 
   &__list {
     .list_style_kill;
@@ -16,8 +19,8 @@
     border-bottom: 1px solid #030303;
   }
   &__link {
-    color: @c_white;
     .link_style_kill;
+    color: @c_white;
     text-transform: uppercase;
     line-height: 66px;
     padding: 0 20px;

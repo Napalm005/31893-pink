@@ -1,5 +1,6 @@
 .page-footer {
   .padding_margin_kill;
+  text-align: center;
   padding-top: 40px;
   padding-bottom: 20px;
   position: relative;
@@ -8,5 +9,26 @@
     font-size: @fz_title;
     font-weight: @fw_light;
     font-style: normal;
+  }
+
+  &__social {
+    margin-bottom: 20px;
+  }
+
+  &__developer {
+    display: inline-block;
+    padding-right: 40px;
+    position: relative;
+  }
+
+  &__developer-link {
+    .link_style_kill;
+    .text_hider;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    background: url('../img/icon-academy.png') no-repeat;
   }
 }
