@@ -1,7 +1,7 @@
 .tarif {
+  padding: 0 2px;
 
   &__table {
-    table-layout: fixed;
     width: 100%;
     text-transform: uppercase;
     border-collapse: collapse;
@@ -24,7 +24,7 @@
     }
 
     & th {
-      padding: 20px 0;
+      padding: 16px 0;
     }
   }
 
@@ -39,6 +39,7 @@
   &__text {
     .padding_margin_kill;
     font-size: @fz_title;
+    line-height: 1.5;
     font-weight: @fw_light;
     color: @c_white;
   }
@@ -51,14 +52,15 @@
     }
 
     & td {
-      line-height: @lh_fussed;
-      padding: 14px 25px;
+      line-height: normal;
+      padding: 20px 22px;
+      padding-right: 17px;
       border-bottom: 2px solid @c_background;
     }
   }
 
   &__check {
-    .text_hider;
+    .text_hide;
     display: block;
     width: 30px;
     height: 15px;
@@ -66,10 +68,11 @@
     border-bottom: 3px solid #3dc644;
     transform: rotate(-45deg);
     margin-left: auto;
+    margin-bottom: 4px;
   }
 
   &__non-check {
-    .text_hider;
+    .text_hide;
     position: relative;
     display: block;
 
@@ -77,7 +80,7 @@
       .after_before;
       .vertical_centered;
       position: absolute;
-      width: 30px;
+      width: 32px;
       height: 3px;
       background-color: #f25b26;
       transform: rotate(-45deg);
@@ -88,7 +91,7 @@
       .after_before;
       .vertical_centered;
       position: absolute;
-      width: 30px;
+      width: 32px;
       height: 3px;
       background-color: #f25b26;
       transform: rotate(45deg);

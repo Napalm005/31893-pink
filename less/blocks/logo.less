@@ -1,16 +1,20 @@
 .logo {
   .link_style_kill;
-  .text_hider;
+  .text_hide;
   float: left;
   width: 74px;
   height: 23px;
-  background: url('../img/logo.png') no-repeat;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
   &--alt {
     height: 40px;
     width: 145px;
-    position: relative;
-    background: url('../img/logo-alt.png') no-repeat right bottom;
     float: none;
     margin: 0 auto;
     margin-bottom: 40px;

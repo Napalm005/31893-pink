@@ -1,15 +1,24 @@
 .checkbox {
   font-size: @fz_big;
-  margin-bottom: 40px;
   position: relative;
-  display: block;
+  padding-left: 60px;
   cursor: pointer;
+
+
+  &__wrap {
+    margin-bottom: 48px;
+
+    &:last-child {
+        margin-bottom: 24px;
+      }
+  }
 
   input {
     .input_hider;
+    width: 0;
 
     &:checked ~ .checkbox__indicator:after {
-      .text_hider;
+      .text_hide;
       content: '';
       display: block;
       position: absolute;
@@ -26,14 +35,14 @@
   }
 
   &__indicator {
-    position: relative;
-    top: 14px;
+    position: absolute;
+    left: 0;
+    top: -8px;
     display: inline-block;
+    vertical-align: middle;
     width: 40px;
     height: 40px;
-    margin-right: 20px;
     border: 2px solid @c_border;
-    text-align: center;
     background-color: #fff;
     -webkit-user-select: none;
     -moz-user-select: none;

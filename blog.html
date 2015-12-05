@@ -9,10 +9,12 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__top">
-        <a class="logo" href="#"><img width="74" height="24" src="" alt="PINK логотип" title="PINK"></a>
-        <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
-      </div>
+        <div class="page-header__top">
+          <div class="container">
+            <a class="logo" href="#"><img width="74" height="24" src="img/logo.png" alt="PINK логотип" title="PINK"></a>
+            <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
+          </div>
+        </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item"></li>
@@ -29,70 +31,84 @@
 
 
     <main class="page-content">
-      <div class="intro">
-        <h1 class="intro__title">Блог путешественников, пользователей Пинк</h1>
+      <div class="intro intro--blog">
+        <div class="container">
+          <h1 class="intro__title">Блог путешественников, пользователей Пинк</h1>
+        </div>
       </div>
 
 
       <article class="post-preview">
-        <header class="post-preview__header">
-          <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Антон и Надя в Тайланде</a></h1>
-          Опубликовано: <time class="post-preview__date" datetime="2015-5-17">6 месяцев назад</time>
-        </header>
-        <p class="post-preview__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+        <div class="container">
+          <header class="post-preview__header">
+            <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Антон и Надя в Тайланде</a></h1>
+            Опубликовано: <time class="post-preview__date" datetime="2015-5-17">6 месяцев назад</time>
+          </header>
+          <p class="post-preview__text">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+        </div>
       </article>
 
 
       <article class="post-preview">
-        <header class="post-preview__header">
-          <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Гастрольный тур «Кубанских борщеваров»</a></h1>
-          Опубликовано: <time class="post-preview__date" datetime="2010-5-17">5 лет назад</time>
-        </header>
-        <p class="post-preview__text">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
+        <div class="container">
+          <header class="post-preview__header">
+            <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Гастрольный тур «Кубанских борщеваров»</a></h1>
+            Опубликовано: <time class="post-preview__date" datetime="2010-5-17">5 лет назад</time>
+          </header>
+          <p class="post-preview__text">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп-группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
+        </div>
       </article>
 
 
       <article class="post-preview">
-        <header class="post-preview__header">
-          <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Чета Болонских в Париже</a></h1>
-          Опубликовано: <time class="post-preview__date" datetime="1915-5-17">100 лет назад</time>
-        </header>
-        <p class="post-preview__text">Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
+        <div class="container">
+          <header class="post-preview__header">
+            <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Чета Болонских в Париже</a></h1>
+            Опубликовано: <time class="post-preview__date" datetime="1915-5-17">100 лет назад</time>
+          </header>
+          <p class="post-preview__text">Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
+        </div>
       </article>
 
 
       <article class="post-preview">
-        <header class="post-preview__header">
-          <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Путешествие на яхте сеньора Христофора</a></h1>
-          Опубликовано: <time class="post-preview__date" datetime="1492-5-17">523 года назад</time>
-        </header>
-        <p class="post-preview__text">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
+        <div class="container">
+          <header class="post-preview__header">
+            <h1 class="post-preview__title"><a href="#" class="post-preview__title-link">Путешествие на яхте сеньора Христофора</a></h1>
+            Опубликовано: <time class="post-preview__date" datetime="1492-5-17">523 года назад</time>
+          </header>
+          <p class="post-preview__text  post-preview__text--bb-none">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернется для всего человечества!</p>
+        </div>
       </article>
 
 
       <ul class="pagination">
-        <li class="pagination__item  pagination__item--active">1</li>
-        <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 2">2</a></li>
-        <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 3">3</a></li>
-        <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 4">4</a></li>
+        <div class="container">
+          <li class="pagination__item  pagination__item--active">1</li>
+          <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 2">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 3">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#" title=" Страница 4">4</a></li>
+        </div>
       </ul>
-    <main>
+    </main>
 
 
 
 
 
     <footer class="page-footer">
-      <a class="logo  logo--alt" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
-      <div class="page-footer__social">
-        <ul class="social-links">
-          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--twitter" title="twitter">twitter</a></li>
-          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--facebook" title="facebook">facebook</a></li>
-          <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--youtube" title="youtube">youtube</a></li>
-        </ul>
-      </div>
-      <div class="page-footer__developer">
-        Разработано<a href="#" class="page-footer__developer-link"><img width="27" height="34" src="" alt="HTML Academy" title="HTML Academy">HTML Academy</a>
+      <div class="container">
+        <a class="logo  logo--alt" href="#"><img width="74" height="23" src="img/logo-alt.png" alt="PINK логотип" title="PINK"></a>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--twitter" title="twitter">twitter</a></li>
+            <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--facebook" title="facebook">facebook</a></li>
+            <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--youtube" title="youtube">youtube</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__developer">
+          Разработано<a href="#" class="page-footer__developer-link"><img width="27" height="34" src="img/icon-academy.png" alt="HTML Academy" title="HTML Academy">HTML Academy</a>
+        </div>
       </div>
     </footer>
   </body>

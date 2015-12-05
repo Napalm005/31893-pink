@@ -1,0 +1,58 @@
+.pagination {
+  .list_style_kill;
+  margin-bottom: 55px;
+  font-size: 0;
+  font-weight: bold;
+  color: @c_dark;
+  margin-left: -8px;
+  text-align: center;
+
+
+  &__item {
+    font-size: @fz_big;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &--prev {
+      float: left;
+    }
+
+    &--next {
+      float: right;
+    }
+
+    &--back {
+      display: block;
+      padding-top: 80px;
+    }
+
+    &--active {
+      .form_fild;
+      border-color: @c_red;
+    }
+  }
+
+  &__link {
+    .link_style_kill;
+    .form_fild;
+    color: @c_dark;
+
+    &--big {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &--prev {
+      width: 131px;
+    }
+
+    &--next {
+      width: 131px;
+    }
+  }
+
+
+}

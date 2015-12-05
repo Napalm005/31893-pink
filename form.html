@@ -12,7 +12,7 @@
     <header class="page-header">
       <div class="page-header__top">
         <div class="container">
-          <a class="logo" href="#"><img width="74" height="24" src="" alt="PINK логотип" title="PINK"></a>
+          <a class="logo" href="#"><img width="74" height="23" src="img/logo.png" alt="PINK логотип" title="PINK"></a>
           <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
         </div>
       </div>
@@ -46,9 +46,9 @@
       <form class="form" action="" enctype="multipart/form-data" method="post">
         <fieldset class="form__fieldset">
           <div class="container">
-            <label class="form__text  form__required" for="name">Имя:</label>
+            <label class="form__text  form__text--required" for="name">Имя:</label>
             <input class="form__input-text" id="name" type="text" name="name" placeholder="Введите ваше имя" required>
-            <label class="form__text  form__required" for="second_name">Фамилия:</label>
+            <label class="form__text  form__text--required" for="second_name">Фамилия:</label>
             <input class="form__input-text" id="second_name" type="text" name="second_name" placeholder="Укажите фамилию" required>
             <label class="form__text" for="third_name">Отчество:</label>
             <input class="form__input-text" id="third_name" type="text" name="third_name" placeholder="Ну и отчество тоже">
@@ -58,33 +58,39 @@
 
         <fieldset class="form__fieldset">
           <div class="container">
-            <h3 class="form__legend  form__required">С каким приложением путешествовали?</h3>
-            <label class="radio" for="radio1">
-              <input type="radio" name="app" id="radio1" checked>
-              <span class="radio__indicator"></span>
-              Pink для iOS
-            </label>
-            <label class="radio" for="radio2">
-              <input type="radio" name="app" id="radio2">
-              <span class="radio__indicator"></span>
-              Pink на Android
-            </label>
-            <label class="radio" for="radio3">
-              <input type="radio" name="app" id="radio3">
-              <span class="radio__indicator"></span>
-              Windows Phone
-            </label>
+            <h3 class="form__legend  form__legend--required">С каким приложением путешествовали?</h3>
+            <div class="radio__wrap">
+              <label class="radio" for="radio1">
+                <input type="radio" name="app" id="radio1" checked>
+                <span class="radio__indicator"></span>
+                Pink для iOS
+              </label>
+            </div>
+            <div class="radio__wrap">
+              <label class="radio" for="radio2">
+                <input type="radio" name="app" id="radio2">
+                <span class="radio__indicator"></span>
+                Pink на Android
+              </label>
+            </div>
+            <div class="radio__wrap">
+              <label class="radio" for="radio3">
+                <input type="radio" name="app" id="radio3">
+                <span class="radio__indicator"></span>
+                Windows Phone
+              </label>
+            </div>
           </div>
         </fieldset>
 
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset  form__fieldset--non-standart">
           <div class="container">
-            <h3 class="form__legend  form__required">Когда вы путешествовали?</h3>
+            <h3 class="form__legend  form__legend--required">Когда вы путешествовали?</h3>
             <input class="form__input-text" type="text" name="date_out" id="date_out" value="1 апреля 2015" required>
             <label class="form__text  form__text--top" for="date_out">Дата выезда</label>
             <div class="number">
-              <button class="number__minus">-</button><input class="number__input" id="number__input-1" type="text" value="10 дней" required><button class="number__plus">+</button>
+              <button class="number__button  number__button--minus">-</button><input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" required><button class="number__button number__button--plus">+</button>
             </div>
             <label class="form__text  form__text--top" for="number__input-1">Продолжительность</label>
             <input class="form__input-text form__input-text--dark" type="text" name="date_back" id="date_back" value="1 апреля 2015" required>
@@ -98,7 +104,7 @@
             <h3 class="form__legend  form__legend--required">Количество попутчиков</h3>
 
             <div class="number  number--bordered">
-              <button class="number__minus">-</button><input class="number__input number__input--dark" id="number__input-2" type="text" value="2 чел" required><button class="number__plus">+</button>
+              <button class="number__button number__button--minus">-</button><input name="input-duration-2" class="number__input number__input--dark" id="INPUTDURATION-2" type="text" value="2 чел" required><button class="number__button  number__button--plus">+</button>
             </div>
 
             <div class="companion">
@@ -106,9 +112,9 @@
                 <span class="companion__number">№</span> <span class="companion__figure">1</span>
               </div>
               <div class="companion__right">
-                <label class="companion__text  form__required" for="companion-name-1">Имя:</label>
-                <input class="form__input-text" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                <label class="companion__text  form__required" for="companion-name-2">Прозвище:</label>
+                <label class="companion__text  companion__text--required" for="companion-name-1">Имя:</label>
+                <input class="form__input-text  form__input-text--bl-none" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
+                <label class="companion__text" for="companion-name-2">Прозвище:</label>
                 <input class="form__input-text" id="companion-name-2" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
               </div>
             </div>
@@ -118,9 +124,9 @@
                 <span class="companion__number">№</span> <span class="companion__figure">2</span>
               </div>
               <div class="companion__right">
-                <label class="companion__text  form__required" for="companion-name-3">Имя:</label>
-                <input class="form__input-text" id="companion-name-3" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                <label class="companion__text  form__required" for="companion-name-4">Прозвище:</label>
+                <label class="companion__text  companion__text--required" for="companion-name-3">Имя:</label>
+                <input class="form__input-text  form__input-text--bl-none" id="companion-name-3" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
+                <label class="companion__text" for="companion-name-4">Прозвище:</label>
                 <input class="form__input-text" id="companion-name-4" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
               </div>
             </div>
@@ -128,83 +134,117 @@
         </fieldset>
 
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset  form__fieldset--non-standart">
           <div class="container">
             <h3 class="form__legend">Ваши безбашенные достижения в путешествии</h3>
-            <label class="checkbox">
-              <input type="checkbox" name="selfy" id="selfy" checked>
-              <span class="checkbox__indicator"></span>
-              Сделал селфи с акулой
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="burned" id="seburnedlfy" checked>
-              <span class="checkbox__indicator"></span>
-              Обгорел на пляже
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="Chak" id="Chak">
-              <span class="checkbox__indicator"></span>
-              Видел Чака Норриса
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="bay" id="bay">
-              <span class="checkbox__indicator"></span>
-              Накупил сувениров
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="tower" id="tower" checked>
-              <span class="checkbox__indicator"></span>
-              Удержал башню
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="hotel" id="hotel">
-              <span class="checkbox__indicator"></span>
-              Разгромил отель
-            </label>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="selfy" id="selfy" checked>
+                <span class="checkbox__indicator"></span>
+                Сделал селфи с акулой
+              </label>
+            </div>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="burned" id="seburnedlfy" checked>
+                <span class="checkbox__indicator"></span>
+                Обгорел на пляже
+              </label>
+            </div>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="Chak" id="Chak">
+                <span class="checkbox__indicator"></span>
+                Видел Чака Норриса
+              </label>
+            </div>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="bay" id="bay">
+                <span class="checkbox__indicator"></span>
+                Накупил сувениров
+              </label>
+            </div>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="tower" id="tower" checked>
+                <span class="checkbox__indicator"></span>
+                Удержал башню
+              </label>
+            </div>
+            <div class="checkbox__wrap">
+              <label class="checkbox">
+                <input type="checkbox" name="hotel" id="hotel">
+                <span class="checkbox__indicator"></span>
+                Разгромил отель
+              </label>
+            </div>
           </div>
         </fieldset>
 
 
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset  form__fieldset--pb-not">
           <div class="container">
-            <h3 class="form__legend  form__required">Ваши фотографии из поездки</h3>
+            <h3 class="form__legend  form__legend--required">Ваши фотографии из поездки</h3>
             <label class="file" for="file">
               <input class="file__input" type="file" id="file">
               <span class="file__custom"></span>
             </label>
             <div class="row">
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/500/300" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/500/300" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/200/400" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/200/400" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/600/200" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/600/200" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/300/300" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/300/300" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/500/200" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/500/200" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
               <div class="photo-block">
-                <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото"><button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                <div class="photo-block__photo-wrap">
+                  <img class="photo-block__photo" src="http://placebear.com/200/300" alt="фото">
+                </div><button class="photo-block__cross" title="cross-photo">&#10006;</button>
                 IMG-1.JPG
               </div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
+              <div class="empty"></div>
             </div>
           </div>
         </fieldset>
@@ -214,15 +254,16 @@
           <div class="form__text-muted"><span class="form__required"></span> &mdash; обязательные поля</div>
         </div>
       </form>
+    </main>
 
 
 
 
 
 
-      <footer class="page-footer">
+    <footer class="page-footer">
       <div class="container">
-        <a class="logo  logo--alt" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
+        <a class="logo  logo--alt" href="#"><img width="74" height="23" src="img/logo-alt.png" alt="PINK логотип" title="PINK"></a>
         <div class="page-footer__social">
           <ul class="social-links">
             <li class="social-links__item"><a href="#" class="social-links__link  social-links__link--twitter" title="twitter">twitter</a></li>
@@ -231,11 +272,10 @@
           </ul>
         </div>
         <div class="page-footer__developer">
-          Разработано<a href="#" class="page-footer__developer-link"><img width="27" height="34" src="" alt="HTML Academy" title="HTML Academy">HTML Academy</a>
+          Разработано<a href="#" class="page-footer__developer-link"><img width="27" height="34" src="img/icon-academy.png" alt="HTML Academy" title="HTML Academy">HTML Academy</a>
         </div>
       </div>
     </footer>
-    </main>
 
 
   </body>
