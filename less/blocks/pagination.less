@@ -1,6 +1,9 @@
 .pagination {
   .list_style_kill;
-  margin-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
   font-size: 0;
   font-weight: bold;
   color: @c_dark;
@@ -9,49 +12,40 @@
 
 
   &__item {
+    .form_field;
+    .padding_margin_kill;
     font-size: @fz_big;
+    line-height: 60px;
     margin-left: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
     display: inline-block;
     vertical-align: middle;
     text-transform: uppercase;
 
     &--prev {
-      float: left;
+      display: inline-block;
+      width: 131px;
     }
 
     &--next {
-      float: right;
+      display: inline-block;
+      width: 131px;
     }
 
     &--back {
-      display: block;
-      padding-top: 80px;
+      display: inline-block;
+      width: 100%;
     }
 
     &--active {
-      .form_fild;
       border-color: @c_red;
     }
   }
 
   &__link {
     .link_style_kill;
-    .form_fild;
+    line-height: 60px;
     color: @c_dark;
-
-    &--big {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    &--prev {
-      width: 131px;
-    }
-
-    &--next {
-      width: 131px;
-    }
   }
 
 

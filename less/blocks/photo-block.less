@@ -1,79 +1,58 @@
 
-.photo-block
-{
-    font-size: @fz_small;
+.photo-block {
+  font-size: @fz_small;
+  position: relative;
+  display: inline-block;
+  width: 68px;
+  margin-bottom: 23px;
+  margin-left: 35px;
+  vertical-align: top;
 
+  &__photo-wrap {
     position: relative;
-
-    display: inline-block;
-
+    display: block;
+    overflow: hidden;
     width: 68px;
-    margin-bottom: 23px;
-    margin-left: 35px;
+    height: 68px;
+    text-align: center;
+    background: #ddd;
+  }
 
-    vertical-align: top;
-    &__photo-wrap
-    {
-        position: relative;
+  &__photo {
+    .zero_centered;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
-        display: block;
-        overflow: hidden;
+  &__cross {
+    .text_hide;
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    width: 34px;
+    height: 34px;
+    border: 2px solid @c_border;
+    border-radius: 50%;
+    background: #fff;
 
-        width: 68px;
-        height: 68px;
-
-        text-align: center;
-
-        background: #ddd;
+    &:before {
+      .after_before;
+      .zero_centered;
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      transform: rotate(-45deg);
+      background: #c1c1c1;
     }
-    &__photo
-    {
-        max-width: 100%;
-        max-height: 100%;
 
-        .zero_centered;
+    &:after {
+      .after_before;
+      .zero_centered;
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      transform: rotate(45deg);
+      background: #c1c1c1;
     }
-    &__cross
-    {
-        position: absolute;
-        top: -17px;
-        right: -17px;
-
-        width: 34px;
-        height: 34px;
-
-        border: 2px solid @c_border;
-        border-radius: 50%;
-        background: #fff;
-
-        .text_hide;
-        &:before
-        {
-            position: absolute;
-
-            width: 14px;
-            height: 2px;
-
-            transform: rotate(-45deg);
-
-            background: #c1c1c1;
-
-            .after_before;
-            .zero_centered;
-        }
-        &:after
-        {
-            position: absolute;
-
-            width: 14px;
-            height: 2px;
-
-            transform: rotate(45deg);
-
-            background: #c1c1c1;
-
-            .after_before;
-            .zero_centered;
-        }
-    }
+  }
 }

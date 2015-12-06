@@ -46,8 +46,7 @@ body {
 
 
 .text-content {
-  padding-top: 27px;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 
   p {
     .padding_margin_kill;
@@ -90,9 +89,19 @@ body {
 
   blockquote {
     .padding_margin_kill;
-    padding-left: 20px;
+    position: relative;
+    padding-left: 22px;
     margin-bottom: 27px;
-    border-left: 2px solid @c_red;
+
+    &:before {
+      .after_before;
+      .vertical_centered;
+      position: absolute;
+      left: 0;
+      height: 94%;
+      width: 2px;
+      background: @c_red;
+    }
 
     p {
       .padding_margin_kill;

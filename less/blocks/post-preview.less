@@ -3,34 +3,49 @@
 
 
   &__header {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: @c_red;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+
+    &--post {
+      text-align: center;
+    }
   }
 
   &__title {
     .padding_margin_kill;
-    padding-bottom: 5px;
     text-transform: none;
+    font-size: @fz_big;
+    line-height: @lh_big;
+    font-weight: @fw_bold;
+
+    &--post {
+      margin: 13px 0;
+      font-size: 30px;
+      line-height: 36/30;
+    }
   }
 
   &__title-link {
     .link_style_kill;
-    font-size: 18px;
-    line-height: @lh_big;
-    font-weight: @fw_bold;
+    display: inline-block;
     color: @c_dark;
   }
 
   &__date {
-
+    font-size: @fz_small;
+    text-transform: uppercase;
+    color: @c_red;
   }
 
-  &__text {
+  &__lead {
     .padding_margin_kill;
     padding-bottom: 25px;
     border-bottom: 1px solid #e5e5e5;
+
+    &--post {
+      font-size: 16px;
+      line-height: 27/16;
+      text-align: center;
+    }
 
     &--bb-none {
       border-bottom: none;
