@@ -82,9 +82,10 @@ body {
     &:before {
       .after_before;
       .vertical_centered;
+      top: 10px;
+      bottom: 6px;
       position: absolute;
       left: 0;
-      height: 94%;
       width: 2px;
       background: @c_red;
     }
@@ -113,6 +114,14 @@ input {
 
   border: 2px solid @c_border;
   outline: none;
+
+  &:hover {
+    border-color: @c_dark;
+  }
+
+  &:focus {
+    border-color: @c_red;
+  }
 }
 
 ::-webkit-input-placeholder {color:#283645; opacity: 1; transition: opacity 0.3s ease;}
@@ -131,4 +140,8 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+dl {
+  .padding_margin_kill;
 }

@@ -25,6 +25,7 @@
 
     & th {
       padding: 16px 0;
+      background: @c_dark;
     }
   }
 
@@ -44,19 +45,15 @@
     color: @c_white;
   }
 
-  &__table-body {
-    text-align: left;
+  & tr {
+    background: #fff;
+  }
 
-    & tr {
-      background: #fff;
-    }
-
-    & td {
-      line-height: 1.4;
-      padding: 20px 22px;
-      padding-right: 17px;
-      border-bottom: 2px solid @c_background;
-    }
+  & td {
+    line-height: 1.4;
+    padding: 20px 22px;
+    padding-right: 17px;
+    border-bottom: 2px solid @c_background;
   }
 
   &__check {

@@ -12,7 +12,6 @@
 
 
   &__item {
-    .form_field;
     .padding_margin_kill;
     font-size: @fz_big;
     line-height: 60px;
@@ -22,31 +21,44 @@
     vertical-align: middle;
     text-transform: uppercase;
 
-    &--prev {
-      display: inline-block;
-      width: 131px;
-    }
-
-    &--next {
-      display: inline-block;
-      width: 131px;
-    }
-
     &--back {
-      display: inline-block;
       width: 100%;
+      display: block;
     }
+
+
 
     &--active {
+      .form_field;
       border-color: @c_red;
     }
   }
 
   &__link {
     .link_style_kill;
-    line-height: 60px;
+    .form_field;
     color: @c_dark;
+
+    &--prev {
+      width: 131px;
+    }
+
+    &--next {
+      width: 131px;
+    }
+
+    &--back {
+      width: 100%;
+    }
+
+
+    &:hover {
+      border-color: @c_dark;
+    }
+
+    &:active {
+      background: @c_dark;
+      color: @c_white;
+    }
   }
-
-
 }

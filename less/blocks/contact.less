@@ -17,5 +17,15 @@
   &__link {
     .link_style_kill;
     color: @c_red;
+
+    &:hover {
+      color: @c_dark;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color:fade(@c_dark, 30%);
+      text-decoration: none;
+    }
   }
 }

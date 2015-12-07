@@ -1,9 +1,17 @@
 .post-preview {
   margin-bottom: 24px;
 
+  &__item {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+
+    &--border-bottom-none {
+      border-bottom: none;
+    }
+  }
+
 
   &__header {
-    margin-bottom: 16px;
 
     &--post {
       text-align: center;
@@ -26,7 +34,7 @@
 
   &__title-link {
     .link_style_kill;
-    display: inline-block;
+    display: inline;
     color: @c_dark;
   }
 
@@ -38,17 +46,12 @@
 
   &__lead {
     .padding_margin_kill;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #e5e5e5;
+    padding-top: 16px;
 
     &--post {
       font-size: 16px;
       line-height: 27/16;
       text-align: center;
-    }
-
-    &--bb-none {
-      border-bottom: none;
     }
   }
 }

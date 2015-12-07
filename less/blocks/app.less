@@ -24,6 +24,15 @@
     margin: 0;
     text-align: center;
     color: @c_white;
+
+    &:hover {
+      background: #fff;
+      color: @c_red;
+    }
+
+    &:active {
+      color:fade(@c_red, 30%);
+    }
   }
 
   &__list {

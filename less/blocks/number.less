@@ -12,9 +12,15 @@
     .padding_margin_kill;
     .text_hide;
     .form_field;
-    font-family: 'Open Sans', sans-serif;
-    background: #fff;
     position: absolute;
+
+    &:hover {
+      border-color: @c_dark;
+    }
+
+    &:active {
+      background: @c_dark;
+    }
 
     &--minus {
       left: 0;
@@ -27,6 +33,10 @@
         position: absolute;
         top: 30px;
         left: 30%;
+
+        &:active {
+          background: @c_white;
+        }
       }
     }
 
