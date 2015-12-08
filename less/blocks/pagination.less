@@ -25,13 +25,12 @@
       width: 100%;
       display: block;
     }
+  }
 
-
-
-    &--active {
-      .form_field;
-      border-color: @c_red;
-    }
+  &__active {
+    display: block;
+    border: 2px solid @c_red;
+    width: 64px;
   }
 
   &__link {
@@ -40,11 +39,11 @@
     color: @c_dark;
 
     &--prev {
-      width: 131px;
+      min-width: 131px;
     }
 
     &--next {
-      width: 131px;
+      min-width: 131px;
     }
 
     &--back {
