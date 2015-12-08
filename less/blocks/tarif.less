@@ -1,0 +1,100 @@
+.tarif {
+  padding: 0 2px;
+
+  &__table {
+    width: 100%;
+    text-transform: uppercase;
+    border-collapse: collapse;
+  }
+
+  &__table-header {
+    .padding_margin_kill;
+    background: @c_dark;
+    color: @c_white;
+
+    &--new {
+      &:before {
+        .after_before;
+        position: absolute;
+        width: 74px;
+        height: 73px;
+        background: url('../img/hit.png') no-repeat left top;
+        margin-left: -2px;
+      }
+    }
+
+    & th {
+      padding: 16px 0;
+      background: @c_dark;
+    }
+  }
+
+  &__title {
+    .padding_margin_kill;
+    font-size: @fz_big;
+    line-height: @lh_big-fussed;
+    font-weight: @fw_bold;
+
+  }
+
+  &__text {
+    .padding_margin_kill;
+    font-size: @fz_title;
+    line-height: 1.5;
+    font-weight: @fw_light;
+    color: @c_white;
+  }
+
+  & tr {
+    background: #fff;
+  }
+
+  & td {
+    line-height: 1.4;
+    padding: 20px 22px;
+    padding-right: 17px;
+    border-bottom: 2px solid @c_background;
+  }
+
+  &__check {
+    .text_hide;
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-left: 3px solid #3dc644;
+    border-bottom: 3px solid #3dc644;
+    transform: rotate(-45deg);
+    margin-left: auto;
+    margin-bottom: 4px;
+  }
+
+  &__non-check {
+    .text_hide;
+    position: relative;
+    display: block;
+
+    &:after {
+      .after_before;
+      .vertical_centered;
+      position: absolute;
+      width: 32px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(-45deg);
+      right: 0;
+    }
+
+    &:before {
+      .after_before;
+      .vertical_centered;
+      position: absolute;
+      width: 32px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(45deg);
+      right: 0;
+    }
+  }
+
+
+}

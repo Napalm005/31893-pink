@@ -29,5 +29,9 @@
   },
   "engines": {
     "node": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp-notify": "^2.2.0"
   }
 }

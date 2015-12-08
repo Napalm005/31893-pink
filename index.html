@@ -2,177 +2,195 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__top">
-        <a class="logo" href="#"><img width="74" height="23" src="" alt="PINK логотип" title="PINK"></a>
-        <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
+        <div class="container">
+          <a class="logo" href="#"><img width="74" height="24" src="img/logo.png" alt="PINK логотип" title="PINK"></a>
+          <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
+        </div>
+      </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
+            <li class="main-nav__item"></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
             <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="#">Блог</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
           </ul>
         </nav>
-      </div>
     </header>
 
 
 
 
     <main class="page-content">
-      <div class="intro--index">
-        <h1 class="intro__title">Взгляните на жизнь иначе</h1>
+      <div class="intro intro--index">
+        <div class="container">
+          <h1 class="intro__title">Взгляните на&nbsp;жизнь иначе!</h1>
+        </div>
       </div>
 
 
 
       <div class="box">
         <section class="app">
-          <h1 class="app__title">Скачать приложение</h1>
-          <ul class="app__list">
-            <li class="app__item"><a href="#" class="app__link" title="Apple">Apple</a></li>
-            <li class="app__item"><a href="#" class="app__link" title="Android">Android</a></li>
-            <li class="app__item"><a href="#" class="app__link" title="Winows">Winows</a></li>
-          </ul>
-          <p class="app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <div class="container">
+            <h1 class="app__title"><a href="#" class="app__title-link">Скачать приложение</a></h1>
+            <ul class="app__list">
+              <li class="app__item"><a href="#" class="app__link  app__link--apple" title="Apple">Apple</a></li>
+              <li class="app__item"><a href="#" class="app__link  app__link--android" title="Android">Android</a></li>
+              <li class="app__item"><a href="#" class="app__link  app__link--windows" title="Winows">Winows</a></li>
+            </ul>
+            <p class="app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS&nbsp;X, Windows&nbsp;8</p>
+          </div>
         </section>
       </div>
 
 
-      <p class="promo-text">Устали от серости мегаполиса?</p>
+      <div>
+        <div class="container">
+          <p class="promo-title">Устали от&nbsp;серости мегаполиса?</p>
+          <p class="promo-title">Нам есть, что вам предложить!</p>
+        </div>
+      </div>
 
-      <p class="promo-text">Нам есть, что вам предложить!</p>
 
 
-
-      <div class="box">
+      <div class="box  box--grey">
         <section class="features">
-          <ul class="features__list">
-            <li class="features__item  feature">
-              <h2 class="feature__title">Поднимает настроение</h2>
-              <p class="feature__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-            </li>
-            <li class="features__item  feature">
-              <h2 class="feature__title">Меняет мир вокруг</h2>
-              <p class="feature__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="features__item  feature">
-              <h2 class="feature__title">Заводит новых друзей</h2>
-              <p class="feature__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
+          <div class="container">
+            <ul class="features__list">
+              <li class="features__item  feature">
+                <h2 class="feature__title">Поднимает настроение</h2>
+                <p class="feature__text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!</p>
+              </li>
+              <li class="features__item  feature">
+                <h2 class="feature__title">Меняет мир вокруг</h2>
+                <p class="feature__text">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="features__item  feature">
+                <h2 class="feature__title">Заводит новых друзей</h2>
+                <p class="feature__text">Ставьте лайки, комментируте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
 
 
       <div class="box">
         <div class="slider">
-          <div class="slider__item">
-            <blockquote class="review">
-              <cite class="review__title">Николай Петров</cite>
-              <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
-            </blockquote>
-          </div>
-          <div class="slider__item">
-            <blockquote class="review">
-              <cite class="review__title">Николай Петров</cite>
-              <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
-            </blockquote>
-          </div>
-          <div class="slider__item">
-            <blockquote class="review">
-              <cite class="review__title">Николай Петров</cite>
-              <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
-            </blockquote>
+          <div class="container">
+            <div class="slider__item  slider__item--current">
+              <blockquote class="review">
+                <cite class="review__title">Николай Петров</cite>
+                <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
+              </blockquote>
+            </div>
+            <div class="slider__item">
+              <blockquote class="review">
+                <cite class="review__title">Николай Петров</cite>
+                <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
+              </blockquote>
+            </div>
+            <div class="slider__item">
+              <blockquote class="review">
+                <cite class="review__title">Николай Петров</cite>
+                <p class="review__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще я&nbsp;познакомился со&nbsp;своей будущей женой в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;</p>
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
 
 
-      <div class="box">
+      <div class="box  box--grey">
         <div class="slider">
-          <div class="slider__item">
-            <section class="tarif">
-              <table class="tarif__table">
-                <thead class="tarif__table-header">
-                  <th>
-                    <h1 class="tarif__title">База</h1>
-                    <p class="tarif__text">1,99 USD</p>
-                  </th>
-                </thead>
-                <tbody class="tarif__table-body">
-                  <tr>
-                    <td>Розовый фильтр</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                  <tr>
-                    <td>Смайлики</td>
-                    <td><span class="tarif__non-check" title="Нет">Нет</span></td>
-                  </tr>
-                  <tr>
-                    <td>Комментарии</td>
-                    <td><span class="tarif__non-check" title="Нет">Нет</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-          </div>
-          <div class="slider__item">
-            <section class="tarif">
-              <table class="tarif__table">
-                <thead class="tarif__table-header  tarif__table-header--new">
-                  <th>
-                    <h1 class="tarif__title">Стандарт</h1>
-                    <p class="tarif__text">3,99 USD</p>
-                  </th>
-                </thead>
-                <tbody class="tarif__table-body">
-                  <tr>
-                    <td>Розовый фильтр</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                  <tr>
-                    <td>Смайлики</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                  <tr>
-                    <td>Комментарии</td>
-                    <td><span class="tarif__non-check" title="Нет">Нет</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-          </div>
-          <div class="slider__item">
-            <section class="tarif">
-              <table class="tarif__table">
-                <thead class="tarif__table-header">
-                  <th>
-                    <h1 class="tarif__title">Анлим</h1>
-                    <p class="tarifs__text">9,99 USD</p>
-                  </th>
-                </thead>
-                <tbody class="tarif__table-body">
-                  <tr>
-                    <td>Розовый фильтр</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                  <tr class="tarif__tr">
-                    <td>Смайлики</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                  <tr class="tarif__tr">
-                    <td>Комментарии</td>
-                    <td><span class="tarif__check" title="Да">Да</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
+          <div class="container">
+            <div class="slider__item  slider__item--visible">
+              <section class="tarif">
+                <table class="tarif__table">
+                  <thead class="tarif__table-header">
+                    <th colspan="2">
+                      <h1 class="tarif__title">База</h1>
+                      <p class="tarif__text">1,99 USD</p>
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Розовый фильтр</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                    <tr>
+                      <td>Смайлики</td>
+                      <td><span class="tarif__non-check" title="Нет">Нет</span></td>
+                    </tr>
+                    <tr>
+                      <td>Комментарии</td>
+                      <td><span class="tarif__non-check" title="Нет">Нет</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+            <div class="slider__item  slider__item--current  slider__item--visible">
+              <section class="tarif">
+                <table class="tarif__table">
+                  <thead class="tarif__table-header  tarif__table-header--new">
+                    <th colspan="2">
+                      <h1 class="tarif__title">Стандарт</h1>
+                      <p class="tarif__text">3,99 USD</p>
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Розовый фильтр</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                    <tr>
+                      <td>Смайлики</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                    <tr>
+                      <td>Комментарии</td>
+                      <td><span class="tarif__non-check" title="Нет">Нет</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+            <div class="slider__item   slider__item--visible">
+              <section class="tarif">
+                <table class="tarif__table">
+                  <thead class="tarif__table-header">
+                    <th colspan="2">
+                      <h1 class="tarif__title">Анлим</h1>
+                      <p class="tarifs__text">9,99 USD</p>
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Розовый фильтр</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                    <tr class="tarif__tr">
+                      <td>Смайлики</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                    <tr class="tarif__tr">
+                      <td>Комментарии</td>
+                      <td><span class="tarif__check" title="Да">Да</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
           </div>
         </div>
       </div>
@@ -185,25 +203,29 @@
 
     <footer class="page-footer page-footer--index">
       <address class="contacts">
-        <h1 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h1>
-          <dl class="contact">
-            <dt class="contact__title">Звоните</dt>
-            <dd class="contact__text">
-              <a class="contact__link" href="tel:+78125556666">+7(812)555-66-66</a>
-            </dd>
-          </dl>
-          <dl class="contact">
-            <dt class="contact__title">Пишите</dt>
-            <dd class="contact__text">
-              <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </dd>
-          </dl>
-          <dl class="contact">
-            <dt class="contact__title">Приезжайте в гости</dt>
-            <dd class="contact__text">ул. Большая Конюшенная, 19/8</dd>
-          </dl>
-          <div class="footer__map"></div>
+        <div class="container">
+          <h1 class="contacts__title">Остались вопросы? Свяжитесь с&nbsp;нами!</h1>
+            <dl class="contacts__body">
+              <div class="contact">
+                <dt class="contact__title">Звоните:</dt>
+                <dd class="contact__text">
+                  <a class="contact__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+                </dd>
+              </div>
+              <div class="contact">
+                <dt class="contact__title">Пишите:</dt>
+                <dd class="contact__text">
+                  <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </dd>
+              </div>
+              <div class="contact">
+                <dt class="contact__title">Приезжайте в гости:</dt>
+                <dd class="contact__text">ул. Большая Конюшенная, 19/8</dd>
+              </div>
+            </dl>
+        </div>
       </address>
     </footer>
+    <div class="map"></div>
   </body>
 </html>

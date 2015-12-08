@@ -1,0 +1,48 @@
+.post-preview {
+  margin-bottom: 24px;
+
+  &__item {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+
+    &--border-bottom-none {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    .padding_margin_kill;
+    text-transform: none;
+    font-size: @fz_big;
+    line-height: @lh_big;
+    font-weight: @fw_bold;
+
+    &--post {
+      margin: 13px 0;
+      font-size: 30px;
+      line-height: 36/30;
+    }
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: @c_dark;
+  }
+
+  &__date {
+    font-size: @fz_small;
+    text-transform: uppercase;
+    color: @c_red;
+  }
+
+  &__lead {
+    .padding_margin_kill;
+    padding-top: 16px;
+
+    &--post {
+      font-size: 16px;
+      line-height: 27/16;
+      text-align: center;
+    }
+  }
+}

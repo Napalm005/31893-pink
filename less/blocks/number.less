@@ -1,0 +1,80 @@
+.number {
+  padding: 0 64px;
+  position: relative;
+
+  &--bordered {
+    margin-top: -5px;
+    border-bottom: 2px solid @c_border;
+    margin-bottom: 25px;
+  }
+
+  &__button {
+    .padding_margin_kill;
+    .text_hide;
+    .form_field;
+    position: absolute;
+
+    &:hover {
+      border-color: @c_dark;
+    }
+
+    &:active {
+      background: @c_dark;
+    }
+
+    &--minus {
+      left: 0;
+
+      &:after {
+        .after_before;
+        height: 3px;
+        width: 27px;
+        background: #000;
+        position: absolute;
+        top: 30px;
+        left: 30%;
+
+        &:active {
+          background: @c_white;
+        }
+      }
+    }
+
+    &--plus {
+      right: 0;
+
+      &:before {
+        .after_before;
+        height: 3px;
+        width: 27px;
+        background: #000;
+        position: absolute;
+        top: 30px;
+        left: 30%;
+      }
+
+      &:after {
+        .after_before;
+        height: 27px;
+        width: 3px;
+        background: #000;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+
+    &--dark {
+      background: @c_background;
+      margin-bottom: 50px;
+    }
+  }
+}
+
