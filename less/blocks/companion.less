@@ -1,0 +1,53 @@
+.companion {
+  position: relative;
+  padding-bottom: 15px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    padding-left: 64px;
+  }
+
+  &__number {
+    display: block;
+    font-size: 14px;
+    color: @c_red;
+    line-height: @lh_fussed;
+    text-transform: uppercase;
+    padding-left: 26px;
+    margin-bottom: 5px;
+  }
+
+  &__figure {
+    .padding_margin_kill;
+    .form_field;
+    display: block;
+    background: @c_background;
+    position: relative;
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    color: @c_red;
+    font-size: 14px;
+    line-height: @lh_fussed;
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-bottom: 5px;
+
+      &--required {
+
+        &:after {
+        color: @c_red;
+        content: "  *";
+        }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.main-nav {
+  .gorizontal_centered;
+  display: none;
+  position: fixed;
+  z-index: @z_over_plus;
+  width: 100%;
+  min-width: 320px;
+  max-width: 830px;
+
+  &__list {
+    .list_style_kill;
+  }
+
+  &__item {
+    height: 66px;
+    background-color: @c_dark;
+    text-align: center;
+    border-top: 1px solid #495562;
+    border-bottom: 1px solid #030303;
+  }
+  &__link {
+    .link_style_kill;
+    color: @c_white;
+    text-transform: uppercase;
+    line-height: 66px;
+    padding: 0 20px;
+
+    &:hover {
+      color: @c_red;
+    }
+
+    &:active {
+      color: fade(@c_red, 30%);
+    }
+  }
+}

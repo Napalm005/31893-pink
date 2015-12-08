@@ -1,0 +1,63 @@
+.pagination {
+  .list_style_kill;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 42px;
+  font-size: 0;
+  font-weight: bold;
+  color: @c_dark;
+  margin-left: -8px;
+  text-align: center;
+
+
+  &__item {
+    .padding_margin_kill;
+    font-size: @fz_big;
+    line-height: 60px;
+    margin-left: 8px;
+    margin-bottom: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &--back {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__active {
+    display: block;
+    border: 2px solid @c_red;
+    width: 64px;
+  }
+
+  &__link {
+    .link_style_kill;
+    .form_field;
+    color: @c_dark;
+
+    &--prev {
+      min-width: 131px;
+    }
+
+    &--next {
+      min-width: 131px;
+    }
+
+    &--back {
+      width: 100%;
+    }
+
+
+    &:hover {
+      border-color: @c_dark;
+    }
+
+    &:active {
+      background: @c_dark;
+      color: @c_white;
+    }
+  }
+}
