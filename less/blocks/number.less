@@ -13,6 +13,7 @@
     .text_hide;
     .form_field;
     position: absolute;
+    background: #fff;
 
     &:hover {
       border-color: @c_dark;
@@ -74,6 +75,23 @@
     &--dark {
       background: @c_background;
       margin-bottom: 50px;
+    }
+  }
+
+
+
+  @media (min-width: 660px) {
+
+    &--bordered {
+      margin-top: 0;
+    }
+
+    &__input {
+
+      &--dark {
+        background: @c_background;
+        margin-bottom: 42px;
+      }
     }
   }
 }

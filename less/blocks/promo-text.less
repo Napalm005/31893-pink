@@ -3,4 +3,21 @@
   line-height: @lh_fussed;
   text-align: center;
   margin-top: 45px;
+  margin-bottom: 35px;
+
+
+
+
+
+
+  @media (min-width: 660px) {
+    font-size: @fz_big;
+    line-height: @lh_big-fussed;
+    padding: 0 30px;
+    margin-top: 93px;
+
+    &:after {
+      content: ' Пожалуйста, заполните форму ниже:'
+    }
+  }
 }

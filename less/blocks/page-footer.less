@@ -1,7 +1,7 @@
 .page-footer {
   .padding_margin_kill;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 46px;
   position: relative;
 
   &--index {
@@ -28,5 +28,24 @@
     right: 0;
     display: inline-block;
     vertical-align: middle;
+  }
+
+
+
+
+
+
+  @media (min-width: 660px) {
+    padding-bottom: 36px;
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__social {
+      margin-bottom: 0;
+    }
   }
 }

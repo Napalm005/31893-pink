@@ -1,12 +1,13 @@
 
 .photo-block {
+  padding-bottom: 10px;
 
   &__item {
     font-size: @fz_small;
     position: relative;
     display: inline-block;
     width: 68px;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
     margin-left: 35px;
     vertical-align: top;
 
@@ -14,6 +15,7 @@
       height: 0px;
       width: 68px;
       margin-left: 35px;
+      margin-bottom: 0;
     }
   }
 
@@ -79,6 +81,57 @@
       height: 2px;
       transform: rotate(45deg);
       background: fade(#333, 30%);
+    }
+  }
+
+
+
+
+  @media (min-width: 660px) {
+    padding-bottom: 0;
+
+    &__item {
+      font-size: 14px;
+      width: 120px;
+      margin-left: 68px;
+      margin-bottom: 0;
+      margin-top: 46px;
+
+
+      &--empty {
+        width: 120px;
+        margin-left: 68px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    &__row {
+      margin-left: -68px;
+    }
+
+
+    &__photo-wrap {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 9px;
+    }
+
+    &__cross {
+      top: -27.5px;
+      right: -27.5px;
+      width: 55px;
+      height: 55px;
+
+      &:before {
+        width: 26px;
+        height: 3px;
+      }
+
+      &:after {
+        width: 26px;
+        height: 3px;
+      }
     }
   }
 }

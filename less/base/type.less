@@ -28,8 +28,17 @@ body {
 
 .container {
   .container;
-}
 
+  &--mobile {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: 660px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
 
 .text-content {
   padding-bottom: 10px;
@@ -105,7 +114,6 @@ input {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  margin-bottom: 18px;
   padding: 15px 20px;
 
   font-size: @fz_big;
