@@ -19,7 +19,9 @@
     "gulp": "3.9.x",
     "gulp-less": "3.0.x",
     "gulp-plumber": "1.0.x",
-    "gulp-postcss": "6.0.x"
+    "gulp-postcss": "6.0.x",
+    "browser-sync": "^2.10.0",
+    "gulp-notify": "^2.2.0"
   },
   "scripts": {
     "pregosha": "npm install > /dev/null",
