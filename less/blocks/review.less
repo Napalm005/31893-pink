@@ -1,5 +1,7 @@
 .review {
   .padding_margin_kill;
+  padding-top: 43px;
+  padding-bottom: 86px;
   text-align: center;
 
   &__title {
@@ -15,5 +17,46 @@
   &__text {
   .padding_margin_kill;
   line-height: @lh_fussed;
+  }
+
+  &__person {
+    font-size: 14px;
+    line-height: @lh_fussed;
+    color: @c_dark;
+    font-weight: @fw_normal;
+
+    &--hidden-xs {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+  @media (min-width: 660px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 23px;
+    padding-bottom: 56px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 30/20;
+    }
+
+    &__person {
+
+      &--hidden-xs {
+        display: block;
+      }
+    }
+
+    &__text {
+      font-size: @fz_big;
+      line-height: @lh_big-fussed;
+      margin-bottom: 36px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .features {
 .padding_margin_kill;
-  padding-top: 83px;
+  padding-top: 42px;
 
   &__list {
     .list_style_kill;
@@ -12,12 +12,45 @@
       margin: 0 auto;
       bottom: 0;
       position: relative;
-      background: url('../img/phone.png') no-repeat 0 10px;
+      background: url('../img/screen-mobile-3.png') no-repeat 0 10px;
     }
   }
 
   &__item {
     vertical-align: top;
     margin-bottom: 30px;
+  }
+
+
+
+
+
+  @media (min-width: 660px) {
+    padding-top: 14px;
+
+    &__item {
+      vertical-align: top;
+      margin-bottom: 34px;
+    }
+
+    &__list {
+      margin-left: auto;
+      text-align: left;
+      width: 50%;
+      min-height: 412px;
+      padding-bottom: 7px;
+
+      &:after {
+        width: 268px;
+        height: 481px;
+        position: absolute;
+        left: 20px;
+        background: url('../img/iphone-screen-tablet-3@1x.png') no-repeat;
+      }
+    }
+
+    &__edge-features {
+      height: 50px;
+    }
   }
 }

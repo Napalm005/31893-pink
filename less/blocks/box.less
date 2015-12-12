@@ -1,7 +1,36 @@
 .box {
 
-  &--grey{
+  &--grey {
     background-color: @c_background;
   }
 
+  &--hidden-xs {
+    display: none;
+  }
+
+  &--visible-xs {
+    display: block;
+  }
+
+
+
+
+
+  @media (min-width: 660px) {
+    &__edge-features {
+      height: 50px;
+    }
+
+    &__edge-tarif {
+      height: 50px;
+    }
+
+    &--hidden-xs {
+      display: block;
+    }
+
+    &--visible-xs {
+      display: none;
+    }
+  }
 }

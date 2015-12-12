@@ -1,0 +1,53 @@
+.profit {
+  .padding_margin_kill;
+
+  &__block {
+    padding: 100px 0;
+    margin-left: auto;
+    text-align: left;
+    width: 50%;
+  }
+
+  &__title {
+    .padding_margin_kill;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 34/30;
+    font-weight: @fw_bold;
+
+    &:after {
+    content: '24';
+    padding-top: 30px;
+    padding-right: 39px;
+    padding-bottom: 43px;
+    padding-left: 36px;
+    font-size: 104.6px;
+    border: 11px solid @c_red;
+    border-radius: 50%;
+    position: absolute;
+    left: 43px;
+    top: 122px;
+    color: @c_red;
+    }
+  }
+
+  &__text {
+    .padding_margin_kill;
+    line-height: @lh_text;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    color: @c_red;
+  }
+
+  &__timer {
+    position: absolute;
+    left: 20px;
+    top: 36px;
+    fill: #dedede;
+    width: 263px;
+  }
+}
+

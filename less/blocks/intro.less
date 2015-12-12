@@ -1,23 +1,21 @@
 .intro {
   background-color: #2a3847;
-  background: url('../img/bg-intro.jpg') no-repeat center top;
+  background: url('../img/background-mobile@1x.jpg') no-repeat center top;
   padding-top: 94px;
   padding-bottom: 52px;
   text-align: center;
 
+  &__hand-mobile {
+    margin-left: -62px;
+    margin-top: 27px;
+    margin-bottom: -7px;
+  }
+
+
   &--index {
     position: relative;
-    padding-bottom: 315px;
+    padding-bottom: 0;
     padding-top: 83px;
-
-    &:after {
-      .after_before;
-      .gorizontal_centered;
-      background: url('../img/handle_with_phone.png') no-repeat;
-      width: 320px;
-      height: 286px;
-      bottom: 0px;
-    }
   }
 
   &--blog {
@@ -26,11 +24,11 @@
   }
 
   &__title {
-  .padding_margin_kill;
-  color: @c_white;
-  font-size: @fz_title;
-  line-height: 1.25;
-  font-weight: @fw_light;
+    .padding_margin_kill;
+    color: @c_white;
+    font-size: @fz_title;
+    line-height: 1.25;
+    font-weight: @fw_light;
   }
 
 
@@ -44,6 +42,22 @@
 
     &__title {
       font-size: 50px;
+
+      &--index-tablet {
+        font-size: 40px;
+        width: 300px;
+      }
+    }
+
+    &--index {
+      padding-top: 200px;
+      padding-bottom: 87px;
+    }
+
+    &__hand-mobile {
+      position: absolute;
+      right: -20px;
+      margin-top: -166px;
     }
   }
 }

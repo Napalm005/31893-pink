@@ -1,5 +1,7 @@
 .tarif {
   padding: 0 2px;
+  padding-top: 57px;
+  padding-bottom: 100px;
 
   &__table {
     width: 100%;
@@ -22,11 +24,11 @@
         margin-left: -2px;
       }
     }
+  }
 
-    & th {
-      padding: 16px 0;
-      background: @c_dark;
-    }
+  th {
+    padding: 16px 0;
+    background: @c_dark;
   }
 
   &__title {
@@ -45,15 +47,15 @@
     color: @c_white;
   }
 
-  & tr {
+  tr {
     background: #fff;
   }
 
-  & td {
+  td {
     line-height: 1.4;
     padding: 20px 22px;
     padding-right: 17px;
-    border-bottom: 2px solid @c_background;
+    border-bottom: 2px solid @c_border;
   }
 
   &__check {
@@ -96,5 +98,57 @@
     }
   }
 
+  @media (min-width: 660px) {
 
+    td {
+      border-left: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+      border-right: 2px solid #e5e5e5;
+      text-transform: none;
+      padding: 13px 12px;
+    }
+
+    th {
+      border-left: 2px solid #e5e5e5;
+      padding: 9px 0;
+      width: 25%;
+
+      &:first-child {
+        border: 2px solid #F2F2F2;
+        border-bottom: 2px solid #e5e5e5;
+        background: #F2F2F2;
+      }
+    }
+
+    .tarif__check {
+      margin: auto;
+    }
+
+    .tarif__non-check {
+      margin: 0 auto;
+      width: 27px;
+    }
+
+    &__title {
+      position: relative;
+      font-size: 16px;
+      line-height: 30/16;
+
+      &--new {
+        &:before {
+          .after_before;
+          position: absolute;
+          width: 74px;
+          height: 73px;
+          top: -9px;
+          background: url('../img/hit.png') no-repeat -4px -8px;
+        }
+      }
+    }
+
+    &__text {
+      font-size: @fz_big;
+      line-height: @lh_big-fussed;
+    }
+  }
 }
