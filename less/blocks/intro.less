@@ -16,6 +16,7 @@
     position: relative;
     padding-bottom: 0;
     padding-top: 83px;
+    margin-bottom: 40px;
   }
 
   &--blog {
@@ -29,6 +30,7 @@
     font-size: @fz_title;
     line-height: 1.25;
     font-weight: @fw_light;
+    max-height: 90px;
   }
 
 
@@ -46,18 +48,21 @@
       &--index-tablet {
         font-size: 40px;
         width: 300px;
+        max-height: 300px;
       }
     }
 
     &--index {
       padding-top: 200px;
-      padding-bottom: 87px;
+      margin-bottom: 46px;
+      height: 729px;
     }
 
     &__hand-mobile {
       position: absolute;
       right: -20px;
-      margin-top: -166px;
+      bottom: 0;
+      margin-bottom: 0;
     }
   }
 }
