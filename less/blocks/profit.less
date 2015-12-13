@@ -6,6 +6,22 @@
     margin-left: auto;
     text-align: left;
     width: 50%;
+
+    &:after {
+      content: '24';
+      padding-right: 40px;
+      padding-left: 36px;
+      font-size: 104.6px;
+      line-height: 185px;
+      font-weight: 700;
+      height: 214px;
+      border: 11px solid #d22856;
+      border-radius: 50%;
+      position: absolute;
+      left: 42px;
+      top: 122px;
+      color: #d22856;
+    }
   }
 
   &__title {
@@ -16,20 +32,7 @@
     line-height: 34/30;
     font-weight: @fw_bold;
 
-    &:after {
-    content: '24';
-    padding-top: 30px;
-    padding-right: 39px;
-    padding-bottom: 43px;
-    padding-left: 36px;
-    font-size: 104.6px;
-    border: 11px solid @c_red;
-    border-radius: 50%;
-    position: absolute;
-    left: 43px;
-    top: 122px;
-    color: @c_red;
-    }
+
   }
 
   &__text {
@@ -44,7 +47,7 @@
 
   &__timer {
     position: absolute;
-    left: 20px;
+    left: 18px;
     top: 36px;
     fill: #dedede;
     width: 263px;
