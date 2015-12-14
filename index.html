@@ -6,6 +6,11 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -149,9 +154,20 @@
             <h1 class="intro__title">Взгляните на&nbsp;жизнь иначе!</h1>
           </div>
         <picture>
-          <source media="(min-width:960px)" srcset="img/iphone-hand-desktop@1x.png">
-          <source media="(min-width:660px)" srcset="img/iphone-hand-tablet@1x.png">
-          <img class="intro__hand-mobile" src="img/iphone-hand-mobile.png" alt="Мобильный телефон в руке">
+          <source
+            media="(min-width:960px)"
+            srcset="img/iphone-hand-desktop@1x.png 1x,
+                    img/iphone-hand-desktop@2x.png 2x">
+          <source
+            media="(min-width:660px)"
+            srcset="img/iphone-hand-tablet@1x.png 1x,
+                    img/iphone-hand-tablet@2x.png 2x">
+          <source
+            srcset="img/iphone-hand-mobile.png 1x,
+                    img/iphone-hand-mobile@2x.png 2x">
+          <img class="intro__hand-mobile"
+            src="img/iphone-hand-mobile.png 1x"
+            alt="Мобильный телефон в руке">
         </picture>
         <section class="app">
           <div class="container">
