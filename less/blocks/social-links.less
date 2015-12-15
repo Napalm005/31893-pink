@@ -1,6 +1,7 @@
 .social-links {
   .list_style_kill;
   text-align: center;
+  margin-left: -10px;
 
   &__item {
     margin-left: 10px;
@@ -13,10 +14,6 @@
     text-align: center;
     background-color: #fff;
   }
-
-  &__item:nth-child(3n-2) {
-    margin-left: 0;
-}
 
   &__link {
     .link_style_kill;
@@ -67,6 +64,18 @@
         height: 14px;
         background: url("../img/icon-youtube.png") no-repeat center;
       }
+    }
+  }
+
+
+
+
+
+  @media (min-width: 660px) {
+    margin-left: -23px;
+
+    &__item {
+      margin-left: 7px;
     }
   }
 }

@@ -2,10 +2,32 @@
   font-style: normal;
 
   &__title {
+    .padding_margin_kill;
     font-size: @fz_title;
     line-height: 1.25;
     font-weight: @fw_light;
     margin-bottom: 33px;
     text-align: center;
+  }
+
+
+
+
+  @media (min-width: 660px) {
+
+    &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 242px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 1.25;
+      padding: 0 100px;
+      margin-bottom: 20px;
+    }
   }
 }

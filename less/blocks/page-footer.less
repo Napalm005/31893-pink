@@ -9,7 +9,7 @@
     font-weight: @fw_light;
     font-style: normal;
     padding-top: 25px;
-    padding-bottom: 14px;
+    padding-bottom: 0;
   }
 
   &__social {
@@ -40,14 +40,25 @@
   @media (min-width: 660px) {
     padding-bottom: 36px;
 
+    &--index {
+      padding-top: 44px;
+      padding-bottom: 0;
+    }
+
     &__block {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 39px 0;
     }
 
     &__social {
       margin-bottom: 0;
+    }
+
+    &__developer {
+      font-size: 14px;
+      padding-right: 45px;
     }
   }
 }
