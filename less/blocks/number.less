@@ -1,6 +1,7 @@
 .number {
-  padding: 0 64px;
   position: relative;
+  display: flex;
+  width: 100%;
 
   &--bordered {
     margin-top: -5px;
@@ -12,7 +13,7 @@
     .padding_margin_kill;
     .text_hide;
     .form_field;
-    position: absolute;
+    position: relative;
     background: #fff;
 
     &:hover {
@@ -24,7 +25,6 @@
     }
 
     &--minus {
-      left: 0;
 
       &:after {
         .after_before;
@@ -42,7 +42,6 @@
     }
 
     &--plus {
-      right: 0;
 
       &:before {
         .after_before;
@@ -68,6 +67,7 @@
 
   &__input {
     width: 100%;
+    flex-grow: 1;
     text-align: center;
     border-left: none;
     border-right: none;
@@ -84,6 +84,7 @@
 
     &--bordered {
       margin-top: 0;
+      margin-bottom: 27px;
     }
 
     &__input {
@@ -91,6 +92,8 @@
       &--dark {
         background: @c_background;
         margin-bottom: 42px;
+        width: 122px;
+        flex-grow: 0;
       }
     }
   }

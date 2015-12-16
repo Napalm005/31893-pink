@@ -64,6 +64,7 @@
 
 
   @media (min-width: 660px) {
+    padding-bottom: 16px;
 
     &__right {
       display: flex;
@@ -73,26 +74,29 @@
 
     &__delete {
       display: inline-block;
-      float: right;
+      position: absolute;
+      right: 0;
       text-decoration: none;
       color: @c_dark;
-      line-height: @lh_fussed;
+      line-height: 1.2;
       text-transform: uppercase;
       font-size: 14px;
-      margin-top: 17px;
+      margin-top: 23px;
+      max-width: 96px;
+      text-align: right;
     }
 
     &__input-block {
       display: inline-block;
       vertical-align: top;
       width: 100%;
-      margin-left: 4%;
+      margin-left: 20px;
       margin-bottom: 18px;
+      padding-right: 117px;
       font-size: 0;
     }
 
     &__input-text {
-      width: 72%;
       border-left: 2px solid @c_border;
     }
   }
