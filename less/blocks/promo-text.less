@@ -5,8 +5,12 @@
   margin-top: 45px;
   margin-bottom: 35px;
 
+  &__add {
 
-
+    &--hidden-mobile {
+      display: none;
+    }
+  }
 
 
 
@@ -16,8 +20,11 @@
     padding: 0 30px;
     margin-top: 93px;
 
-    &:after {
-      content: ' Пожалуйста, заполните форму ниже:'
+    &__add {
+
+      &--hidden-mobile {
+        display: inline;
+      }
     }
   }
 }
