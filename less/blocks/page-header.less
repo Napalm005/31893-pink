@@ -1,22 +1,33 @@
 .page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 111;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__top {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 21px 0;
-    position: fixed;
-    z-index: @z_over;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    &--c_dark {
+      background: @c_dark;
+      border-bottom: 1px solid #030303;
+    }
   }
 
   &__toggler {
     .padding_margin_kill;
     width:50px;
     height: 24px;
-    float: right;
-    border: 0;
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    margin: 10px 0;
 
     > span {
       display: block;
@@ -78,7 +89,8 @@
   @media (min-width: 660px) {
 
     &__top {
-      padding: 43px 0;
+      padding-top: 33px;
+      padding-bottom: 33px;
     }
   }
 }
