@@ -20,6 +20,7 @@
   &--index {
     position: relative;
     padding-bottom: 0;
+    background-color: #2a3847;
     padding-top: 83px;
     margin-bottom: 40px;
   }
@@ -31,23 +32,22 @@
 
   &__title {
     .padding_margin_kill;
+    padding: 0 20px;
     color: @c_white;
     font-size: @fz_title;
     line-height: 1.25;
     font-weight: @fw_light;
-    max-height: 90px;
   }
 
 
 
 
 
-  @media (min-width: 660px) {
+  @media @tablet {
     background-color: #2a3847;
     background-image: url('../img/background-tablet@1x.jpg');
     background-size: 1200px auto;
     padding-top: 177px;
-    padding-bottom: 173px;
 
     @media (min-resolution: 1.5dppx) {
       background-image: url('../img/background-tablet@2x.jpg');
@@ -59,21 +59,22 @@
 
     &--index {
       padding-top: 200px;
+      padding-bottom: 79px;
       margin-bottom: 46px;
-      height: 729px;
+      z-index: @z_base;
 
       .intro__title {
       font-size: 40px;
       width: 300px;
-      max-height: 300px;
       }
     }
 
     &__hand-mobile {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -79px;
       margin-bottom: 0;
+      z-index: -1;
     }
   }
 }
