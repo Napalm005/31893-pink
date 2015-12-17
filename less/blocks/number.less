@@ -23,6 +23,11 @@
 
     &:active {
       background: @c_dark;
+
+      &:after,
+      &:before {
+        background: #fff;
+      }
     }
 
     &--minus {
@@ -35,10 +40,6 @@
         position: absolute;
         top: 30px;
         left: 30%;
-
-        &:active {
-          background: @c_white;
-        }
       }
     }
 

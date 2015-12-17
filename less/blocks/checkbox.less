@@ -32,10 +32,19 @@
       transform: rotate(-45deg);
       margin-left: auto;
 
+
       @media @tablet {
         top: 10px;
         left: 7px;
       }
+    }
+
+    &:hover ~ .checkbox__indicator {
+      border-color: @c_dark;
+    }
+
+    &:active ~ .checkbox__indicator {
+      border-color: @c_red;
     }
   }
 
@@ -53,6 +62,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    &:hover {
+      border-color: @c_dark;
+    }
+
+    &:active {
+      border-color: @c_red;
+    }
   }
 
   @media @tablet {

@@ -16,6 +16,16 @@
 
   &__delete {
     display: none;
+
+    &:hover {
+      color: @c_red;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @c_red;
+      opacity: .3;
+    }
   }
 
   &__input-block {

@@ -29,6 +29,7 @@
     cursor: pointer;
     margin: 10px 0;
 
+
     > span {
       display: block;
       vertical-align: bottom;
@@ -37,6 +38,22 @@
       background: #fff;
       position: relative;
       transition: background .3s .5s;
+
+      &:hover {
+        background: @c_red;
+
+        &:before,
+        &:after {
+          background: @c_red;
+        }
+      }
+
+      &:active {
+        &:before,
+        &:after {
+          background: @c_red;
+        }
+      }
 
       &:before,
       &:after {
