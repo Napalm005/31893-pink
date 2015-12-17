@@ -57,10 +57,20 @@
 
     &:hover {
       border-color: @c_dark;
+
+      &:before,
+      &:after {
+        background: #333;
+      }
     }
 
     &:active {
       background: @c_dark;
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
     }
 
     &:before {
