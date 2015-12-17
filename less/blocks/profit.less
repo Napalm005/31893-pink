@@ -1,28 +1,9 @@
 .profit {
   .padding_margin_kill;
-
-  &__block {
-    padding: 100px 0;
-    margin-left: auto;
-    text-align: left;
-    width: 50%;
-
-    &:after {
-      content: '24';
-      padding-right: 40px;
-      padding-left: 36px;
-      font-size: 104.6px;
-      line-height: 185px;
-      font-weight: 700;
-      height: 214px;
-      border: 11px solid #d22856;
-      border-radius: 50%;
-      position: absolute;
-      left: 42px;
-      top: 122px;
-      color: #d22856;
-    }
-  }
+  padding: 100px 0;
+  margin-left: auto;
+  text-align: left;
+  width: 50%;
 
   &__title {
     .padding_margin_kill;
@@ -31,8 +12,7 @@
     font-size: 30px;
     line-height: 34/30;
     font-weight: @fw_bold;
-
-
+    padding-right: 100px
   }
 
   &__text {
@@ -51,6 +31,25 @@
     top: 36px;
     fill: #dedede;
     width: 263px;
+  }
+
+  &__timer-wrap {
+
+    &:after {
+      content: '24';
+      padding-right: 40px;
+      padding-left: 36px;
+      font-size: 104.6px;
+      line-height: 185px;
+      font-weight: 700;
+      height: 214px;
+      border: 11px solid #d22856;
+      border-radius: 50%;
+      position: absolute;
+      left: 42px;
+      top: 122px;
+      color: #d22856;
+    }
   }
 }
 
