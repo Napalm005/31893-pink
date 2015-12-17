@@ -35,6 +35,7 @@
   &__figure {
     .padding_margin_kill;
     .form_field;
+    border-right: none;
     display: block;
     background: @c_background;
     position: relative;
@@ -86,6 +87,10 @@
       text-align: right;
     }
 
+    &__figure {
+      border-right: 2px solid @c_border;
+    }
+
     &__input-block {
       display: inline-block;
       vertical-align: top;
@@ -94,10 +99,6 @@
       margin-bottom: 18px;
       padding-right: 117px;
       font-size: 0;
-    }
-
-    &__input-text {
-      border-left: 2px solid @c_border;
     }
   }
 }

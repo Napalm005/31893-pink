@@ -144,6 +144,10 @@ input {
   &:focus {
     border-color: @c_red;
   }
+
+  &[disabled] {
+    border: 2px solid #e5e5e5;
+  }
 }
 
 ::-webkit-input-placeholder {color:#283645; opacity: 1; transition: opacity 0.3s ease;}
