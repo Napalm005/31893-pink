@@ -1,14 +1,17 @@
 .checkbox {
-  font-size: @fz_big;
-  position: relative;
-  padding-left: 60px;
-  cursor: pointer;
+
+  &__item {
+    font-size: @fz_big;
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+  }
 
 
   &__wrap {
     margin-top: 47.5px;
 
-    &:last-child {
+    &--diff-padding {
       margin-bottom: 24px;
     }
   }
@@ -77,9 +80,21 @@
       margin-top: 15px;
       margin-bottom: 48px;
 
-      &:last-child {
+      &--diff-padding {
         margin-bottom: 11px;
       }
+    }
+  }
+
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__wrap {
+      width: 100%;
+      margin-bottom: 46px;
     }
   }
 }

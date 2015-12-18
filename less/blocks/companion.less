@@ -111,4 +111,43 @@
       font-size: 0;
     }
   }
+
+
+
+
+
+
+  @media @desktop {
+    padding-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 44px;
+    }
+
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+
+    &__delete {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      color: @c_dark;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 23px;
+      max-width: 96px;
+      text-align: right;
+    }
+
+    &__input-block {
+      width: 300px;
+      padding-right: 0;
+      margin-bottom: 6px;
+    }
+  }
 }

@@ -192,26 +192,32 @@
               <h3 class="form__legend  form__legend--required">С&nbsp;каким приложением путешествовали?</h3>
             </div>
             <div class="radio">
-              <div class="radio__wrap">
-                <label class="radio__item" for="radio1">
-                  <input type="radio" name="app" id="radio1" checked>
-                  <span class="radio__indicator"></span>
-                  Pink для iOS
-                </label>
+              <div class="radio__group">
+                <div class="radio__wrap">
+                  <label class="radio__item" for="radio1">
+                    <input type="radio" name="app" id="radio1" checked>
+                    <span class="radio__indicator"></span>
+                    Pink для iOS
+                  </label>
+                </div>
               </div>
-              <div class="radio__wrap">
-                <label class="radio__item" for="radio2">
-                  <input type="radio" name="app" id="radio2">
-                  <span class="radio__indicator"></span>
-                  Pink на Android
-                </label>
+              <div class="radio__group">
+                <div class="radio__wrap">
+                  <label class="radio__item" for="radio2">
+                    <input type="radio" name="app" id="radio2">
+                    <span class="radio__indicator"></span>
+                    Pink на Android
+                  </label>
+                </div>
               </div>
-              <div class="radio__wrap">
-                <label class="radio__item" for="radio3">
-                  <input type="radio" name="app" id="radio3">
-                  <span class="radio__indicator"></span>
-                  Windows Phone
-                </label>
+              <div class="radio__group">
+                <div class="radio__wrap  radio__wrap--diff-margin">
+                  <label class="radio__item" for="radio3">
+                    <input type="radio" name="app" id="radio3">
+                    <span class="radio__indicator"></span>
+                    Windows Phone
+                  </label>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -291,47 +297,55 @@
             <div class="form__legend-wrap">
               <h3 class="form__legend">Ваши безбашенные достижения в&nbsp;путешествии</h3>
             </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="selfy" id="selfy" checked>
-                <span class="checkbox__indicator"></span>
-                Сделал селфи с акулой
-              </label>
-            </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="burned" id="seburnedlfy" checked>
-                <span class="checkbox__indicator"></span>
-                Обгорел на пляже
-              </label>
-            </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="Chak" id="Chak">
-                <span class="checkbox__indicator"></span>
-                Видел Чака Норриса
-              </label>
-            </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="bay" id="bay">
-                <span class="checkbox__indicator"></span>
-                Накупил сувениров
-              </label>
-            </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="tower" id="tower" checked>
-                <span class="checkbox__indicator"></span>
-                Удержал башню
-              </label>
-            </div>
-            <div class="checkbox__wrap">
-              <label class="checkbox">
-                <input type="checkbox" name="hotel" id="hotel">
-                <span class="checkbox__indicator"></span>
-                Разгромил отель
-              </label>
+            <div class="checkbox">
+              <div class="chekbox__group">
+                <div class="checkbox__wrap">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="selfy" id="selfy" checked>
+                    <span class="checkbox__indicator"></span>
+                    Сделал селфи с акулой
+                  </label>
+                </div>
+                <div class="checkbox__wrap">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="burned" id="seburnedlfy" checked>
+                    <span class="checkbox__indicator"></span>
+                    Обгорел на пляже
+                  </label>
+                </div>
+              </div>
+              <div class="chekbox__group">
+                <div class="checkbox__wrap">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="Chak" id="Chak">
+                    <span class="checkbox__indicator"></span>
+                    Видел Чака Норриса
+                  </label>
+                </div>
+                <div class="checkbox__wrap">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="bay" id="bay">
+                    <span class="checkbox__indicator"></span>
+                    Накупил сувениров
+                  </label>
+                </div>
+              </div>
+              <div class="chekbox__group">
+                <div class="checkbox__wrap">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="tower" id="tower" checked>
+                    <span class="checkbox__indicator"></span>
+                    Удержал башню
+                  </label>
+                </div>
+                <div class="checkbox__wrap  checkbox__wrap--diff-padding">
+                  <label class="checkbox__item">
+                    <input type="checkbox" name="hotel" id="hotel">
+                    <span class="checkbox__indicator"></span>
+                    Разгромил отель
+                  </label>
+                </div>
+              </div>
             </div>
           </fieldset>
 
@@ -416,7 +430,7 @@
 
           <div class="form__submit-block">
             <input class="form__submit" type="submit" value="Отправить форму">
-            <div class="form__text-muted"><span class="form__required"></span> &mdash; обязательные поля</div>
+            <div class="form__text-muted"><span class="form__required"></span> &mdash; обязательные <span class="form__text-muted form__text-muted--desk-visible">для заполнения</span> поля</div>
           </div>
         </div>
       </form>

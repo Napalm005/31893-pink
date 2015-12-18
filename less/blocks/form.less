@@ -149,6 +149,10 @@
     text-align: center;
     text-transform: uppercase;
     line-height: @lh_fussed;
+
+    &--desk-visible {
+      display: none;
+    }
   }
 
   &__submit-block {
@@ -269,14 +273,22 @@
 
 
   @media @desktop {
-    margin-bottom: 64px;
+    margin-bottom: 0;
 
     &__fieldset {
       padding: 39px 58px;
       margin-bottom: 65px;
 
+      &--non-standart {
+        padding-bottom: 13px;
+      }
+
       &--padding-min {
         padding-bottom: 8px;
+      }
+
+      &--pb-not {
+      padding-bottom: 30px;
       }
     }
 
@@ -308,36 +320,17 @@
     &__text {
       padding-left: 23px;
       margin-bottom: 4px;
-
-      &--top {
-        margin-top: 12px;
-        text-align: left;
-      }
-
-      &--top-center {
-        padding-left: 0;
-        text-align: center;
-      }
-    }
-    &__submit-block {
-      padding-right: 0;
-      padding-left: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__submit {
-      margin: 0;
-      margin-bottom: 0;
-      min-width: 300px;
     }
 
     &__file-wrap {
-      padding-bottom: 41px;
-      margin-bottom: 19px;
-      margin-top: 0;
-      border-bottom: 2px solid #e5e5e5;
+      margin-bottom: 43px;
+    }
+
+    &__text-muted {
+
+      &--desk-visible {
+        display: inline;
+      }
     }
   }
 }
