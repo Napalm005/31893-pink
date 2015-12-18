@@ -4,7 +4,7 @@
   padding-top: 26px;
   padding-bottom: 30px;
 
-  &__title-link {
+  &__button {
     .link_style_kill;
     width: 280px;
     font-size: @fz_big;
@@ -79,12 +79,12 @@
 
 
 
-  @media (min-width: 660px) {
+  @media @tablet {
     background-color: transparent;
     margin-left: -20px;
     width: 320px;
 
-    &__title-link {
+    &__button {
       margin-bottom: 45px;
     }
 
@@ -97,6 +97,30 @@
       font-size: 18px;
       line-height: 24/18;
       width: 340px;
+    }
+  }
+
+
+
+
+  @media @desktop {
+    padding-top: 46px;
+    margin-left: -10px;
+    width: 320px;
+
+    &__button {
+      margin-bottom: 63px;
+      width: 300px;
+      font-size: 20px;
+    }
+
+    &__list {
+      margin-left: -33px;
+      margin-bottom: 44px;
+    }
+
+    &__text {
+      width: 320px;
     }
   }
 }

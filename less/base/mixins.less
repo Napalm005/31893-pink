@@ -31,6 +31,13 @@
   }
 }
 
+.clearfix {
+  .clearfix;
+}
+
+
+
+
 .after_before() {
   content: '';
   display: block;
@@ -40,11 +47,45 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-left: @tablet_offset;
-  padding-right: @tablet_offset;
+  padding-left: @mobile_offset;
+  padding-right: @mobile_offset;
   max-width: 960px;
   min-width: @container_min;
 }
+
+.container {
+  .container;
+
+  &--hidden-mobile {
+    display: none;
+  }
+
+  &--padding_0 {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media @tablet {
+      padding-left: @tablet_offset;
+      padding-right: @tablet_offset;
+    }
+  }
+
+  @media @tablet {
+
+    &--hidden-mobile {
+      display: block;
+    }
+  }
+
+
+
+  @media @desktop {
+    padding-left: @desktop_offset;
+    padding-right: @desktop_offset;
+  }
+}
+
+
 
 .text_hider() {
   text-indent: 100%;
