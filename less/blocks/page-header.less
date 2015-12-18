@@ -39,6 +39,16 @@
       }
     }
 
+    &:active > span {
+      background-color: fade(@c_red, 30%);
+
+      &:before,
+      &:after {
+        background-color: fade(@c_red, 30%);
+        transition: all .3s 0s;
+      }
+    }
+
     > span {
       display: block;
       vertical-align: bottom;
@@ -78,6 +88,8 @@
       > span {
         transition: background .3s 0s;
         background: transparent;
+        width: 70%;
+        margin-left: auto;
 
         &:before,
         &:after {
@@ -106,6 +118,29 @@
     &__top {
       padding-top: 33px;
       padding-bottom: 33px;
+    }
+  }
+
+
+
+
+
+  @media @desktop {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__toggler {
+      display: none;
+    }
+
+    &__top {
+
+      &--c_dark {
+        background: transparent;
+        border-bottom: none;
+      }
     }
   }
 }

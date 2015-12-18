@@ -13,6 +13,7 @@
     border-top: 1px solid #495562;
     border-bottom: 1px solid #030303;
   }
+
   &__link {
     .link_style_kill;
     color: @c_white;
@@ -31,5 +32,22 @@
 
   &--show {
     display: block;
+  }
+
+
+
+
+  @media @desktop {
+    display: block;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      background-color: transparent;
+      border-top: none;
+      border-bottom: none;
+    }
   }
 }
