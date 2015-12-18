@@ -1,6 +1,10 @@
 .feature {
   text-align: center;
 
+  &__mobile {
+    display: none;
+  }
+
   &__title {
     .padding_margin_kill;
     color: #000;
@@ -20,5 +24,29 @@
 
   @media @tablet {
     text-align: left;
+  }
+
+
+  @media @desktop {
+    text-align: center;
+    width: 292px;
+
+    &__title {
+      margin-bottom: 25px;
+      padding: 0 30px;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 30/18;
+      padding: 0 25px;
+    }
+
+    &__mobile {
+      margin-bottom: 58px;
+      display: block;
+    }
   }
 }

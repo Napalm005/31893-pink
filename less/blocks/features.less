@@ -46,9 +46,34 @@
         background: url('../img/iphone-screen-tablet-3@1x.png') no-repeat;
       }
     }
+  }
 
-    &__edge-features {
-      height: 50px;
+
+
+
+  @media @desktop {
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__item {
+      vertical-align: top;
+      margin-bottom: 34px;
+    }
+
+    &__list {
+      margin-left: 0;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      margin-top: -110px;
+
+      &:after {
+        display: none;
+      }
     }
   }
 }

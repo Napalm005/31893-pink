@@ -6,6 +6,10 @@
   padding-bottom: 86px;
   text-align: center;
 
+  &__quotes {
+    display: none;
+  }
+
   &__title {
     font-size: @fz_big;
     font-weight: @fw_bold;
@@ -58,6 +62,33 @@
       font-size: @fz_big;
       line-height: @lh_big-fussed;
       margin-bottom: 36px;
+    }
+  }
+
+
+
+  @media @desktop {
+    padding-top: 66px;
+    padding-bottom: 30px;
+
+    &__quotes {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 49px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 30/24;
+    }
+
+    &__person {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    &__text {
+      padding: 0px 100px;
     }
   }
 }

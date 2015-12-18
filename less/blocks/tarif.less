@@ -154,4 +154,40 @@
       line-height: @lh_big-fussed;
     }
   }
+
+
+
+
+
+  @media @desktop {
+    padding-top: 59px;
+    padding-bottom: 93px;
+
+    td {
+      font-size: 18px;
+      padding: 18px 21px;
+    }
+
+    th {
+      padding: 20px 0;
+    }
+
+    &__title {
+      position: relative;
+      font-size: 18px;
+      line-height: 30/18;
+
+      &--new {
+        &:before {
+          top: -20px;
+          background-position: 0 0;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 30/24;
+    }
+  }
 }
