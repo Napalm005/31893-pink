@@ -23,7 +23,7 @@
   }
 
   &__wrap {
-    padding: 45px 20px;
+    padding: 40px 20px;
     background: #fff;
 
     &--padding-bottom_0 {
@@ -40,7 +40,46 @@
 
 
   @media @tablet {
-    min-width: 300px;
+    width: 460px;
+    margin-left: -230px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 40/30;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 24/18;
+    }
+
+    &__wrap {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+  }
+
+
+
+
+  @media @desktop {
+    width: 460px;
+    margin-left: -230px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 40/30;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 24/18;
+    }
+
+    &__wrap {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
   }
 }
 
