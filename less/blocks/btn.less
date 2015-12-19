@@ -1,0 +1,31 @@
+.btn {
+  .form_field;
+  color: @c_white;
+  display: block;
+  margin: 0 auto;
+  min-width: 280px;
+  background: #2aab6d;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: fade(@c_white, 30%);
+  }
+
+  &:disabled {
+    background-color: @c_border;
+  }
+
+
+
+
+  @media @tablet {
+    min-width: 300px;
+  }
+}
