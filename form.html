@@ -579,6 +579,31 @@
     </div>
 
 
+    <script>
+      var toggler = document.querySelector(".page-header__toggler");
+      var menu = document.querySelector(".main-nav");
+      var menu_top = document.querySelector(".page-header__top");
+      var popup = document.querySelector(".popup");
+      var popup_close = popup.querySelector(".btn");
+      var form_send = document.querySelector(".form__submit");
 
+      toggler.addEventListener("click", function(event) {
+        event.preventDefault();
+        menu.classList.toggle("main-nav--show");
+        menu_top.classList.toggle("page-header__top--c_dark");
+        toggler.classList.toggle('page-header__toggler--close');
+      });
+
+      form_send.addEventListener('click', function(event) {
+        event.preventDefault();
+        popup.classList.add('popup--show');
+      });
+
+      popup_close.addEventListener('click', function(event) {
+        event.preventDefault();
+        popup.classList.remove('popup--show');
+      });
+
+    </script>
   </body>
 </html>
