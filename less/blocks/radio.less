@@ -5,6 +5,8 @@
     position: relative;
     padding-left: 60px;
     cursor: pointer;
+
+
   }
 
   &__wrap {
@@ -36,6 +38,14 @@
       left: 10px;
     }
 
+    &:checked ~ .radio__indicator:active {
+      border-color: @c_red;
+    }
+
+    &:not(checked) ~ .radio__indicator:active {
+      border-color: @c_red;
+    }
+
     &:hover ~ .radio__indicator {
       border-color: @c_dark;
     }
@@ -60,14 +70,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    &:hover {
-      border-color: @c_dark;
-    }
-
-    &:active {
-      border-color: @c_red;
-    }
   }
 
 

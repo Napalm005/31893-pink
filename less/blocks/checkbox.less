@@ -20,6 +20,22 @@
     .input_hider;
     width: 0;
 
+    &:checked ~ .checkbox__indicator:active {
+      border-color: @c_red;
+    }
+
+    &:not(checked) ~ .checkbox__indicator:active {
+      border-color: @c_red;
+    }
+
+    &:hover ~ .checkbox__indicator {
+      border-color: @c_dark;
+    }
+
+    &:active ~ .checkbox__indicator {
+      border-color: @c_red;
+    }
+
     &:checked ~ .checkbox__indicator:after {
       .text_hide;
       content: '';
@@ -36,18 +52,12 @@
       margin-left: auto;
 
 
+
+
       @media @tablet {
         top: 10px;
         left: 7px;
       }
-    }
-
-    &:hover ~ .checkbox__indicator {
-      border-color: @c_dark;
-    }
-
-    &:active ~ .checkbox__indicator {
-      border-color: @c_red;
     }
   }
 
