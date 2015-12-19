@@ -142,7 +142,7 @@
               </g>
             </svg>
           </a>
-          <button class="page-header__toggler" id="toggler" title="toggle-menu"><span></span></button>
+          <button class="page-header__toggler" id="toggler" type="button" title="toggle-menu"><span></span></button>
         </div>
       </div>
       <nav class="main-nav">
@@ -234,7 +234,7 @@
               </div>
               <div class="form__input-block  form__input-block--margin_big">
                 <div class="number">
-                  <button class="number__button  number__button--minus">-</button><input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" readonly><button class="number__button number__button--plus">+</button>
+                  <button class="number__button  number__button--minus" type="button">-</button><input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" readonly><button class="number__button number__button--plus" type="button">+</button>
                 </div>
                 <label class="form__text  form__text--top  form__text--top-center" for="number__input-1">Продолжительность</label>
               </div>
@@ -254,7 +254,7 @@
             </div>
 
             <div class="number  number--bordered">
-              <button class="number__button number__button--minus">-</button><input name="input-duration-2" class="number__input number__input--dark" id="INPUTDURATION-2" type="text" value="2 чел" readonly><button class="number__button  number__button--plus">+</button>
+              <button class="number__button number__button--minus" type="button">-</button><input name="input-duration-2" class="number__input number__input--dark" id="INPUTDURATION-2" type="text" value="2 чел" readonly><button class="number__button  number__button--plus" type="button">+</button>
             </div>
 
             <div class="companion">
@@ -366,56 +366,56 @@
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/400/300" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-1.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/500/400" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-2.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/500/300" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-3.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/400/400" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-4.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/500/600" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-5.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/600/300" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-6.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/300/300" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-7.JPG
                 </div>
                 <div class="photo-block__item">
                   <div class="photo-block__photo-wrap">
                     <img class="photo-block__photo" src="http://placebear.com/500/500" alt="фото">
                   </div>
-                  <button class="photo-block__cross" title="cross-photo">&#10006;</button>
+                  <button class="photo-block__cross" type="button" title="cross-photo">&#10006;</button>
                   IMG-8.JPG
                 </div>
                 <div class="photo-block__item  photo-block__item--empty"></div>
@@ -564,7 +564,7 @@
         <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
       </div>
       <div class="popup__wrap">
-        <button class="btn">Ok</button>
+        <button type="button" class="btn">Ok</button>
       </div>
     </div>
 
@@ -574,7 +574,7 @@
         <p class="popup__text">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее и&nbsp;оповестим&nbsp;вас.</p>
       </div>
       <div class="popup__wrap  popup__wrap--grey">
-        <button class="btn  btn--long">Закрыть окно</button>
+        <button type="button" class="btn  btn--long">Закрыть окно</button>
       </div>
     </div>
 
@@ -603,7 +603,6 @@
         event.preventDefault();
         popup.classList.remove('popup--show');
       });
-
     </script>
   </body>
 </html>
