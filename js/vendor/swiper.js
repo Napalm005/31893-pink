@@ -1,17 +1,4 @@
-/**
- * Swiper 3.2.7
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- *
- * http://www.idangero.us/swiper/
- *
- * Copyright 2015, Vladimir Kharlampidi
- * The iDangero.us
- * http://www.idangero.us/
- *
- * Licensed under MIT
- *
- * Released on: December 7, 2015
- */
+
 (function () {
     'use strict';
     var $;
@@ -2728,7 +2715,6 @@
                     };
                 })();
             },
-            //xxx: for now i will just save one spline function to to
             getInterpolateFunction: function(c){
                 if(!s.controller.spline) s.controller.spline = s.params.loop ?
                     new s.controller.LinearSpline(s.slidesGrid, c.slidesGrid) :
@@ -2738,15 +2724,10 @@
                var controlled = s.params.control;
                var multiplier, controlledTranslate;
                function setControlledTranslate(c) {
-                    // this will create an Interpolate function based on the snapGrids
-                    // x is the Grid of the scrolled scroller and y will be the controlled scroller
-                    // it makes sense to create this only once and recall it for the interpolation
-                    // the function does a lot of value caching for performance
+
                     translate = c.rtl && c.params.direction === 'horizontal' ? -s.translate : s.translate;
                     if (s.params.controlBy === 'slide') {
                         s.controller.getInterpolateFunction(c);
-                        // i am not sure why the values have to be multiplicated this way, tried to invert the snapGrid
-                        // but it did not work out
                         controlledTranslate = -s.controller.spline.interpolate(-translate);
                     }
 
@@ -4147,9 +4128,6 @@
     	domLib = Dom7;
     }
 
-    /*===========================
-    Add .swiper plugin from Dom libraries
-    ===========================*/
     function addLibraryPlugin(lib) {
         lib.fn.swiper = function (params) {
             var firstInstance;
