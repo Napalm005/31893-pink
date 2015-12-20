@@ -175,7 +175,7 @@
               srcset="img/iphone-hand-mobile.png 1x,
                       img/iphone-hand-mobile@2x.png 2x">
             <img class="intro__hand-mobile"
-              src="img/iphone-hand-mobile.png 1x"
+              srcset="img/iphone-hand-mobile.png 1x"
               alt="Мобильный телефон в руке">
           </picture>
           <div class="app">
@@ -213,30 +213,33 @@
             <ul class="features__list">
               <li class="features__item  feature">
                 <picture>
-                  <img  class="feature__mobile" width="292" height="302"
-                        srcset="img/iphone-screen-desktop-1@1x.png 1x,
-                                img/iphone-screen-desktop-1@2x.png 2x"
-                        alt="Мобильный телефон">
+                  <source srcset="img/iphone-screen-desktop-1@1x.png 1x,
+                                  img/iphone-screen-desktop-1@2x.png 2x"
+                          media="(min-width: 960px)">
+                  <img class="feature__mobile" width="292" height="302"
+                  srcset="data:image/gifbase64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Мобильный телефон">
                 </picture>
                 <h2 class="feature__title">Поднимает настроение</h2>
                 <p class="feature__text">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в&nbsp;несколько кликов!</p>
               </li>
               <li class="features__item  feature">
                 <picture>
-                  <img  class="feature__mobile" width="292" height="302"
-                        srcset="img/iphone-screen-desktop-2@1x.png 1x,
-                                img/iphone-screen-desktop-2@2x.png 2x"
-                        alt="Мобильный телефон">
+                  <source srcset="img/iphone-screen-desktop-2@1x.png 1x,
+                                  img/iphone-screen-desktop-2@2x.png 2x"
+                          media="(min-width: 960px)">
+                  <img class="feature__mobile" width="292" height="302"
+                  srcset="data:image/gifbase64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Мобильный телефон">
                 </picture>
                 <h2 class="feature__title">Меняет мир вокруг</h2>
                 <p class="feature__text">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
               <li class="features__item  feature">
                 <picture>
-                  <img  class="feature__mobile" width="292" height="302"
-                        srcset="img/iphone-screen-desktop-3@1x.png 1x,
-                                img/iphone-screen-desktop-3@2x.png 2x"
-                        alt="Мобильный телефон">
+                  <source srcset="img/iphone-screen-desktop-3@1x.png 1x,
+                                  img/iphone-screen-desktop-3@2x.png 2x"
+                          media="(min-width: 960px)">
+                  <img class="feature__mobile" width="292" height="302"
+                  srcset="data:image/gifbase64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Мобильный телефон">
                 </picture>
                 <h2 class="feature__title">Заводит новых друзей</h2>
                 <p class="feature__text">Ставьте лайки, комментируте, делитесь фотографиями с&nbsp;друзьями и&nbsp;заводите новых</p>

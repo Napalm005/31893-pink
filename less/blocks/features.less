@@ -44,6 +44,11 @@
         position: absolute;
         left: 20px;
         background: url('../img/iphone-screen-tablet-3@1x.png') no-repeat;
+
+        @media (min-resolution: 1.5dppx) {
+          background-image: url('../img/iphone-screen-tablet-3@2x.png');
+          background-size: 268px auto;
+        }
       }
     }
   }
