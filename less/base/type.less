@@ -11,9 +11,13 @@ html {
   box-sizing: inherit;
 }
 
-*:hover,
-*:active {
-  transition: 0.2s ease all;
+*:hover {
+  transition: 0.3s ease all;
+
+  &:before,
+  &:after {
+    transition: 0.3s ease all;
+  }
 }
 
 body {
