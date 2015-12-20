@@ -53,6 +53,16 @@ body {
 
   a {
     color: @c_red;
+
+    &:hover {
+      color: @c_dark;
+      text-decoration: none;
+    }
+
+    &:active {
+      color:fade(@c_dark, 30%);
+      text-decoration: none;
+    }
   }
 
   ul {
