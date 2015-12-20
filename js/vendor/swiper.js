@@ -2721,9 +2721,9 @@
                     new s.controller.LinearSpline(s.snapGrid, c.snapGrid);
             },
             setTranslate: function (translate, byController) {
-               var controlled = s.params.control;
-               var multiplier, controlledTranslate;
-               function setControlledTranslate(c) {
+              var controlled = s.params.control;
+              var multiplier, controlledTranslate;
+              function setControlledTranslate(c) {
 
                     translate = c.rtl && c.params.direction === 'horizontal' ? -s.translate : s.translate;
                     if (s.params.controlBy === 'slide') {
@@ -2742,18 +2742,18 @@
                     c.updateProgress(controlledTranslate);
                     c.setWrapperTranslate(controlledTranslate, false, s);
                     c.updateActiveIndex();
-               }
-               if (s.isArray(controlled)) {
-                   for (var i = 0; i < controlled.length; i++) {
-                       if (controlled[i] !== byController && controlled[i] instanceof Swiper) {
-                           setControlledTranslate(controlled[i]);
-                       }
-                   }
-               }
-               else if (controlled instanceof Swiper && byController !== controlled) {
+              }
+              if (s.isArray(controlled)) {
+                  for (var i = 0; i < controlled.length; i++) {
+                      if (controlled[i] !== byController && controlled[i] instanceof Swiper) {
+                          setControlledTranslate(controlled[i]);
+                      }
+                  }
+              }
+              else if (controlled instanceof Swiper && byController !== controlled) {
 
-                   setControlledTranslate(controlled);
-               }
+                  setControlledTranslate(controlled);
+              }
             },
             setTransition: function (duration, byController) {
                 var controlled = s.params.control;
@@ -4110,22 +4110,20 @@
     })();
 
 
-    /*===========================
-     Get Dom libraries
-     ===========================*/
+
     var swiperDomPlugins = ['jQuery', 'Zepto', 'Dom7'];
     for (var i = 0; i < swiperDomPlugins.length; i++) {
-    	if (window[swiperDomPlugins[i]]) {
-    		addLibraryPlugin(window[swiperDomPlugins[i]]);
-    	}
+      if (window[swiperDomPlugins[i]]) {
+        addLibraryPlugin(window[swiperDomPlugins[i]]);
+      }
     }
     // Required DOM Plugins
     var domLib;
     if (typeof Dom7 === 'undefined') {
-    	domLib = window.Dom7 || window.Zepto || window.jQuery;
+      domLib = window.Dom7 || window.Zepto || window.jQuery;
     }
     else {
-    	domLib = Dom7;
+      domLib = Dom7;
     }
 
     function addLibraryPlugin(lib) {
