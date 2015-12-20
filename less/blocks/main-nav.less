@@ -51,6 +51,23 @@
       background-color: transparent;
       border-top: none;
       border-bottom: none;
+      position: relative;
+
+      &--active {
+
+        &:after {
+          content: "";
+
+          position: absolute;
+          bottom: 10px;
+          left: 34px;
+          right: 34px;
+
+          height: 2px;
+
+          background: #fff;
+        }
+      }
     }
 
     &__link {
@@ -60,13 +77,27 @@
 
       &:hover {
         color: #fff;
-        border-bottom: 2px solid #fff;
+
+        &:after {
+          content: "";
+
+          position: absolute;
+          bottom: 10px;
+          left: 34px;
+          right: 34px;
+
+          height: 2px;
+
+          background: #fff;
+        }
       }
 
       &:active {
-        color: #fff;
-        opacity: .3;
-        border-bottom: none;
+        color: fade(#fff, 30%);
+
+        &:after {
+          display: none;
+        }
       }
     }
   }
