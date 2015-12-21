@@ -210,7 +210,7 @@
       display: inline-block;
       vertical-align: top;
       width: 46%;
-      margin-left: 20px;
+      margin-left: @block_offset;
       font-size: 14px;
 
       &--tablet {
@@ -225,7 +225,7 @@
     &__row {
       display: flex;
       flex-wrap: wrap;
-      margin-left: -20px;
+      margin-left: -@block_offset;
       font-size: 0;
     }
 
@@ -302,7 +302,7 @@
 
 
       &--margin_big {
-        margin-left: 44px;
+        margin-left: @block_offset_big;
       }
 
       &--tablet {
@@ -313,7 +313,7 @@
     &__row {
 
       &--margin_big {
-        margin-left: -44px;
+        margin-left: -@block_offset_big;
       }
     }
 
