@@ -37,7 +37,7 @@ gulp.task("style", function() {
 gulp.task('server', function() {
   browserSync.init({
     server: {
-      baseDir: './source/'
+      baseDir: './build/'
     }
   });
 });
@@ -101,19 +101,19 @@ gulp.task('html', function () {
 //   gulp.watch("./source/*.html").on('change', browserSync.reload);
 // });
 
-gulp.task('watch', function() {
+gulp.task("watch", ["style", "server"], function() {
   gulp.watch("./source/less/**/*.less", ["style"]);
-  gulp.watch("./*.html").on('change', browserSync.reload);
   gulp.watch('./source/js/*.js', ['scripts']);
+  gulp.watch("./build/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('default', function() {
   runSequence(
     'clean',
     'copy',
-    'style',
     'compress',
-    'connect'
+    'style',
+    'watch'
   );
 });
 
