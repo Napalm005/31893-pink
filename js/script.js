@@ -3,8 +3,6 @@
 var toggler = document.querySelector(".page-header__toggler");
 var menu = document.querySelector(".main-nav");
 var menu_top = document.querySelector(".page-header__top");
-var popup = document.querySelector(".popup");
-var form_send = document.querySelector(".form__submit");
 
 toggler.addEventListener("click", function(event) {
   event.preventDefault();
@@ -26,3 +24,4 @@ var mySwiper = new Swiper ('.swiper-container', {
   nextButton: '.swiper-button-next',
   prevButton: '.swiper-button-prev',
 })
+
