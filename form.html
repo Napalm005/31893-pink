@@ -6,11 +6,6 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <script>
-    // Picture element HTML5 shiv
-    document.createElement( "picture" );
-    </script>
-    <script src="js/vendor/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -165,7 +160,7 @@
     </div>
 
     <div class="container">
-      <p class="promo-text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту! <span class="promo-text  promo-text--hidden-mobile">Пожалуйста, заполните форму ниже:</span></p>
+      <p class="promo-text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту! <span class="mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
     </div>
 
 
@@ -432,7 +427,7 @@
 
           <div class="form__submit-block">
             <input class="form__submit" type="submit" value="Отправить форму">
-            <div class="form__text-muted"><span class="form__required"></span> &mdash; обязательные <span class="form__text-muted form__text-muted--desk-visible">для заполнения</span> поля</div>
+            <div class="form__text-muted"><span class="form__required"></span> &mdash; обязательные <span class="desktop-shown">для заполнения</span> поля</div>
           </div>
         </div>
       </form>
@@ -568,6 +563,10 @@
     </footer>
 
 
+/*==============================
+=            ПОПАПЫ            =
+==============================*/
+
     <div class="popup">
       <div class="popup__wrap  popup__wrap--padding-bottom_0">
         <h2 class="popup__title">Что-то пошло не&nbsp;так!</h2>
@@ -587,5 +586,14 @@
         <button type="button" class="btn  btn--long">Закрыть окно</button>
       </div>
     </div>
+
+/*=====  End of ПОПАПЫ  ======*/
+
+
+    <script src="js/script.js" defer></script>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/vendor/picturefill.min.js" async></script>
   </body>
 </html>
