@@ -43,11 +43,8 @@ gulp.task('server', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./source/js/*.js', './vendor/*.js'])
+  return gulp.src(['./vendor/*.js', './source/js/*.js'])
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('./build/js/'))
-    .pipe(uglify())
-    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('./build/js/'))
     .pipe(connect.reload());
 });
@@ -113,6 +110,7 @@ gulp.task('default', function() {
     'copy',
     'compress',
     'style',
+    'scripts',
     'watch'
   );
 });

@@ -1,5 +1,6 @@
 
 
+
 var toggler = document.querySelector(".page-header__toggler");
 var menu = document.querySelector(".main-nav");
 var menu_top = document.querySelector(".page-header__top");
@@ -10,6 +11,7 @@ toggler.addEventListener("click", function(event) {
   menu_top.classList.toggle("page-header__top--c_dark");
   toggler.classList.toggle('page-header__toggler--close');
 });
+
 
 
 var mySwiper = new Swiper ('.swiper-container', {
@@ -25,26 +27,3 @@ var mySwiper = new Swiper ('.swiper-container', {
   prevButton: '.swiper-button-prev',
 })
 
-
-function initMap() {
-   if (!document.querySelector(".info__map")) {
-     return;
-   }
-
-   var myLatLng = {lat: 34.870, lng: -111.761};
-
-   var map = new google.maps.Map(document.getElementById('map'), {
-     center: myLatLng,
-     scrollwheel: false,
-      zoom: 7
-    });
-
- +  var image = 'img/map-dot.png';
-    var marker = new google.maps.Marker({
-      map: map,
-      position: myLatLng,
-     title: 'Седона',
-     icon: image
-   });
-
- }
