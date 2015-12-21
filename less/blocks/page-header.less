@@ -8,11 +8,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &__top {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding: 11px 20px;
+    width: 100%;
 
     &--c_dark {
       background: @c_dark;
@@ -131,11 +134,24 @@
     justify-content: space-between;
     align-items: center;
 
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 960px;
+      margin: 0 auto;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     &__toggler {
       display: none;
     }
 
     &__top {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
 
       &--c_dark {
         background: transparent;

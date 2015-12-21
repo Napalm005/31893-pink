@@ -33,11 +33,13 @@
 
   &__developer-icon {
 
-    &:hover {
+    &:hover>path {
       fill: #6c7682;
+      transition: 0.3s ease all;
     }
 
-    &:active {
+    &:active>path {
+      fill: #6c7682;
       opacity: .3;
     }
   }
