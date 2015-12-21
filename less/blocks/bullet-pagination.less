@@ -1,117 +1,23 @@
 .bullet-pagination {
-    text-align: center;
-    transition: 300ms;
-    z-index: 10;
-    padding-bottom: 40px;
+  text-align: center;
+  transition: 300ms;
+  z-index: 10;
+  padding-bottom: 40px;
 
-    &__item {
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      vertical-align: middle;
-      border: 3px solid @c_background;
-      border-radius: 100%;
-      background: #bec2c7;
-      margin: 0 5px;
-      cursor: pointer;
+  &__item {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 3px solid @c_background;
+    border-radius: 100%;
+    background: #bec2c7;
+    margin: 0 5px;
+    cursor: pointer;
 
-      &--active {
-        background: transparent;
-        border: 3px solid #283645;
-      }
-    }
-
-
-  @media @tablet {
-    padding: 0;
-    padding-top: 30px;
-    padding-bottom: 68px;
-
-    td {
-      border-left: 2px solid #e5e5e5;
-      border-bottom: 2px solid #e5e5e5;
-      border-right: 2px solid #e5e5e5;
-      text-transform: none;
-      padding: 13px 14px;
-    }
-
-    th {
-      border-left: 2px solid #e5e5e5;
-      padding: 10px 0;
-      width: 24%;
-
-      &:first-child {
-        border: 2px solid #F2F2F2;
-        border-bottom: 2px solid #e5e5e5;
-        background: #F2F2F2;
-      }
-    }
-
-    .tarif__check {
-      margin-right: auto;
-    }
-
-    .tarif__non-check {
-      margin: 0 auto;
-      width: 30px;
-    }
-
-    &__title {
-      position: relative;
-      font-size: 16px;
-      line-height: 30/16;
-
-      &--new {
-        &:before {
-          .after_before;
-          position: absolute;
-          width: 74px;
-          height: 73px;
-          top: -9px;
-          background: url('../img/hit.png') no-repeat -4px -8px;
-        }
-      }
-    }
-
-    &__text {
-      font-size: @fz_big;
-      line-height: @lh_big-fussed;
-    }
-  }
-
-
-
-
-
-  @media @desktop {
-    padding-top: 59px;
-    padding-bottom: 93px;
-
-    td {
-      font-size: 18px;
-      padding: 18px 21px;
-    }
-
-    th {
-      padding: 20px 0;
-    }
-
-    &__title {
-      position: relative;
-      font-size: 18px;
-      line-height: 30/18;
-
-      &--new {
-        &:before {
-          top: -20px;
-          background-position: 0 0;
-        }
-      }
-    }
-
-    &__text {
-      font-size: 24px;
-      line-height: 30/24;
+    &--active {
+      background: transparent;
+      border: 3px solid #283645;
     }
   }
 }
