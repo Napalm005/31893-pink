@@ -14,15 +14,18 @@ var connect = require('gulp-connect');
 var minify = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var runSequence = require('run-sequence');
+var rename = require("gulp-rename");
+var imagemin = require('gulp-imagemin');
 
 
 gulp.task("style", function() {
-  return gulp.src("./sourse/less/style.less")
+  return gulp.src("./source/less/style.less")
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
     .pipe(less())
     .pipe(postcss([
       autoprefixer({browsers: "last 2 versions"})
     ]))
+    .pipe(rename("style.css"))
     .pipe(gulp.dest("./build/css"))
     .pipe(browserSync.stream())
     .pipe(minify())
@@ -34,13 +37,13 @@ gulp.task("style", function() {
 gulp.task('server', function() {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: './source/'
     }
   });
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./source/js/*.js', './vendor/swiper.js', './vendor/picturefill.js'])
+  return gulp.src(['./source/js/*.js', './vendor/*.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('./build/js/'))
     .pipe(uglify())
@@ -55,6 +58,14 @@ gulp.task('images', function(cb) {
       progressive: true,
       interlaced: true
   })).pipe(gulp.dest('./build/img')).on('end', cb).on('error', cb);
+});
+
+gulp.task('compress', function() {
+  gulp.src('./source/img/**/')
+  .pipe(imagemin({
+      progressive: true
+  }))
+  .pipe(gulp.dest('./build/img/'))
 });
 
 gulp.task('clean', function () {
@@ -86,8 +97,8 @@ gulp.task('html', function () {
 
 
 // gulp.task("start", ["style", "server"], function() {
-//   gulp.watch("./sourse/less/**/*.less", ["style"]);
-//   gulp.watch("./sourse/*.html").on('change', browserSync.reload);
+//   gulp.watch("./source/less/**/*.less", ["style"]);
+//   gulp.watch("./source/*.html").on('change', browserSync.reload);
 // });
 
 gulp.task('watch', function() {
@@ -101,10 +112,8 @@ gulp.task('default', function() {
     'clean',
     'copy',
     'style',
-    'scripts',
-    'images',
-    'connect',
-    'watch'
+    'compress',
+    'connect'
   );
 });
 
