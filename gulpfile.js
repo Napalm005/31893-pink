@@ -85,20 +85,20 @@ gulp.task('html', function () {
 //   gulp.watch("./source/*.html").on('change', browserSync.reload);
 // });
 
-gulp.task("watch", ["style", "server"], function() {
+gulp.task("start", ["style", "server"], function() {
   gulp.watch("./source/less/**/*.less", ["style"]);
   gulp.watch('./source/js/*.js', ['scripts']);
   gulp.watch("./source/*.html", ['html']);
 });
 
-gulp.task('default', function() {
+gulp.task('build', function() {
   runSequence(
     'clean',
     'copy',
-    ['compress'],
+    'compress',
     'style',
     'scripts',
-    'watch'
+    'html'
   );
 });
 
