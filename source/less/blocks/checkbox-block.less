@@ -1,0 +1,35 @@
+.checkbox-block {
+
+  &__wrap {
+    margin-top: 47.5px;
+
+    &--diff-padding {
+      margin-bottom: 24px;
+    }
+  }
+
+
+  @media @tablet {
+
+    &__wrap {
+      margin-top: 15px;
+      margin-bottom: 48px;
+
+      &--diff-padding {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__wrap {
+      width: 100%;
+      margin-bottom: 46px;
+    }
+  }
+}

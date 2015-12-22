@@ -1,26 +1,22 @@
 .checkbox {
+  font-size: @fz_big;
+  position: relative;
+  padding-left: 60px;
+  cursor: pointer;
 
-  &__item {
-    font-size: @fz_big;
-    position: relative;
-    padding-left: 60px;
-    cursor: pointer;
-  }
+&__indicator {
+    position: absolute;
+    left: 0;
+    top: -9px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    border: 2px solid @c_border;
+    background-color: #fff;
+    user-select: none;
 
-
-  &__wrap {
-    margin-top: 47.5px;
-
-    &--diff-padding {
-      margin-bottom: 24px;
-    }
-  }
-
-  input {
-    .input_hider;
-    width: 0;
-
-    & ~ .checkbox__indicator:after {
+    &:after {
       .text_hide;
       content: '';
       display: block;
@@ -40,74 +36,35 @@
         top: 10px;
         left: 7px;
       }
-    }
 
-    &:checked ~ .checkbox__indicator:after {
-      opacity: 1;
-    }
-
-    &:not(checked) ~ .checkbox__indicator:active:after {
-      opacity: 1;
-    }
-
-    &:checked ~ .checkbox__indicator:active {
-      border-color: @c_red;
-    }
-
-    &:not(checked) ~ .checkbox__indicator:active {
-      border-color: @c_red;
-    }
-
-    &:hover ~ .checkbox__indicator {
-      border-color: @c_dark;
-    }
-
-    &:active ~ .checkbox__indicator {
-      border-color: @c_red;
-    }
-
-    &:checked ~ &__indicator:after{
-      transition: 0.3s ease all;
-      opacity : 1;
-    }
-  }
-
-  &__indicator {
-    position: absolute;
-    left: 0;
-    top: -9px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 38px;
-    height: 38px;
-    border: 2px solid @c_border;
-    background-color: #fff;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  @media @tablet {
-    &__wrap {
-      margin-top: 15px;
-      margin-bottom: 48px;
-
-      &--diff-padding {
-        margin-bottom: 11px;
+      &:active {
+        opacity: 1;
+        transition: 0.3s ease all;
       }
     }
   }
 
+  &:hover &__indicator {
+    border-color: @c_dark;
+    transition: 0.3s ease all;
+  }
 
-  @media @desktop {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  &:active &__indicator {
+    border-color: @c_red;
+    transition: 0.3s ease all;
+  }
 
-    &__wrap {
-      width: 100%;
-      margin-bottom: 46px;
+  &:active &__indicator:after {
+    opacity: 1;
+    transition: 0.3s ease all;
+  }
+
+  input {
+    .input_hider;
+    width: 0;
+
+    &:checked ~ .checkbox__indicator:after {
+      opacity: 1;
     }
   }
 }
