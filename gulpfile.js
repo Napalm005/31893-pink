@@ -102,6 +102,13 @@ gulp.task('build', function() {
   );
 });
 
+gulp.task('default', function() {
+  runSequence(
+    'build',
+    'start'
+  );
+});
+
 
 // Оставьте эту строку в самом конце файла
 require("./.gosha");
