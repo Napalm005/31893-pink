@@ -1,0 +1,52 @@
+.feature {
+  text-align: center;
+
+  &__mobile {
+    display: none;
+  }
+
+  &__title {
+    .padding_margin_kill;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: @fz_big;
+    line-height: @lh_big;
+    font-weight: @fw_bold;
+  }
+
+  &__text {
+    .padding_margin_kill;
+    line-height: @lh_text;
+  }
+
+
+
+
+  @media @tablet {
+    text-align: left;
+  }
+
+
+  @media @desktop {
+    text-align: center;
+    width: 292px;
+
+    &__title {
+      margin-bottom: 25px;
+      padding: 0 30px;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 30/18;
+      padding: 0 25px;
+    }
+
+    &__mobile {
+      margin-bottom: 58px;
+      display: block;
+    }
+  }
+}

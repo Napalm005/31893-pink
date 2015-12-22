@@ -1,0 +1,51 @@
+.contacts {
+  font-style: normal;
+  margin-bottom: 35px;
+
+  &__title {
+    .padding_margin_kill;
+    font-size: @fz_title;
+    line-height: 1.25;
+    font-weight: @fw_light;
+    margin-bottom: 33px;
+    text-align: center;
+  }
+
+
+
+
+  @media @tablet {
+    margin-bottom: 0;
+
+    &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 29px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 1.25;
+      padding: 0 100px;
+      margin-bottom: 37px;
+    }
+  }
+
+
+
+  @media @desktop {
+    margin-bottom: 0;
+
+    &__body {
+    margin-bottom: 9px;
+    }
+
+    &__title {
+      font-size: 50px;
+      padding: 0 150px;
+      margin-bottom: 48px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.radio {
+    font-size: @fz_big;
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+
+  &__indicator {
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @c_border;
+    border-radius: 50%;
+    background-color: #fff;
+    user-select: none;
+
+    &:after {
+      content: '';
+      display: block;
+      background: @c_red;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+
+      &:active {
+        opacity: 1;
+        transition: 0.3s ease all;
+      }
+    }
+  }
+
+  &:hover &__indicator {
+    border-color: @c_dark;
+    transition: 0.3s ease all;
+  }
+
+  &:active &__indicator {
+    border-color: @c_red;
+    transition: 0.3s ease all;
+  }
+
+  &:active &__indicator:after {
+    opacity: 1;
+    transition: 0.3s ease all;
+  }
+
+  input {
+    .input_hider;
+    width: 0;
+
+    &:checked ~ .radio__indicator:after {
+      opacity: 1;
+    }
+  }
+}
+
+

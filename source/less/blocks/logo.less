@@ -1,0 +1,64 @@
+.logo {
+  height: 23px;
+  margin: 10px 0;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &--alt {
+    width: 145px;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 39px;
+  }
+
+  &__svg:hover path {
+    fill: @c_red;
+    transition: 0.3s ease all;
+  }
+
+  &__svg:active path {
+    fill: #fff;
+    opacity: .3;
+  }
+
+  &__svg--footer:active {
+
+    .logo__text path,
+    .logo__sparks path {
+      opacity: .3;
+      fill: @c_dark;
+    }
+
+    .logo__glasses-tablet path,
+    .logo__glasses-desktop path {
+      opacity: .3;
+      fill: @c_red;
+    }
+  }
+
+
+  @media @tablet {
+    width: 146px;
+
+    &--alt {
+      margin: 0;
+      height: 23px;
+
+      &:after {
+        top: -16px;
+        left: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

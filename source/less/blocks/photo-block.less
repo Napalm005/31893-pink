@@ -1,0 +1,172 @@
+
+.photo-block {
+  padding-bottom: 3px;
+
+  &__item {
+    font-size: @fz_small;
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    margin-bottom: 21px;
+    margin-left: 35px;
+    vertical-align: top;
+
+    &--empty {
+      height: 0px;
+      width: 68px;
+      margin-left: 35px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    margin-left: -35px;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+  &__photo-wrap {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 68px;
+    height: 68px;
+    text-align: center;
+    background: #ddd;
+  }
+
+  &__photo {
+    .zero_centered;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__cross {
+    .text_hide;
+    position: absolute;
+    top: -17px;
+    right: -17px;
+    width: 34px;
+    height: 34px;
+    border: 2px solid @c_border;
+    border-radius: 50%;
+    background: #fff;
+
+    &:hover {
+      border-color: @c_dark;
+
+      &:before,
+      &:after {
+        background: #333;
+      }
+    }
+
+    &:active {
+      border-color: @c_dark;
+      background: @c_dark;
+
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+
+    &:before {
+      .after_before;
+      .zero_centered;
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      transform: rotate(-45deg);
+      background: #c1c1c1;
+    }
+
+    &:after {
+      .after_before;
+      .zero_centered;
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      transform: rotate(45deg);
+      background: #c1c1c1;
+    }
+  }
+
+
+
+
+  @media @tablet {
+    padding-bottom: 0;
+
+    &__item {
+      font-size: 14px;
+      width: 120px;
+      margin-left: 68px;
+      margin-bottom: 0;
+      margin-top: 46px;
+
+
+      &--empty {
+        width: 120px;
+        margin-left: 68px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    &__row {
+      margin-left: -68px;
+    }
+
+
+    &__photo-wrap {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 9px;
+    }
+
+    &__cross {
+      top: -27.5px;
+      right: -27.5px;
+      width: 55px;
+      height: 55px;
+
+      &:before {
+        width: 26px;
+        height: 3px;
+      }
+
+      &:after {
+        width: 26px;
+        height: 3px;
+      }
+    }
+  }
+
+
+
+
+
+  @media @desktop {
+
+    &__item {
+      margin-left: 55px;
+      margin-top: 22px;
+
+      &--empty {
+        margin-left: 55px;
+      }
+    }
+
+    &__row {
+      margin-left: -55px;
+    }
+
+
+    &__photo-wrap {
+    }
+  }
+}

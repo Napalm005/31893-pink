@@ -1,0 +1,84 @@
+.features {
+  .padding_margin_kill;
+
+  &__list {
+    .list_style_kill;
+
+    &:after {
+      .after_before;
+      width: 157px;
+      height: 288px;
+      margin: 0 auto;
+      bottom: 0;
+      position: relative;
+      background: url('../img/screen-mobile-3.png') no-repeat 0 10px;
+    }
+  }
+
+  &__item {
+    vertical-align: top;
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+  @media @tablet {
+
+    &__item {
+      vertical-align: top;
+      margin-bottom: 34px;
+    }
+
+    &__list {
+      margin-left: auto;
+      text-align: left;
+      width: 50%;
+      min-height: 412px;
+      padding-bottom: 7px;
+
+      &:after {
+        width: 268px;
+        height: 481px;
+        position: absolute;
+        left: 20px;
+        background: url('../img/iphone-screen-tablet-3@1x.png') no-repeat;
+
+        @media (min-resolution: 1.5dppx) {
+          background-image: url('../img/iphone-screen-tablet-3@2x.png');
+          background-size: 268px auto;
+        }
+      }
+    }
+  }
+
+
+
+
+  @media @desktop {
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__item {
+      vertical-align: top;
+      margin-bottom: 34px;
+    }
+
+    &__list {
+      margin-left: 0;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      width: 100%;
+      margin-top: -110px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

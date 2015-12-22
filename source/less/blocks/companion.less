@@ -1,0 +1,154 @@
+.companion {
+  position: relative;
+  padding-bottom: 23px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &__left {
+    float: left;
+  }
+
+  &__right {
+    padding-left: 64px;
+  }
+
+  &__delete {
+    display: none;
+
+    &:hover {
+      color: @c_red;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @c_red;
+      opacity: .3;
+      text-decoration: none;
+    }
+  }
+
+  &__input-block {
+    margin-bottom: 14px;
+  }
+
+  &__number {
+    display: block;
+    font-size: 14px;
+    color: @c_red;
+    line-height: @lh_fussed;
+    text-transform: uppercase;
+    padding-left: 26px;
+    margin-bottom: 5px;
+  }
+
+  &__figure {
+    .padding_margin_kill;
+    .form_field;
+    border-right: none;
+    display: block;
+    background: @c_background;
+    position: relative;
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    color: @c_red;
+    font-size: 14px;
+    line-height: @lh_fussed;
+    text-transform: uppercase;
+    padding-left: 20px;
+    margin-bottom: 5px;
+
+    &--required {
+
+      &:after {
+      color: @c_red;
+      content: "  *";
+      }
+    }
+  }
+
+
+
+
+
+  @media @tablet {
+    padding-bottom: 16px;
+
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+
+    &__delete {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      color: @c_dark;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 23px;
+      max-width: 96px;
+      text-align: right;
+    }
+
+    &__figure {
+      border-right: 2px solid @c_border;
+    }
+
+    &__input-block {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      margin-left: 20px;
+      margin-bottom: 18px;
+      padding-right: 117px;
+      font-size: 0;
+    }
+  }
+
+
+
+
+
+
+  @media @desktop {
+    padding-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 44px;
+    }
+
+    &__right {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+
+    &__delete {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      text-decoration: none;
+      color: @c_dark;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 23px;
+      max-width: 96px;
+      text-align: right;
+    }
+
+    &__input-block {
+      width: 300px;
+      padding-right: 0;
+      margin-bottom: 6px;
+    }
+  }
+}
