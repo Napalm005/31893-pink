@@ -41,7 +41,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./vendor/*.js', './source/js/*.js'])
+  return gulp.src(['./source/vendor/*.js', './source/js/*.js'])
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
     .pipe(concat('script.js'))
     .pipe(gulp.dest('./build/js/'))
