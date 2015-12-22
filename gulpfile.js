@@ -79,12 +79,6 @@ gulp.task('html', function () {
     .pipe(notify("html"));
 });
 
-
-// gulp.task("start", ["style", "server"], function() {
-//   gulp.watch("./source/less/**/*.less", ["style"]);
-//   gulp.watch("./source/*.html").on('change', browserSync.reload);
-// });
-
 gulp.task("start", ["style", "server"], function() {
   gulp.watch("./source/less/**/*.less", ["style"]);
   gulp.watch('./source/js/*.js', ['scripts']);
