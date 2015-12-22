@@ -1,71 +1,8 @@
 .radio {
-
-  &__item {
     font-size: @fz_big;
     position: relative;
     padding-left: 60px;
     cursor: pointer;
-  }
-
-  &__wrap {
-    margin-bottom: 42px;
-
-    &--diff-margin {
-      margin-bottom: 18px;
-    }
-
-    @media @tablet {
-      margin-top: 14px;
-      margin-bottom: 41px;
-    }
-  }
-
-  input {
-    .input_hider;
-    width: 0;
-
-    & ~ .radio__indicator:after {
-      content: '';
-      display: block;
-      background: @c_red;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      opacity: 0;
-    }
-
-    &:checked ~ .radio__indicator:after {
-      opacity: 1;
-    }
-
-    &:not(checked) ~ .radio__indicator:active:after {
-      opacity: 1;
-    }
-
-    &:checked ~ .radio__indicator:active {
-      border-color: @c_red;
-    }
-
-    &:not(checked) ~ .radio__indicator:active {
-      border-color: @c_red;
-    }
-
-    &:hover ~ .radio__indicator {
-      border-color: @c_dark;
-    }
-
-    &:active ~ .radio__indicator {
-      border-color: @c_red;
-    }
-
-    &:checked ~ &__indicator:after{
-      transition: 0.3s ease all;
-      opacity : 1;
-    }
-  }
 
   &__indicator {
     position: absolute;
@@ -78,24 +15,48 @@
     border: 2px solid @c_border;
     border-radius: 50%;
     background-color: #fff;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+
+    &:after {
+      content: '';
+      display: block;
+      background: @c_red;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0;
+
+      &:active {
+        opacity: 1;
+        transition: 0.3s ease all;
+      }
+    }
   }
 
+  &:hover &__indicator {
+    border-color: @c_dark;
+    transition: 0.3s ease all;
+  }
 
+  &:active &__indicator {
+    border-color: @c_red;
+    transition: 0.3s ease all;
+  }
 
+  &:active &__indicator:after {
+    opacity: 1;
+    transition: 0.3s ease all;
+  }
 
-  @media @desktop {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  input {
+    .input_hider;
+    width: 0;
 
-    &__wrap {
-      width: 100%;
-      margin-top: 16px;
-      margin-bottom: 20px;
+    &:checked ~ .radio__indicator:after {
+      opacity: 1;
     }
   }
 }
