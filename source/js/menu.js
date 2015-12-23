@@ -1,4 +1,3 @@
-debugger;
 (function() {
 
   var toggler = document.querySelector(".page-header__toggler");
@@ -6,6 +5,7 @@ debugger;
   var menu_top = document.querySelector(".page-header__top");
 
   toggler.addEventListener("click", function(event) {
+debugger;
     event.preventDefault();
     menu.classList.toggle("main-nav--show");
     menu_top.classList.toggle("page-header__top--c_dark");
@@ -14,4 +14,3 @@ debugger;
 
 })();
 
-console.log(100);
