@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,7 +138,7 @@
                 </g>
               </svg>
             </a>
-            <button class="page-header__toggler" id="toggler" type="button" title="toggle-menu"><span></span></button>
+            <button class="page-header__toggler" id="TOGGLER" type="button" title="toggle-menu"><span></span></button>
           </div>
         </div>
         <nav class="main-nav">
@@ -165,21 +165,21 @@
 
 
     <main class="page-content">
-      <form class="form" action="get" enctype="multipart/form-data" method="post">
+      <form class="form" action="https://echo.htmlacademy.ru/adaptive?" enctype="multipart/form-data" method="post">
         <div class="container  container--padding_0">
           <div class="form__name-block">
             <div class="form__row">
               <div class="form__input-block  form__input-block--tablet">
-                <label class="form__text  form__text--required" for="name">Имя:</label>
-                <input class="form__input-text" id="name" type="text" name="name" placeholder="Введите ваше имя" required>
+                <label class="form__text  form__text--required" for="NAME">Имя:</label>
+                <input class="form__input-text" id="NAME" type="text" name="name" placeholder="Введите ваше имя" required>
               </div>
               <div class="form__input-block  form__input-block--tablet">
-                <label class="form__text  form__text--required" for="second_name">Фамилия:</label>
-                <input class="form__input-text" id="second_name" type="text" name="second_name" placeholder="Укажите фамилию" required>
+                <label class="form__text  form__text--required" for="SECONDNAME">Фамилия:</label>
+                <input class="form__input-text" id="SECONDNAME" type="text" name="second_name" placeholder="Укажите фамилию" required>
               </div>
               <div class="form__input-block  form__input-block--tablet">
-                <label class="form__text" for="third_name">Отчество:</label>
-                <input class="form__input-text" id="third_name" type="text" name="third_name" placeholder="Ну и отчество тоже">
+                <label class="form__text" for="THIRDNAME">Отчество:</label>
+                <input class="form__input-text" id="THIRDNAME" type="text" name="third_name" placeholder="Ну и отчество тоже">
               </div>
             </div>
           </div>
@@ -191,8 +191,8 @@
             <div class="radio-block">
               <div class="radio-block__group">
                 <div class="radio-block__wrap">
-                  <label class="radio-block___item  radio" for="radio1">
-                    <input type="radio" name="app" id="radio1" checked>
+                  <label class="radio-block___item  radio" for="RADIO1">
+                    <input type="radio" value="iOS" name="app" id="RADIO1" checked>
                     <span class="radio__indicator"></span>
                     Pink для iOS
                   </label>
@@ -200,8 +200,8 @@
               </div>
               <div class="radio-block__group">
                 <div class="radio-block__wrap">
-                  <label class="radio-block__item  radio" for="radio2">
-                    <input type="radio" name="app" id="radio2">
+                  <label class="radio-block__item  radio" for="RADIO2">
+                    <input type="radio" value="Android" name="app" id="RADIO2">
                     <span class="radio__indicator"></span>
                     Pink на Android
                   </label>
@@ -209,8 +209,8 @@
               </div>
               <div class="radio-block__group">
                 <div class="radio-block__wrap">
-                  <label class="radio-block__item  radio" for="radio3">
-                    <input type="radio" name="app" id="radio3">
+                  <label class="radio-block__item  radio" for="RADIO3">
+                    <input type="radio" value="Windows Phone" name="app" id="RADIO3">
                     <span class="radio__indicator"></span>
                     Windows Phone
                   </label>
@@ -226,18 +226,20 @@
             </div>
             <div class="form__row  form__row--margin_big">
               <div class="form__input-block  form__input-block--margin_big">
-                <input class="form__input-text" type="text" name="date_out" id="date_out" value="1 апреля 2015" required>
-                <label class="form__text  form__text--top" for="date_out">Дата выезда</label>
+                <input class="form__input-text" type="text" name="date_out" id="DATEOUT" value="1 апреля 2015" required>
+                <label class="form__text  form__text--top" for="DATEOUT">Дата выезда</label>
               </div>
               <div class="form__input-block  form__input-block--margin_big">
                 <div class="number">
-                  <button class="number__button  number__button--minus" type="button">-</button><input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" readonly><button class="number__button number__button--plus" type="button">+</button>
+                  <button class="number__button  number__button--minus" type="button">-</button>
+                  <input class="number__input" name="duration" id="DURATION" type="text" value="10 дней" readonly>
+                  <button class="number__button number__button--plus" type="button">+</button>
                 </div>
-                <label class="form__text  form__text--top  form__text--top-center" for="INPUTDURATION-1">Продолжительность</label>
+                <label class="form__text  form__text--top  form__text--top-center" for="DURATION">Продолжительность</label>
               </div>
               <div class="form__input-block  form__input-block--mobile-none  form__input-block--margin_big">
-                <input class="form__input-text form__input-text--dark" type="text" name="date_back" id="date_back" value="1 апреля 2015" disabled>
-                <label class="form__text  form__text--top" for="date_back">Дата возвращения</label>
+                <input class="form__input-text form__input-text--dark" type="text" name="date_back" id="DATEBACK" value="1 апреля 2015" disabled>
+                <label class="form__text  form__text--top" for="DATEBACK">Дата возвращения</label>
               </div>
               <div class="form__input-block  form__input-block--empty  form__input-block--margin_big">
               </div>
@@ -245,45 +247,47 @@
           </fieldset>
 
 
-          <fieldset class="form__fieldset  form__fieldset--padding-min">
+          <fieldset class="form__fieldset form__fieldset--padding-min">
             <div class="form__legend-wrap">
               <h3 class="form__legend  form__legend--required">Количество попутчиков</h3>
             </div>
 
             <div class="number  number--bordered">
-              <button class="number__button number__button--minus" type="button">-</button><input name="input-duration-2" class="number__input number__input--dark" id="INPUTDURATION-2" type="text" value="2 чел" readonly><button class="number__button  number__button--plus" type="button">+</button>
+              <button class="number__button number__button--minus" type="button">-</button><input name="companions-number" class="number__input number__input--dark" id="COMPANIONSNUMBER" type="text" value="2 чел" readonly><button class="number__button  number__button--plus" type="button">+</button>
             </div>
 
-            <div class="companion">
-              <div class="companion__left">
-                <span class="companion__number">№</span> <span class="companion__figure">1</span>
-              </div>
-              <div class="companion__right">
-                <div class="companion__input-block">
-                  <label class="companion__text  companion__text--required" for="companion-name-1">Имя:</label>
-                  <input class="companion__input-text" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                  <button type="button" class="companion__delete">Удалить</button>
+            <div class="companion-wrap">
+              <div class="companion">
+                <div class="companion__left">
+                  <span class="companion__number">№</span> <span class="companion__figure">1</span>
                 </div>
-                <div class="companion__input-block">
-                  <label class="companion__text" for="companion-name-2">Прозвище:</label>
-                  <input class="companion__input-text" id="companion-name-2" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
+                <div class="companion__right">
+                  <div class="companion__input-block">
+                    <label class="companion__text  companion__text--required" for="COMPANIONNAME1">Имя:</label>
+                    <input class="companion__input-text" id="COMPANIONNAME1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
+                    <button type="button" class="companion__delete">Удалить</button>
+                  </div>
+                  <div class="companion__input-block">
+                    <label class="companion__text" for="COMPANIONNICKNAME1">Прозвище:</label>
+                    <input class="companion__input-text" id="COMPANIONNICKNAME1" type="text" name="companion-nickname-1" placeholder="Ну как же без этого!">
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="companion">
-              <div class="companion__left">
-                <span class="companion__number">№</span> <span class="companion__figure">2</span>
-              </div>
-              <div class="companion__right">
-                <div class="companion__input-block">
-                  <label class="companion__text  companion__text--required" for="companion-name-3">Имя:</label>
-                  <input class="companion__input-text" id="companion-name-3" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                  <button type="button" class="companion__delete">Удалить</button>
+              <div class="companion">
+                <div class="companion__left">
+                  <span class="companion__number">№</span> <span class="companion__figure">2</span>
                 </div>
-                <div class="companion__input-block">
-                  <label class="companion__text" for="companion-name-4">Прозвище:</label>
-                  <input class="companion__input-text" id="companion-name-4" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
+                <div class="companion__right">
+                  <div class="companion__input-block">
+                    <label class="companion__text  companion__text--required" for="COMPANIONNAME2">Имя:</label>
+                    <input class="companion__input-text" id="COMPANIONNAME2" type="text" name="companion-name-2" placeholder="Введите ваше имя" required>
+                    <button type="button" class="companion__delete">Удалить</button>
+                  </div>
+                  <div class="companion__input-block">
+                    <label class="companion__text" for="COMPANIONNICKNAME2">Прозвище:</label>
+                    <input class="companion__input-text" id="COMPANIONNICKNAME2" type="text" name="companion-nickname-2" placeholder="Ну как же без этого!">
+                  </div>
                 </div>
               </div>
             </div>
@@ -298,14 +302,14 @@
               <div class="checkbox-block__group">
                 <div class="checkbox-block__wrap">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="selfy" id="selfy" checked>
+                    <input type="checkbox" name="selfy" id="SELFY" checked>
                     <span class="checkbox__indicator"></span>
                     Сделал селфи с акулой
                   </label>
                 </div>
                 <div class="checkbox-block__wrap">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="burned" id="seburnedlfy" checked>
+                    <input type="checkbox" name="burned" id="SEBURNEDLFY" checked>
                     <span class="checkbox__indicator"></span>
                     Обгорел на пляже
                   </label>
@@ -314,14 +318,14 @@
               <div class="checkbox-block__group">
                 <div class="checkbox-block__wrap">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="Chak" id="Chak">
+                    <input type="checkbox" name="Chak" id="CHAK">
                     <span class="checkbox__indicator"></span>
                     Видел Чака Норриса
                   </label>
                 </div>
                 <div class="checkbox-block__wrap">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="bay" id="bay">
+                    <input type="checkbox" name="bay" id="BAY">
                     <span class="checkbox__indicator"></span>
                     Накупил сувениров
                   </label>
@@ -330,14 +334,14 @@
               <div class="checkbox-block__group">
                 <div class="checkbox-block__wrap">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="tower" id="tower" checked>
+                    <input type="checkbox" name="tower" id="TOWER" checked>
                     <span class="checkbox__indicator"></span>
                     Удержал башню
                   </label>
                 </div>
                 <div class="checkbox-block__wrap  checkbox-block__wrap--diff-padding">
                   <label class="checkbox-block__item  checkbox">
-                    <input type="checkbox" name="hotel" id="hotel">
+                    <input type="checkbox" name="hotel" id="HOTEL">
                     <span class="checkbox__indicator"></span>
                     Разгромил отель
                   </label>
@@ -352,8 +356,8 @@
               <h3 class="form__legend  form__legend--required">Ваши фотографии из&nbsp;поездки</h3>
             </div>
             <div class="form__file-wrap">
-              <label class="file" for="file">
-                <input class="file__input" type="file" id="file" multiple>
+              <label class="file" for="FILE">
+                <input class="file__input" type="file" id="FILE" multiple>
                 <span class="file__custom"></span>
               </label>
             </div>
@@ -548,7 +552,7 @@
             </ul>
           </div>
           <div class="page-footer__developer">
-            Разработано<a href="https://htmlacademy.ru" class="page-footer__developer-link"><svg class="page-footer__developer-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            Разработано<a href="https://htmlacademy.ru" class="page-footer__developer-link"><svg class="page-footer__developer-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
             <path fill="#D22856" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334
               l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5
@@ -589,7 +593,22 @@
 
 
 
-
+    <script id="COMPANIONTEMPLATE" type="text/html">
+      <div class="companion__left">
+        <span class="companion__number">№</span> <span class="companion__figure">{{ number }}</span>
+      </div>
+      <div class="companion__right">
+        <div class="companion__input-block">
+          <label class="companion__text  companion__text--required" for="COMPANIONNAME{{ number }}">Имя:</label>
+          <input class="companion__input-text" id="COMPANIONNAME{{ number }}" type="text" name="companion-name-{{ number }}" placeholder="Введите ваше имя" required>
+          <button type="button" class="companion__delete" onclick="delete_companion();">Удалить</button>
+        </div>
+        <div class="companion__input-block">
+          <label class="companion__text" for="COMPANIONNICKNAME{{ number }}">Прозвище:</label>
+          <input class="companion__input-text" id="COMPANIONNICKNAME{{ number }}" type="text" name="companion-nickname-{{ number }}" placeholder="Ну как же без этого!">
+        </div>
+      </div>
+    </script>
     <script src="js/script.min.js" defer></script>
   </body>
 </html>
