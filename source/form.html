@@ -231,7 +231,9 @@
               </div>
               <div class="form__input-block  form__input-block--margin_big">
                 <div class="number">
-                  <button class="number__button  number__button--minus" type="button">-</button><input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" readonly><button class="number__button number__button--plus" type="button">+</button>
+                  <button class="number__button  number__button--minus" type="button">-</button>
+                  <input class="number__input" name="input-duration-1" id="INPUTDURATION-1" type="text" value="10 дней" readonly>
+                  <button class="number__button number__button--plus" type="button">+</button>
                 </div>
                 <label class="form__text  form__text--top  form__text--top-center" for="INPUTDURATION-1">Продолжительность</label>
               </div>
@@ -245,7 +247,7 @@
           </fieldset>
 
 
-          <fieldset class="form__fieldset  form__fieldset--companions  form__fieldset--padding-min">
+          <fieldset class="form__fieldset form__fieldset--padding-min">
             <div class="form__legend-wrap">
               <h3 class="form__legend  form__legend--required">Количество попутчиков</h3>
             </div>
@@ -254,36 +256,38 @@
               <button class="number__button number__button--minus" type="button">-</button><input name="input-duration-2" class="number__input number__input--dark" id="INPUTDURATION-2" type="text" value="2 чел" readonly><button class="number__button  number__button--plus" type="button">+</button>
             </div>
 
-            <div class="companion">
-              <div class="companion__left">
-                <span class="companion__number">№</span> <span class="companion__figure">1</span>
-              </div>
-              <div class="companion__right">
-                <div class="companion__input-block">
-                  <label class="companion__text  companion__text--required" for="companion-name-1">Имя:</label>
-                  <input class="companion__input-text" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                  <button type="button" class="companion__delete" onclick="delete_companion.replace();">Удалить</button>
+            <div class="companion-wrap">
+              <div class="companion">
+                <div class="companion__left">
+                  <span class="companion__number">№</span> <span class="companion__figure">1</span>
                 </div>
-                <div class="companion__input-block">
-                  <label class="companion__text" for="companion-name-2">Прозвище:</label>
-                  <input class="companion__input-text" id="companion-name-2" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
+                <div class="companion__right">
+                  <div class="companion__input-block">
+                    <label class="companion__text  companion__text--required" for="companion-name-1">Имя:</label>
+                    <input class="companion__input-text" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
+                    <button type="button" class="companion__delete">Удалить</button>
+                  </div>
+                  <div class="companion__input-block">
+                    <label class="companion__text" for="companion-nickname-1">Прозвище:</label>
+                    <input class="companion__input-text" id="companion-nickname-1" type="text" name="companion-nickname-1" placeholder="Ну как же без этого!">
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="companion">
-              <div class="companion__left">
-                <span class="companion__number">№</span> <span class="companion__figure">2</span>
-              </div>
-              <div class="companion__right">
-                <div class="companion__input-block">
-                  <label class="companion__text  companion__text--required" for="companion-name-3">Имя:</label>
-                  <input class="companion__input-text" id="companion-name-3" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
-                  <button type="button" class="companion__delete" onclick="delete_companion.replace();">Удалить</button>
+              <div class="companion">
+                <div class="companion__left">
+                  <span class="companion__number">№</span> <span class="companion__figure">2</span>
                 </div>
-                <div class="companion__input-block">
-                  <label class="companion__text" for="companion-name-4">Прозвище:</label>
-                  <input class="companion__input-text" id="companion-name-4" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
+                <div class="companion__right">
+                  <div class="companion__input-block">
+                    <label class="companion__text  companion__text--required" for="companion-name-2">Имя:</label>
+                    <input class="companion__input-text" id="companion-name-2" type="text" name="companion-name-2" placeholder="Введите ваше имя" required>
+                    <button type="button" class="companion__delete">Удалить</button>
+                  </div>
+                  <div class="companion__input-block">
+                    <label class="companion__text" for="companion-nickname-2">Прозвище:</label>
+                    <input class="companion__input-text" id="companion-nickname-2" type="text" name="companion-nickname-2" placeholder="Ну как же без этого!">
+                  </div>
                 </div>
               </div>
             </div>
@@ -591,17 +595,17 @@
 
     <script id="companion-template" type="text/html">
       <div class="companion__left">
-        <span class="companion__number">№</span> <span class="companion__figure">1</span>
+        <span class="companion__number">№</span> <span class="companion__figure">{{ number }}</span>
       </div>
       <div class="companion__right">
         <div class="companion__input-block">
-          <label class="companion__text  companion__text--required" for="companion-name-1">Имя:</label>
-          <input class="companion__input-text" id="companion-name-1" type="text" name="companion-name-1" placeholder="Введите ваше имя" required>
+          <label class="companion__text  companion__text--required" for="companion-name-{{ number }}">Имя:</label>
+          <input class="companion__input-text" id="companion-name-{{ number }}" type="text" name="companion-name-{{ number }}" placeholder="Введите ваше имя" required>
           <button type="button" class="companion__delete" onclick="delete_companion();">Удалить</button>
         </div>
         <div class="companion__input-block">
-          <label class="companion__text" for="companion-name-2">Прозвище:</label>
-          <input class="companion__input-text" id="companion-name-2" type="text" name="companion-name-2" placeholder="Ну как же без этого!">
+          <label class="companion__text" for="companion-nickname-{{ number }}">Прозвище:</label>
+          <input class="companion__input-text" id="companion-nickname-{{ number }}" type="text" name="companion-nickname-{{ number }}" placeholder="Ну как же без этого!">
         </div>
       </div>
     </script>
