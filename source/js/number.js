@@ -1,7 +1,6 @@
 (function() {
 
   var elements = document.querySelectorAll(".number");
-  var companion = document.querySelector(".companion");
   var area = document.querySelector(".companion-wrap");
   var template = document.querySelector("#COMPANIONTEMPLATE").innerHTML;
 
@@ -10,7 +9,7 @@
   }
 
   function initNumberField(parent) {
-    var input = parent.querySelector("input");
+    var input = parent.querySelector(".number__input");
     var minus = parent.querySelector(".number__button--minus");
     var plus = parent.querySelector(".number__button--plus");
     var min = parseInt(input.getAttribute('min')) || 0;
