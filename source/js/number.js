@@ -2,7 +2,7 @@
 
   var elements = document.querySelectorAll(".number");
   var area = document.querySelector(".companion-wrap");
-  var template = document.querySelector("#COMPANIONTEMPLATE").innerHTML;
+  var template = document.querySelector("#COMPANIONTEMPLATE");
 
   for (var i = 0; i < elements.length; i++) {
     initNumberField(elements[i]);
@@ -22,7 +22,7 @@
     }
 
     minus.addEventListener('click', function(){
-      if (input == document.getElementById("COMPANIONSNUMBER")) {
+      if (input == COMPANIONSNUMBER) {
         removeFields();
       }
       changeNumber(false);
@@ -30,7 +30,7 @@
 
     plus.addEventListener('click', function(){
       changeNumber(true);
-      if (input == document.getElementById("COMPANIONSNUMBER")) {
+      if (input == COMPANIONSNUMBER) {
         addFields();
       }
     });
@@ -61,7 +61,7 @@
     function addFields() {
       var number = Number(input.value);
 
-      var html = Mustache.render(template, {
+      var html = Mustache.render(template.innerHTML, {
         "number": number
       });
 
