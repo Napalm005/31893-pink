@@ -16,6 +16,7 @@
     .form_field;
     position: relative;
     background: #fff;
+    cursor: pointer;
 
     &:hover {
       border-color: @c_dark;
@@ -28,6 +29,15 @@
       &:after,
       &:before {
         background: #fff;
+      }
+    }
+
+    &[disabled] {
+      background:#e5e5e5;
+      cursor: default;
+
+      &:hover {
+        border -color: #e5e5e5;
       }
     }
 

@@ -39,13 +39,23 @@
       var value = parseInt(input.value);
       if (operation) {
         value = value + 1;
+        minus.disabled=false;
+
         if (!isNaN(max)){
           value = Math.min(value, max);
+          if (value == max) {
+            plus.disabled=true;
+          }
         }
-      }  else {
-        value = value - 1;
-        value = Math.max(value, min);
-      }
+      } else {
+          value = value - 1;
+          value = Math.max(value, min);
+          minus.disabled=false;
+
+          if (value == min) {
+            minus.disabled=true;
+          }
+        }
       input.value = value;
     }
 
@@ -59,6 +69,7 @@
     }
 
     function addFields() {
+      debugger;
 
       var number = parseInt(input.value) + 1;
 
