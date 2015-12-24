@@ -3,7 +3,7 @@
   var elements = document.querySelectorAll(".number");
   var companion = document.querySelector(".companion");
   var area = document.querySelector(".companion-wrap");
-  var template = document.querySelector("#companion-template").innerHTML;
+  var template = document.querySelector("#COMPANIONTEMPLATE").innerHTML;
 
   for (var i = 0; i < elements.length; i++) {
     initNumberField(elements[i]);
@@ -23,7 +23,7 @@
     }
 
     minus.addEventListener('click', function(){
-      if (input == document.getElementById("INPUTDURATION-2")) {
+      if (input == document.getElementById("COMPANIONSNUMBER")) {
         removeFields();
       }
       changeNumber(false);
@@ -31,7 +31,7 @@
 
     plus.addEventListener('click', function(){
       changeNumber(true);
-      if (input == document.getElementById("INPUTDURATION-2")) {
+      if (input == document.getElementById("COMPANIONSNUMBER")) {
         addFields();
       }
     });
