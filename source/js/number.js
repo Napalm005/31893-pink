@@ -29,10 +29,10 @@
     });
 
     plus.addEventListener('click', function(){
-      changeNumber(true);
       if (input == COMPANIONSNUMBER) {
         addFields();
       }
+      changeNumber(true);
     });
 
     function changeNumber(operation) {
@@ -51,7 +51,7 @@
 
     function removeFields() {
       var value = parseInt(input.value);
-      if (value > 0) {
+      if (value > min) {
         var children = area.children;
         var lastChildNumber = children.length - 1;
         area.removeChild(children[lastChildNumber]);
@@ -59,7 +59,8 @@
     }
 
     function addFields() {
-      var number = Number(input.value);
+
+      var number = parseInt(input.value) + 1;
 
       var html = Mustache.render(template.innerHTML, {
         "number": number
@@ -69,7 +70,9 @@
       templateElement.classList.add("companion");
       templateElement.innerHTML = html;
 
-      area.appendChild(templateElement);
+      if (number <= max) {
+        area.appendChild(templateElement);
+      }
     }
   }
 })();
