@@ -1,0 +1,42 @@
+.file {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+
+
+  &__input {
+    opacity: 0;
+  }
+
+  &__custom {
+    .form_field;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    background: #fff;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+    border-color: @c_dark;
+    }
+
+    &:active {
+      background: @c_dark;
+      color: @c_white;
+      border-color: @c_dark;
+      transition: 0.2s ease all;
+    }
+
+    &:after {
+      content: "Загрузить фото";
+      text-transform: uppercase;
+    }
+  }
+}

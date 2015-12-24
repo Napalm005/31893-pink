@@ -1,0 +1,110 @@
+.intro {
+  background-color: #2a3847;
+  background: url('../img/background-mobile@1x.jpg') no-repeat center top;
+  background-size: cover;
+  padding-top: 94px;
+  padding-bottom: 52px;
+  text-align: center;
+
+  @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/background-mobile@2x.jpg');
+    }
+
+  &__hand-mobile {
+    margin-left: -62px;
+    margin-top: 27px;
+    margin-bottom: -7px;
+  }
+
+
+  &--index {
+    position: relative;
+    padding-bottom: 0;
+    background-color: #2a3847;
+    padding-top: 83px;
+    margin-bottom: 40px;
+  }
+
+  &--blog {
+    padding-bottom: 40px;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    .padding_margin_kill;
+    padding: 0 20px;
+    color: @c_white;
+    font-size: @fz_title;
+    line-height: 1.25;
+    font-weight: @fw_light;
+  }
+
+
+
+
+
+  @media @tablet {
+    background-color: #2a3847;
+    background-image: url('../img/background-tablet@1x.jpg');
+    padding-top: 177px;
+    padding-bottom: 77px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/background-tablet@2x.jpg');
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &--index {
+      padding-top: 200px;
+      padding-bottom: 79px;
+      margin-bottom: 46px;
+      z-index: @z_base;
+
+      .intro__title {
+      font-size: 40px;
+      width: 300px;
+      }
+    }
+
+    &__hand-mobile {
+      position: absolute;
+      right: 0;
+      bottom: -79px;
+      margin-bottom: 0;
+      z-index: -1;
+      width: 680px;
+      height: 545px;
+    }
+  }
+
+
+
+
+
+
+  @media @desktop {
+    padding-top: 172px;
+    padding-bottom: 97px;
+    background-image: url('../img/background-fullsize.jpg');
+
+    &--index {
+      padding-top: 217px;
+      padding-bottom: 93px;
+      margin-bottom: 65px;
+
+      .intro__title {
+      font-size: 50px;
+      }
+    }
+
+    &__hand-mobile {
+      right: 0;
+      bottom: -93px;
+      width: 934px;
+      height: 645px;
+    }
+  }
+}

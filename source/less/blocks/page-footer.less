@@ -1,0 +1,101 @@
+.page-footer {
+  .padding_margin_kill;
+  text-align: center;
+  position: relative;
+
+  &--index {
+    font-size: @fz_title;
+    font-weight: @fw_light;
+    font-style: normal;
+    padding-top: 43px;
+    padding-bottom: 0;
+  }
+
+  &__social {
+    margin-bottom: 28px;
+  }
+
+  &__developer {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 40px;
+    position: relative;
+    font-weight: @fw_normal;
+  }
+
+  &__developer-link {
+    .link_style_kill;
+    .text_hide;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__developer-icon {
+
+    &:hover>path {
+      fill: #6c7682;
+      transition: 0.3s ease all;
+    }
+
+    &:active>path {
+      fill: #6c7682;
+      opacity: .3;
+    }
+  }
+
+  &__block {
+    padding-bottom: 53px;
+  }
+
+
+
+
+
+
+
+
+  @media @tablet {
+
+    &--index {
+      padding-top: 44px;
+      padding-bottom: 0;
+    }
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
+
+    &__social {
+      margin-bottom: 0;
+    }
+
+    &__developer {
+      font-size: 14px;
+      padding-right: 45px;
+    }
+  }
+
+
+
+
+  @media @desktop {
+
+    &--index {
+      padding-top: 64px;
+    }
+
+    &__block {
+      padding: 64px 0;
+    }
+
+    &__developer {
+      font-size: 18px;
+      padding-right: 41px;
+    }
+  }
+}

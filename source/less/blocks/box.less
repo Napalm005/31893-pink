@@ -1,0 +1,58 @@
+.box {
+
+  &--grey {
+    background-color: @c_background;
+  }
+
+  &--hidden-mobile {
+    display: none;
+    min-height: 409px;
+  }
+
+  &--visible-mobile {
+    display: block;
+  }
+
+  &__edge-features {
+    margin-bottom: 42px;
+  }
+
+
+
+
+  @media @tablet {
+    &__edge-features {
+      height: 50px;
+      margin-bottom: 14px;
+    }
+
+    &__edge-tarif {
+      height: 50px;
+    }
+
+    &--hidden-mobile {
+      display: block;
+    }
+
+    &--visible-mobile {
+      display: none;
+    }
+  }
+
+
+
+    @media @desktop {
+
+    &__edge-features {
+      height: 73px;
+    }
+
+    &--hidden-mobile {
+      background: @c_background;
+    }
+
+    &__edge-tarif {
+      height: 76px;
+    }
+  }
+}

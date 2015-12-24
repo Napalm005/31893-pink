@@ -1,0 +1,163 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 111;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__top {
+    padding: 11px 20px;
+    width: 100%;
+
+    &--c_dark {
+      background: @c_dark;
+      border-bottom: 1px solid #030303;
+      transition: 0s ease all;
+    }
+  }
+
+  &__toggler {
+    .padding_margin_kill;
+    width:50px;
+    height: 24px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px 0;
+
+    &:hover > span {
+      background: @c_red;
+
+      &:before,
+      &:after {
+        background: @c_red;
+        transition: all .3s 0s;
+      }
+    }
+
+    &:active > span {
+      background-color: fade(@c_red, 30%);
+
+      &:before,
+      &:after {
+        background-color: fade(@c_red, 30%);
+        transition: all .3s 0s;
+      }
+    }
+
+    > span {
+      display: block;
+      vertical-align: bottom;
+      width: 100%;
+      height: 4px;
+      background: #fff;
+      position: relative;
+      transition: background .3s 0s;
+
+      &:before,
+      &:after {
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        content: '';
+        transform-origin: 50% 50%;
+        transition: all .3s 0s, transform .3s;
+      }
+
+      &:before {
+        top: 10px;
+      }
+
+      &:after {
+        top: -10px;
+      }
+    }
+
+    &--close {
+
+      &:hover > span {
+        background: transparent;
+      }
+
+      > span {
+        transition: background .3s 0s;
+        background: transparent;
+        width: 70%;
+        margin-left: auto;
+
+        &:before,
+        &:after {
+          transition: all .3s, transform .3s .5s;
+          top: 0;
+        }
+
+        &:before {
+          transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+        &:after {
+          transform: rotate3d(0, 0, 1, -45deg);
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+  @media @tablet {
+
+    &__top {
+      padding-top: 33px;
+      padding-bottom: 33px;
+    }
+  }
+
+
+
+
+
+  @media @desktop {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 960px;
+      margin: 0 auto;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__toggler {
+      display: none;
+    }
+
+    &__top {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+
+      &--c_dark {
+        background: transparent;
+        border-bottom: none;
+      }
+    }
+  }
+}

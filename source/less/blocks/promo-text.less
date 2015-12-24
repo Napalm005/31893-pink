@@ -1,0 +1,35 @@
+.promo-text {
+  .padding_margin_kill;
+  line-height: @lh_fussed;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 35px;
+
+  &--hidden-mobile {
+    display: none;
+  }
+
+
+
+  @media @tablet {
+    font-size: @fz_big;
+    line-height: @lh_big-fussed;
+    padding: 0 30px;
+    margin-top: 93px;
+  }
+
+
+
+
+
+
+  @media @desktop {
+    padding: 0 90px;
+    margin-top: 93px;
+    margin-bottom: 66px;
+
+    &--hidden-mobile {
+        display: inline;
+    }
+  }
+}

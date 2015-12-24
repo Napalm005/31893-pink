@@ -1,0 +1,193 @@
+.tarif {
+  padding: 0 2px;
+  padding-top: 57px;
+  padding-bottom: 33px;
+
+  &__table {
+    width: 100%;
+    text-transform: uppercase;
+    border-collapse: collapse;
+  }
+
+  &__table-header {
+    .padding_margin_kill;
+    background: @c_dark;
+    color: @c_white;
+
+    &--new {
+      &:before {
+        .after_before;
+        position: absolute;
+        width: 74px;
+        height: 73px;
+        background: url('../img/hit.png') no-repeat left top;
+        margin-left: -2px;
+      }
+    }
+  }
+
+  th {
+    padding: 16px 0;
+    background: @c_dark;
+  }
+
+  &__title {
+    .padding_margin_kill;
+    font-size: @fz_big;
+    line-height: @lh_big-fussed;
+    font-weight: @fw_bold;
+
+  }
+
+  &__text {
+    .padding_margin_kill;
+    font-size: @fz_title;
+    line-height: 1.5;
+    font-weight: @fw_light;
+    color: @c_white;
+  }
+
+  tr {
+    background: #fff;
+  }
+
+  td {
+    line-height: 1.3;
+    padding: 20px 22px;
+    padding-right: 17px;
+    border-bottom: 2px solid @c_border;
+  }
+
+  &__check {
+    .text_hide;
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-left: 3px solid #3dc644;
+    border-bottom: 3px solid #3dc644;
+    transform: rotate(-45deg);
+    margin-left: auto;
+    margin-bottom: 4px;
+  }
+
+  &__non-check {
+    .text_hide;
+    position: relative;
+    display: block;
+
+    &:after {
+      .after_before;
+      .vertical_centered;
+      position: absolute;
+      width: 32px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(-45deg);
+      right: 0;
+    }
+
+    &:before {
+      .after_before;
+      .vertical_centered;
+      position: absolute;
+      width: 32px;
+      height: 3px;
+      background-color: #f25b26;
+      transform: rotate(45deg);
+      right: 0;
+    }
+  }
+
+  @media @tablet {
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 68px;
+
+    td {
+      border-left: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+      border-right: 2px solid #e5e5e5;
+      text-transform: none;
+      padding: 13px 14px;
+    }
+
+    th {
+      border-left: 2px solid #e5e5e5;
+      padding: 10px 0;
+      width: 24%;
+
+      &:first-child {
+        border: 2px solid #F2F2F2;
+        border-bottom: 2px solid #e5e5e5;
+        background: #F2F2F2;
+      }
+    }
+
+    .tarif__check {
+      margin-right: auto;
+    }
+
+    .tarif__non-check {
+      margin: 0 auto;
+      width: 30px;
+    }
+
+    &__title {
+      position: relative;
+      font-size: 16px;
+      line-height: 30/16;
+
+      &--new {
+        &:before {
+          .after_before;
+          position: absolute;
+          width: 74px;
+          height: 73px;
+          top: -9px;
+          background: url('../img/hit.png') no-repeat -4px -8px;
+        }
+      }
+    }
+
+    &__text {
+      font-size: @fz_big;
+      line-height: @lh_big-fussed;
+    }
+  }
+
+
+
+
+
+  @media @desktop {
+    padding-top: 59px;
+    padding-bottom: 93px;
+
+    td {
+      font-size: 18px;
+      padding: 18px 21px;
+    }
+
+    th {
+      padding: 20px 0;
+    }
+
+    &__title {
+      position: relative;
+      font-size: 18px;
+      line-height: 30/18;
+
+      &--new {
+        &:before {
+          top: -20px;
+          background-position: 0 0;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 30/24;
+    }
+  }
+}

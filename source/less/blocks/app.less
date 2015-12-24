@@ -1,0 +1,127 @@
+.app {
+  background-color: #1d2631;
+  color: @c_white;
+  padding-top: 26px;
+  padding-bottom: 30px;
+
+  &__button {
+    .link_style_kill;
+    width: 280px;
+    font-size: @fz_big;
+    line-height: 1;
+    font-weight: @fw_bold;
+    padding: 16px 0;
+    border: 3px solid @c_white;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    color: @c_white;
+
+    &:hover {
+      background: #fff;
+      color: @c_red;
+    }
+
+    &:active {
+      color:fade(@c_red, 30%);
+      background: #fff;
+    }
+  }
+
+  &__list {
+    .list_style_kill;
+    text-align: center;
+    margin-left: -33px;
+    margin-bottom: 11px;
+  }
+
+  &__item {
+    margin-left: 33px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__link {
+    .link_style_kill;
+    .text_hide;
+
+
+    &--apple {
+      width: 46px;
+      height: 69px;
+      background: url("../img/app-graphic/apple-logo.svg") no-repeat center top;
+    }
+
+    &--android {
+      width: 42px;
+      height: 47px;
+      background: url("../img/app-graphic/android-logo.svg") no-repeat center;
+    }
+
+    &--windows {
+      width: 44px;
+      height: 42px;
+      background: url("../img/app-graphic/microsoft-logo.svg") no-repeat center;
+    }
+  }
+
+  &__text {
+    .padding_margin_kill;
+    line-height: @lh_text;
+    font-weight: @fw_light;
+    text-align: center;
+    color: @c_white;
+  }
+
+
+
+
+
+
+
+  @media @tablet {
+    background-color: transparent;
+    margin-left: -20px;
+    width: 320px;
+
+    &__button {
+      margin-bottom: 45px;
+    }
+
+    &__list {
+      margin-left: -11px;
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 24/18;
+      width: 340px;
+    }
+  }
+
+
+
+
+  @media @desktop {
+    padding-top: 46px;
+    margin-left: -10px;
+    width: 320px;
+
+    &__button {
+      margin-bottom: 63px;
+      width: 300px;
+      font-size: 20px;
+    }
+
+    &__list {
+      margin-left: -33px;
+      margin-bottom: 44px;
+    }
+
+    &__text {
+      width: 320px;
+    }
+  }
+}
