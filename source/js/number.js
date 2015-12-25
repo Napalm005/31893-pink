@@ -51,6 +51,7 @@
           value = value - 1;
           value = Math.max(value, min);
           minus.disabled=false;
+          plus.disabled=false;
 
           if (value == min) {
             minus.disabled=true;
@@ -69,7 +70,6 @@
     }
 
     function addFields() {
-      debugger;
 
       var number = parseInt(input.value) + 1;
 
