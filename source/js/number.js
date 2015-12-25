@@ -12,8 +12,8 @@
     var input = parent.querySelector(".number__input");
     var minus = parent.querySelector(".number__button--minus");
     var plus = parent.querySelector(".number__button--plus");
-    var min = parseInt(input.getAttribute('min')) || 0;
-    var max = parseInt(input.getAttribute('max'));
+    var min = parseInt(input.getAttribute('data-min')) || 0;
+    var max = parseInt(input.getAttribute('data-max'));
     var id = input.getAttribute('id')
 
     input.readOnly=true;
@@ -33,7 +33,6 @@
     });
 
     plus.addEventListener('click', function(){
-      debugger;
       if (id == "companionsnumber") {
         addFields();
       }
