@@ -5,6 +5,8 @@
   }
 
   .page-header {
+    position: inherit;
+
     &__toggler {
       display: none;
     }
@@ -13,8 +15,12 @@
       background: @c_dark;
       border-bottom: 1px solid #030303;
       transition: 0s ease all;
+    }
 
-      @media @desktop {
+    @media @desktop {
+      position: absolute;
+
+      &__top {
         background: transparent;
         border-bottom: none;
       }
@@ -23,15 +29,6 @@
 
   .main-nav {
     display: block;
-
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    &__item {
-      flex-grow: 1;
-    }
   }
 
   .slider__item {
