@@ -2,7 +2,7 @@
 
   var elements = document.querySelectorAll(".number");
   var area = document.querySelector(".companion-wrap");
-  var template = document.querySelector("#COMPANIONTEMPLATE");
+  var template = document.querySelector("#companiontemplate");
 
   for (var i = 0; i < elements.length; i++) {
     initNumberField(elements[i]);
@@ -14,6 +14,7 @@
     var plus = parent.querySelector(".number__button--plus");
     var min = parseInt(input.getAttribute('min')) || 0;
     var max = parseInt(input.getAttribute('max'));
+    var id = input.getAttribute('id')
 
     input.readOnly=true;
 
@@ -24,14 +25,16 @@
     }
 
     minus.addEventListener('click', function(){
-      if (input == COMPANIONSNUMBER) {
+
+      if (id == "companionsnumber") {
         removeFields();
       }
       changeNumber(false);
     });
 
     plus.addEventListener('click', function(){
-      if (input == COMPANIONSNUMBER) {
+      debugger;
+      if (id == "companionsnumber") {
         addFields();
       }
       changeNumber(true);
