@@ -10,6 +10,60 @@ html {
   .photo-block {
     display:none;
   }
+
+  .page-header {
+    &__toggler {
+      display: none;
+    }
+
+    &__top {
+      background: @c_dark;
+      border-bottom: 1px solid #030303;
+      transition: 0s ease all;
+
+      @media @desktop {
+        background: transparent;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .main-nav {
+    display: block;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-grow: 1;
+    }
+  }
+
+  .slider__item {
+    display: block;
+  }
+
+  .review {
+    padding: 30px 0;
+  }
+
+  .bullet-pagination {
+    display: none;
+  }
+
+  .swiper-button-next{
+    display: none;
+  }
+
+  .swiper-button-prev{
+    display: none;
+  }
+
+  .swiper-container {
+    display: none;
+  }
 }
 
 *,

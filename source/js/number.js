@@ -15,6 +15,8 @@
     var min = parseInt(input.getAttribute('min')) || 0;
     var max = parseInt(input.getAttribute('max'));
 
+    input.readOnly=true;
+
     if (min>max) {
       var x = min;
       min = max;
