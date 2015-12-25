@@ -81,7 +81,7 @@
       templateElement.classList.add("companion");
       templateElement.innerHTML = html;
 
-      if (number <= max) {
+      if (number <= max || number > 0) {
         area.appendChild(templateElement);
       }
     }
